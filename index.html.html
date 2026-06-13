@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXS 居住形态深度勘探雷达 (满配级)</title>
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+    :root {
+        --bg-color: #050505;
+        --panel-bg: rgba(18, 18, 18, 0.65);
+        --panel-border: rgba(212, 175, 55, 0.15);
+        --text-main: #e0e0e0;
+        --text-muted: #888888;
+        --accent: #d4af37; /* AXS 极客金 */
+        --accent-glow: rgba(212, 175, 55, 0.4);
+        --danger: #e84118;
+        --glass-blur: blur(16px);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        background-image: 
+            radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.03), transparent 25%),
+            radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.04), transparent 25%);
+        background-attachment: fixed;
+        color: var(--text-main);
+        font-family: 'Outfit', 'Noto Sans SC', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 20px;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+    .header::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 2px;
+        background: var(--accent);
+        margin: 30px auto 0;
+        box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    .slogan {
+        color: var(--accent);
+        font-size: 0.9em;
+        font-weight: 800;
+        letter-spacing: 4px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .header h1 {
+        color: #ffffff;
+        font-size: 2.8em;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+        font-weight: 800;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .header p {
+        color: var(--text-muted);
+        font-size: 1.05em;
+        font-weight: 300;
+    }
+
+    .warm-box {
+        background: rgba(212, 175, 55, 0.05);
+        border: 1px solid var(--panel-border);
+        border-left: 4px solid var(--accent);
+        padding: 20px 25px;
+        margin-bottom: 50px;
+        color: #d1d1d1;
+        font-size: 0.95em;
+        border-radius: 8px;
+        backdrop-filter: var(--glass-blur);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .module {
+        background: var(--panel-bg);
+        padding: 40px;
+        margin-bottom: 40px;
+        border-radius: 12px;
+        border: 1px solid var(--panel-border);
+        backdrop-filter: var(--glass-blur);
+        -webkit-backdrop-filter: var(--glass-blur);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.02);
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .module:hover {
+        transform: translateY(-3px);
+        border-color: rgba(212, 175, 55, 0.3);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 20px rgba(212, 175, 55, 0.05);
+    }
+
+    .module-badge {
+        display: inline-block;
+        font-size: 0.75em;
+        background: var(--accent);
+        color: #000;
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+    }
+
+    .module-title {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .question {
+        margin-bottom: 35px;
+    }
+
+    .question:last-child {
+        margin-bottom: 0;
+    }
+
+    .question-text {
+        font-size: 1.1em;
+        font-weight: 500;
+        margin-bottom: 8px;
+        display: block;
+        color: #ffffff;
+    }
+
+    .helper-text {
+        display: block;
+        font-size: 0.85em;
+        color: var(--text-muted);
+        margin-bottom: 15px;
+        font-weight: 300;
+    }
+
+    input[type="text"], input[type="number"], input[type="date"], input[type="time"], input[type="file"], textarea {
+        width: 100%;
+        padding: 14px 18px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: white;
+        border-radius: 6px;
+        font-family: inherit;
+        font-size: 1em;
+        transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="time"]:focus, textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .options-group {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 12px;
+    }
+
+    .option-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 14px 18px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255,255,255,0.05);
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .option-label:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255,255,255,0.1);
+    }
+
+    .option-label:has(input:checked) {
+        background: rgba(212, 175, 55, 0.08);
+        border-color: var(--accent);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Custom Checkbox/Radio Styling */
+    .option-label input[type="radio"],
+    .option-label input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--text-muted);
+        margin-right: 12px;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .option-label input[type="radio"] {
+        border-radius: 50%;
+    }
+    .option-label input[type="checkbox"] {
+        border-radius: 4px;
+    }
+
+    .option-label input:checked {
+        border-color: var(--accent);
+    }
+
+    .option-label input[type="radio"]:checked::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 5px var(--accent-glow);
+    }
+
+    .option-label input[type="checkbox"]:checked::after {
+        content: '¹3';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: bold;
+        text-shadow: 0 0 5px var(--accent-glow);
+    }
+
+    .option-label .other-text {
+        flex: 1;
+        min-width: 120px;
+        margin: 0 0 0 10px;
+        padding: 4px 8px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        border-radius: 0;
+    }
+    
+    .option-label .other-text:focus {
+        border-bottom-color: var(--accent);
+        box-shadow: none;
+    }
+
+    .submit-btn {
+        background: var(--accent);
+        color: #000;
+        border: 1px solid var(--accent);
+        padding: 18px 30px;
+        font-size: 1.1em;
+        font-family: 'Outfit', 'Noto Sans SC', sans-serif;
+        font-weight: 800;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .submit-btn::before {
+        content: '';
+        position: absolute;
+        top: 0; left: -100%; width: 100%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .submit-btn:hover::before {
+        left: 100%;
+    }
+
+    .submit-btn:hover {
+        background: #ebd076;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        transform: translateY(-2px);
+    }
+
+    /* Primary vs Secondary button logic handled inline, but we can enhance it here */
+    #savePageBtn {
+        background: rgba(20, 20, 20, 0.8) !important;
+        color: var(--accent) !important;
+    }
+    #savePageBtn:hover {
+        background: rgba(212, 175, 55, 0.1) !important;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    }
+
+    .result-panel {
+        display: none;
+        background: rgba(10, 10, 10, 0.8);
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        padding: 30px;
+        margin-top: 40px;
+        backdrop-filter: var(--glass-blur);
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+    }
+
+    .result-panel.is-visible {
+        display: block;
+        animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .result-actions {
+        display: flex;
+        gap: 12px;
+        margin: 18px 0;
+    }
+
+    .action-btn {
+        background: transparent;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 700;
+        font-family: inherit;
+        transition: all 0.3s ease;
+    }
+
+    .action-btn:hover {
+        background: rgba(212, 175, 55, 0.15);
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+    }
+
+    .report-output {
+        width: 100%;
+        min-height: 420px;
+        background: #000;
+        color: #00ff41; /* Hacker terminal green for geeky feel */
+        font-family: 'Courier New', Courier, monospace;
+        padding: 20px;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 6px;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 600px) {
+        .options-group {
+            grid-template-columns: 1fr;
+        }
+        .header h1 {
+            font-size: 2em;
+        }
+    }
+
+    /* EXTREME AESTHETICS OVERRIDES */
+    
+    /* 1. Custom Cursor */
+    body {
+        cursor: none;
+    }
+    a, button, input, label, textarea {
+        cursor: none !important;
+    }
+
+    #custom-cursor-dot {
+        position: fixed;
+        top: 0; left: 0;
+        width: 8px; height: 8px;
+        background: var(--accent);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 10px var(--accent);
+        transition: width 0.2s, height 0.2s;
+    }
+
+    #custom-cursor-ring {
+        position: fixed;
+        top: 0; left: 0;
+        width: 32px; height: 32px;
+        border: 1px solid rgba(212, 175, 55, 0.5);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9998;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s, height 0.3s, border-color 0.3s, transform 0.1s ease-out;
+    }
+
+    .cursor-hover #custom-cursor-dot {
+        width: 0; height: 0;
+    }
+
+    .cursor-hover #custom-cursor-ring {
+        width: 48px; height: 48px;
+        border-color: var(--accent);
+        background: rgba(212, 175, 55, 0.1);
+        backdrop-filter: blur(2px);
+    }
+
+    /* 2. Grain Overlay */
+    .grain-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        pointer-events: none;
+        z-index: 9000;
+        opacity: 0.04;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* 3. Cyber-Grid Distortion */
+    .cyber-grid {
+        position: fixed;
+        bottom: -20vh;
+        left: -50vw;
+        width: 200vw;
+        height: 60vh;
+        background-image: 
+            linear-gradient(rgba(212, 175, 55, 0.2) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(212, 175, 55, 0.2) 1px, transparent 1px);
+        background-size: 40px 40px;
+        transform: perspective(600px) rotateX(75deg);
+        transform-origin: top;
+        z-index: -1;
+        pointer-events: none;
+        animation: gridMove 10s linear infinite;
+        mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+        -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    }
+
+    @keyframes gridMove {
+        0% { transform: perspective(600px) rotateX(75deg) translateY(0); }
+        100% { transform: perspective(600px) rotateX(75deg) translateY(40px); }
+    }
+
+    /* 4. Dramatic Shadows & Depth */
+    .module {
+        background: rgba(12, 12, 12, 0.7);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        box-shadow: 
+            0 30px 60px rgba(0, 0, 0, 0.9),
+            0 0 40px rgba(212, 175, 55, 0.05),
+            inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        opacity: 0;
+        transform: translateY(40px) scale(0.98);
+        transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    }
+
+    .module.reveal-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    .module:hover {
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 
+            0 40px 80px rgba(0, 0, 0, 1),
+            0 0 60px rgba(212, 175, 55, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        border-color: rgba(212, 175, 55, 0.5);
+    }
+    
+    .header h1 {
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 5px 15px rgba(0,0,0,0.8);
+        letter-spacing: 4px;
+    }
+
+
+    
+    
+    
+    
+    /* Mascot Characters */
+    .mascot {
+        position: fixed;
+        top: 50%;
+        width: 600px;
+        z-index: 0;
+        pointer-events: none;
+        mix-blend-mode: screen; 
+        opacity: 0.95;
+        filter: contrast(1.3) brightness(0.85);
+        -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 60%, transparent 100%);
+        mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 60%, transparent 100%);
+        transform-origin: center center;
+    }
+
+    .mascot-left {
+        left: 18%; /* Center point is 18% from the left edge */
+        animation: walkInPlaceLeft 1.4s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+    }
+
+    .mascot-right {
+        left: 82%; /* Center point is 82% from the left edge */
+        animation: walkInPlaceRight 1.5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite 0.7s;
+    }
+
+    @keyframes walkInPlaceLeft {
+        0% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
+        25% { transform: translate(-50%, calc(-50% - 15px)) scaleY(1.02) rotate(1.5deg); }
+        50% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
+        75% { transform: translate(-50%, calc(-50% - 15px)) scaleY(1.02) rotate(-1.5deg); }
+        100% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
+    }
+    
+    @keyframes walkInPlaceRight {
+        0% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
+        25% { transform: translate(-50%, calc(-50% - 15px)) scaleY(1.02) rotate(1.5deg); }
+        50% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
+        75% { transform: translate(-50%, calc(-50% - 15px)) scaleY(1.02) rotate(-1.5deg); }
+        100% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
+    }
+
+    @media (max-width: 1600px) {
+        .mascot { width: 500px; opacity: 0.8; }
+        .mascot-left { left: 15%; }
+        .mascot-right { left: 85%; }
+    }
+    @media (max-width: 1200px) {
+        .mascot { width: 400px; opacity: 0.5; }
+    }
+    @media (max-width: 800px) {
+        .mascot { display: none; }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="slogan">AXS（Aesthetics × System）（美学 × 系统）</div>
+        <h1>AXS 设计工作室</h1>
+        <p><strong>【系统理念】：所有极致的 实用主义 与 系统化的代码， 最终，都是为了毫无痕迹地服务于您的审美与舒适。</strong></p>
+    </div>
+
+    <div class="warm-box">
+        <strong>✨ 主理人致信：</strong><br>
+        这份问卷包含了 32 个关乎您未来每天生活起居的细节，预计需要占用您 15-20 分钟的时间。<br>
+        家是包裹疲惫的容器。请放慢脚步，倒一杯茶，跟我们一起，从这里开始描绘那个充满温度的避风港。
+    </div>
+
+    <form id="axsSurveyForm">
+
+        <!-- ================= 模块 01：物理与人口底座 ================= -->
+        <div class="module">
+            <span class="module-badge">01. 居住基础</span>
+            <div class="module-title">模块 01 | 物理与人口底座</div>
+            
+            <div class="question">
+                <span class="question-text">1. 怎么称呼您？</span>
+                <input type="text" id="username" name="username" placeholder="例如：张先生 / 李女士">
+            </div>
+            
+            <div class="question">
+                <span class="question-text">2. 房屋绝对信息（小区/户型/面积）：</span>
+                <input type="text" id="house_info" name="house_info" placeholder="例如：万科天空之城 / 大平层 / 150平米">
+            </div>
+
+            <div class="question">
+                <span class="question-text">3. 户型图上传：</span>
+                <span class="helper-text">可上传开发商户型图、现场测量图、CAD 导出图或手绘平面图。</span>
+                <input type="file" id="floor_plan_files" name="floor_plan_files" accept=".jpg,.jpeg,.png,.webp,.pdf,.dwg,.dxf" multiple>
+            </div>
+
+            <div class="question">
+                <span class="question-text">4. 客户意向设计图上传：</span>
+                <span class="helper-text">可上传喜欢的空间参考图、材质图、软装图或风格案例。</span>
+                <input type="file" id="reference_design_files" name="reference_design_files" accept=".jpg,.jpeg,.png,.webp,.pdf" multiple>
+            </div>
+            
+            <div class="question">
+                <span class="question-text">5. 预算控制绝对红线范围：</span>
+                <span class="helper-text">系统将严格根据此红线决定是否砍掉装饰性吊顶。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="budget" value="15-30万"> 15-30万</label>
+                    <label class="option-label"><input type="radio" name="budget" value="30-50万"> 30-50万</label>
+                    <label class="option-label"><input type="radio" name="budget" value="50-80万"> 50-80万</label>
+                    <label class="option-label"><input type="radio" name="budget" value="80万以上"> 80万以上</label>
+                </div>
+            
+    <textarea name="budget_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">6. 家庭常住成员构成及孩子年龄段：</span>
+                <input type="text" id="family_member" name="family_member" placeholder="例如：夫妻二人 + 1个3岁男孩 + 偶尔老人居住">
+            </div>
+
+            <div class="question">
+                <span class="question-text">7. 男主人出生日期与时间：</span>
+                <span class="helper-text">用于后续结合风水、易经等传统空间观念做参考分析；如不方便填写，可留空。</span>
+                <input type="date" id="male_birth_date" name="male_birth_date">
+                <input type="time" id="male_birth_time" name="male_birth_time">
+            </div>
+
+            <div class="question">
+                <span class="question-text">8. 女主人出生日期与时间：</span>
+                <span class="helper-text">用于后续结合风水、易经等传统空间观念做参考分析；如不方便填写，可留空。</span>
+                <input type="date" id="female_birth_date" name="female_birth_date">
+                <input type="time" id="female_birth_time" name="female_birth_time">
+            </div>
+
+            <div class="question">
+                <span class="question-text">9. 宠物情况：</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="pet" value="无"> 无</label>
+                    <label class="option-label"><input type="radio" name="pet" value="猫"> 猫</label>
+                    <label class="option-label"><input type="radio" name="pet" value="狗"> 狗</label>
+                </div>
+            
+    <textarea name="pet_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">10. 常住男/女主人净身高(cm)及厨房主要操作者惯用手：</span>
+                <span class="helper-text">高度机密：反推厨房高低台面与洗碗机动线的唯一依据。</span>
+                <input type="text" id="height_hand" name="height_hand" placeholder="例如：男175cm / 女160cm / 女主人右撇子">
+            </div>
+        </div>
+
+        <!-- ================= 模块 02：空间规划 ================= -->
+        <div class="module">
+            <span class="module-badge">02. 空间规划</span>
+            <div class="module-title">模块 02 | 分区空间规划与生活场景</div>
+            
+            <div class="question">
+                <span class="question-text">空间 01｜主卧：希望它承担哪些功能？</span>
+                <span class="helper-text">可多选，按真实生活需求选择。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_master_bedroom" value="纯睡眠"> 纯睡眠</label>
+                    <label class="option-label"><input type="checkbox" name="space_master_bedroom" value="主卫"> 主卫</label>
+                    <label class="option-label"><input type="checkbox" name="space_master_bedroom" value="衣帽间"> 衣帽间</label>
+                    <label class="option-label"><input type="checkbox" name="space_master_bedroom" value="梳妆区"> 梳妆区</label>
+                    <label class="option-label"><input type="checkbox" name="space_master_bedroom" value="办公/阅读"> 办公/阅读</label>
+                    <label class="option-label"><input type="checkbox" name="space_master_bedroom" value="隔音遮光"> 隔音遮光</label>
+                </div>
+            
+    <textarea name="space_master_bedroom_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 02｜次卧 1：主要给谁使用？</span>
+                <span class="helper-text">可多选，按当前和未来使用方式选择。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_1" value="儿童房"> 儿童房</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_1" value="老人房"> 老人房</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_1" value="长期客房"> 长期客房</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_1" value="书房兼卧室"> 书房兼卧室</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_1" value="衣柜收纳"> 衣柜收纳</label>
+                </div>
+            
+    <textarea name="space_secondary_bedroom_1_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 03｜次卧 2：希望保留固定卧室，还是做弹性空间？</span>
+                <span class="helper-text">可多选，适合表达弹性功能。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_2" value="固定卧室"> 固定卧室</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_2" value="儿童房"> 儿童房</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_2" value="客房"> 客房</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_2" value="书房"> 书房</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_2" value="衣帽间"> 衣帽间</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_2" value="影音/多功能房"> 影音/多功能房</label>
+                </div>
+            
+    <textarea name="space_secondary_bedroom_2_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 04｜次卧 3：是否需要长期床位或特殊功能？</span>
+                <span class="helper-text">如没有第三个次卧，可选择“无此空间”。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_3" value="无此空间"> 无此空间</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_3" value="长期床位"> 长期床位</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_3" value="储物间"> 储物间</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_3" value="办公"> 办公</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_3" value="健身"> 健身</label>
+                    <label class="option-label"><input type="checkbox" name="space_secondary_bedroom_3" value="亲子活动"> 亲子活动</label>
+                </div>
+            
+    <textarea name="space_secondary_bedroom_3_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 05｜客厅：它最重要的生活角色是什么？</span>
+                <span class="helper-text">可多选，帮助判断客厅家具、收纳和电位布局。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_living_room" value="家庭陪伴"> 家庭陪伴</label>
+                    <label class="option-label"><input type="checkbox" name="space_living_room" value="会客"> 会客</label>
+                    <label class="option-label"><input type="checkbox" name="space_living_room" value="观影"> 观影</label>
+                    <label class="option-label"><input type="checkbox" name="space_living_room" value="亲子活动"> 亲子活动</label>
+                    <label class="option-label"><input type="checkbox" name="space_living_room" value="游戏/娱乐"> 游戏/娱乐</label>
+                    <label class="option-label"><input type="checkbox" name="space_living_room" value="展示收纳"> 展示收纳</label>
+                </div>
+            
+    <textarea name="space_living_room_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 06｜就餐区：餐桌主要承担哪些场景？</span>
+                <span class="helper-text">可多选，帮助判断餐桌尺寸、电源和收纳配置。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_dining_area" value="日常吃饭"> 日常吃饭</label>
+                    <label class="option-label"><input type="checkbox" name="space_dining_area" value="家庭聚餐"> 家庭聚餐</label>
+                    <label class="option-label"><input type="checkbox" name="space_dining_area" value="办公"> 办公</label>
+                    <label class="option-label"><input type="checkbox" name="space_dining_area" value="辅导作业"> 辅导作业</label>
+                    <label class="option-label"><input type="checkbox" name="space_dining_area" value="手工/兴趣"> 手工/兴趣</label>
+                    <label class="option-label"><input type="checkbox" name="space_dining_area" value="临时置物"> 临时置物</label>
+                </div>
+            
+    <textarea name="space_dining_area_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 07｜厨房：烹饪习惯和设备需求是什么？</span>
+                <span class="helper-text">可多选，帮助判断厨房动线、电器和台面尺度。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_kitchen" value="中厨爆炒"> 中厨爆炒</label>
+                    <label class="option-label"><input type="checkbox" name="space_kitchen" value="西厨/轻食"> 西厨/轻食</label>
+                    <label class="option-label"><input type="checkbox" name="space_kitchen" value="大备菜台面"> 大备菜台面</label>
+                    <label class="option-label"><input type="checkbox" name="space_kitchen" value="双开门/大冰箱"> 双开门/大冰箱</label>
+                    <label class="option-label"><input type="checkbox" name="space_kitchen" value="洗碗机"> 洗碗机</label>
+                    <label class="option-label"><input type="checkbox" name="space_kitchen" value="蒸烤箱"> 蒸烤箱</label>
+                    <label class="option-label"><input type="checkbox" name="space_kitchen" value="净水系统"> 净水系统</label>
+                </div>
+            
+    <textarea name="space_kitchen_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 08｜卫生间：是否需要干湿分离或三分离？</span>
+                <span class="helper-text">可多选，帮助判断卫生间分离方式和舒适配置。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_bathroom" value="干湿分离"> 干湿分离</label>
+                    <label class="option-label"><input type="checkbox" name="space_bathroom" value="三分离"> 三分离</label>
+                    <label class="option-label"><input type="checkbox" name="space_bathroom" value="双台盆"> 双台盆</label>
+                    <label class="option-label"><input type="checkbox" name="space_bathroom" value="化妆/护肤区"> 化妆/护肤区</label>
+                    <label class="option-label"><input type="checkbox" name="space_bathroom" value="老人小孩友好"> 老人小孩友好</label>
+                    <label class="option-label"><input type="checkbox" name="space_bathroom" value="强收纳"> 强收纳</label>
+                </div>
+            
+    <textarea name="space_bathroom_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 09｜玄关 / 入户区：进门第一步需要解决什么？</span>
+                <span class="helper-text">可多选，玄关也可理解为入户区。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_entry" value="大鞋柜"> 大鞋柜</label>
+                    <label class="option-label"><input type="checkbox" name="space_entry" value="换鞋凳"> 换鞋凳</label>
+                    <label class="option-label"><input type="checkbox" name="space_entry" value="挂衣区"> 挂衣区</label>
+                    <label class="option-label"><input type="checkbox" name="space_entry" value="包钥匙随手放"> 包钥匙随手放</label>
+                    <label class="option-label"><input type="checkbox" name="space_entry" value="快递暂存"> 快递暂存</label>
+                    <label class="option-label"><input type="checkbox" name="space_entry" value="落尘区"> 落尘区</label>
+                </div>
+            
+    <textarea name="space_entry_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 10｜阳台：更偏生活阳台、休闲阳台，还是复合阳台？</span>
+                <span class="helper-text">可多选，按阳台的真实用途选择。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_balcony" value="洗烘家政"> 洗烘家政</label>
+                    <label class="option-label"><input type="checkbox" name="space_balcony" value="晾晒"> 晾晒</label>
+                    <label class="option-label"><input type="checkbox" name="space_balcony" value="储物柜"> 储物柜</label>
+                    <label class="option-label"><input type="checkbox" name="space_balcony" value="绿植"> 绿植</label>
+                    <label class="option-label"><input type="checkbox" name="space_balcony" value="宠物"> 宠物</label>
+                    <label class="option-label"><input type="checkbox" name="space_balcony" value="休闲观景"> 休闲观景</label>
+                </div>
+            
+    <textarea name="space_balcony_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 11｜书房：需要独立办公、阅读、学习或电竞功能吗？</span>
+                <span class="helper-text">可多选，帮助判断书桌、书柜、电位和安静程度。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_study" value="独立办公"> 独立办公</label>
+                    <label class="option-label"><input type="checkbox" name="space_study" value="双人办公"> 双人办公</label>
+                    <label class="option-label"><input type="checkbox" name="space_study" value="孩子学习"> 孩子学习</label>
+                    <label class="option-label"><input type="checkbox" name="space_study" value="阅读藏书"> 阅读藏书</label>
+                    <label class="option-label"><input type="checkbox" name="space_study" value="电竞设备"> 电竞设备</label>
+                    <label class="option-label"><input type="checkbox" name="space_study" value="视频会议"> 视频会议</label>
+                    <label class="option-label"><input type="checkbox" name="space_study" value="音乐工作室"> 音乐工作室</label>
+                </div>
+            
+    <textarea name="space_study_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 12｜休闲区：希望在家里留出怎样的放松角落？</span>
+                <span class="helper-text">可多选，帮助判断氛围、家具和照明。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_leisure_area" value="茶区"> 茶区</label>
+                    <label class="option-label"><input type="checkbox" name="space_leisure_area" value="阅读角"> 阅读角</label>
+                    <label class="option-label"><input type="checkbox" name="space_leisure_area" value="冥想放空"> 冥想放空</label>
+                    <label class="option-label"><input type="checkbox" name="space_leisure_area" value="健身"> 健身</label>
+                    <label class="option-label"><input type="checkbox" name="space_leisure_area" value="亲子游戏"> 亲子游戏</label>
+                    <label class="option-label"><input type="checkbox" name="space_leisure_area" value="音乐/手作"> 音乐/手作</label>
+                </div>
+            
+    <textarea name="space_leisure_area_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间 13｜储物 / 家政区：哪些东西最需要被妥善隐藏？</span>
+                <span class="helper-text">可多选，帮助判断集中收纳和家政柜配置。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="space_storage_housekeeping" value="清洁工具"> 清洁工具</label>
+                    <label class="option-label"><input type="checkbox" name="space_storage_housekeeping" value="囤货"> 囤货</label>
+                    <label class="option-label"><input type="checkbox" name="space_storage_housekeeping" value="行李箱"> 行李箱</label>
+                    <label class="option-label"><input type="checkbox" name="space_storage_housekeeping" value="换季衣物"> 换季衣物</label>
+                    <label class="option-label"><input type="checkbox" name="space_storage_housekeeping" value="工具箱"> 工具箱</label>
+                    <label class="option-label"><input type="checkbox" name="space_storage_housekeeping" value="儿童/宠物用品"> 儿童/宠物用品</label>
+                </div>
+            
+    <textarea name="space_storage_housekeeping_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">空间结构调整：您对非承重墙调整的接受度是？</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="smash_wall" value="可以接受合理调整"> 可以接受合理调整</label>
+                    <label class="option-label"><input type="checkbox" name="smash_wall" value="尽量少动墙体"> 尽量少动墙体</label>
+                    <label class="option-label"><input type="checkbox" name="smash_wall" value="不接受墙体调整"> 不接受墙体调整</label>
+                </div>
+            
+    <textarea name="smash_wall_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+        </div>
+
+        <!-- ================= 模块 03：玄关与落尘 ================= -->
+        <div class="module">
+            <span class="module-badge">03. 归家动线</span>
+            <div class="module-title">模块 03 | 玄关落尘与归家动线</div>
+            
+            <div class="question">
+                <span class="question-text">11. 您回家后，包包、钥匙、穿过的外套一般习惯放在哪里？</span>
+                <span class="helper-text">可多选，帮助判断玄关收纳、挂衣和随手置物位置。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="genkan_drop" value="进门鞋柜台面"> 进门鞋柜台面</label>
+                    <label class="option-label"><input type="checkbox" name="genkan_drop" value="玄关挂钩/挂衣区"> 玄关挂钩/挂衣区</label>
+                    <label class="option-label"><input type="checkbox" name="genkan_drop" value="客厅沙发"> 客厅沙发</label>
+                    <label class="option-label"><input type="checkbox" name="genkan_drop" value="餐桌/岛台"> 餐桌/岛台</label>
+                    <label class="option-label"><input type="checkbox" name="genkan_drop" value="卧室"> 卧室</label>
+                    <label class="option-label"><input type="checkbox" name="genkan_drop" value="经常随手乱放"> 经常随手乱放</label>
+                </div>
+            
+    <textarea name="genkan_drop_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">12. 快递或外卖到家后，您通常在哪个区域拆解处理？</span>
+                <span class="helper-text">可多选，用于判断临时台面、垃圾分类和清洁动线。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="delivery_area" value="门外拆完"> 门外拆完</label>
+                    <label class="option-label"><input type="checkbox" name="delivery_area" value="玄关拆解"> 玄关拆解</label>
+                    <label class="option-label"><input type="checkbox" name="delivery_area" value="餐桌/岛台拆解"> 餐桌/岛台拆解</label>
+                    <label class="option-label"><input type="checkbox" name="delivery_area" value="厨房拆解"> 厨房拆解</label>
+                    <label class="option-label"><input type="checkbox" name="delivery_area" value="客厅地面拆解"> 客厅地面拆解</label>
+                    <label class="option-label"><input type="checkbox" name="delivery_area" value="需要快递暂存区"> 需要快递暂存区</label>
+                </div>
+            
+    <textarea name="delivery_area_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">13. 下班回家后，您通常是马上开始做家务收拾，还是先瘫一会儿？</span>
+                <span class="helper-text">可多选，用于判断归家缓冲区和低维护收纳比例。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="after_work_habit" value="马上收拾"> 马上收拾</label>
+                    <label class="option-label"><input type="checkbox" name="after_work_habit" value="先坐下休息"> 先坐下休息</label>
+                    <label class="option-label"><input type="checkbox" name="after_work_habit" value="先换衣洗手"> 先换衣洗手</label>
+                    <label class="option-label"><input type="checkbox" name="after_work_habit" value="先照顾孩子/宠物"> 先照顾孩子/宠物</label>
+                    <label class="option-label"><input type="checkbox" name="after_work_habit" value="经常把东西临时放着"> 经常把东西临时放着</label>
+                    <label class="option-label"><input type="checkbox" name="after_work_habit" value="希望系统帮我降低家务"> 希望系统帮我降低家务</label>
+                </div>
+            
+    <textarea name="after_work_habit_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">14. 是否接受入户做一个 3-5cm 的【下沉式落尘区】？</span>
+                <span class="helper-text">日式极致功能：将室外灰尘 100% 挡在门外，降低 50% 扫地频次。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="genkan" value="强烈需要"> 强烈需要</label>
+                    <label class="option-label"><input type="checkbox" name="genkan" value="不需要，我习惯全屋地面平铺"> 不需要，我习惯全屋地面平铺</label>
+                </div>
+            
+    <textarea name="genkan_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+        </div>
+
+        <!-- ================= 模块 04：LDK与机电黑盒 ================= -->
+        <div class="module">
+            <span class="module-badge">04. 核心生活区</span>
+            <div class="module-title">模块 04 | LDK 与隐蔽机电黑盒</div>
+            
+            <div class="question">
+                <span class="question-text">15. 在家醒着的时候，您最常待的空间是？</span>
+                <input type="text" id="main_active_area" name="main_active_area" placeholder="例如：客厅沙发 / 餐桌 / 书房">
+            </div>
+
+            <div class="question">
+                <span class="question-text">16. 餐桌的真实使用场景（按高低频排序）？</span>
+                                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="dining_table_usage" value="吃饭（日常三餐）"> 吃饭（日常三餐）</label>
+                    <label class="option-label"><input type="checkbox" name="dining_table_usage" value="孩子写作业/做手工"> 孩子写作业/做手工</label>
+                    <label class="option-label"><input type="checkbox" name="dining_table_usage" value="看电视/屏幕时光"> 看电视/屏幕时光</label>
+                    <label class="option-label"><input type="checkbox" name="dining_table_usage" value="临时办公/阅读"> 临时办公/阅读</label>
+                    <label class="option-label"><input type="checkbox" name="dining_table_usage" value="泡茶/泡脚/水疗"> 泡茶/泡脚/水疗</label>
+                </div>
+                <textarea name="dining_table_usage_supplement" placeholder="其它补充说明（选填）" style="margin-top: 10px;"></textarea>
+            </div>
+
+            <div class="question">
+                <span class="question-text">17. 做饭的习惯以及在现居所遇到的最痛点是什么？</span>
+                <input type="text" id="cooking_habit" name="cooking_habit" placeholder="例如：重油烟爆炒，最烦台面不够放切好的菜">
+            </div>
+
+            <div class="question">
+                <span class="question-text">18. 极度重要！请勾选您已有或必买的【重型电器】：</span>
+                <span class="helper-text">系统将据此推算独立 4 平方专线数量及强电箱漏保配置。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="双开大冰箱 (宽度>80cm)"> 双开大冰箱 (宽度>80cm)</label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="独立热泵烘干机"> 独立热泵烘干机</label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="13套以上大型洗碗机"> 13套以上大型洗碗机</label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="嵌入式大容量蒸烤箱"> 嵌入式大容量蒸烤箱</label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="24小时不间断 NAS 服务器 / 极路由"> 24小时不间断 NAS 服务器 / 极路由</label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="全屋软水/前置净水系统"> 全屋软水/前置净水系统</label>
+                </div>
+            
+    <textarea name="heavy_appliances_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">19. 扫拖机器人是否需要预留【自动上下水基站】？</span>
+                <span class="helper-text">选中则系统强制在水路图纸生成隐蔽式上下水三通。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="robot" value="是的，必须解放双手"> 是的，必须解放双手</label>
+                    <label class="option-label"><input type="checkbox" name="robot" value="不需要，人工加水"> 不需要，人工加水</label>
+                </div>
+            
+    <textarea name="robot_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">20. 智能系统的基础布局：</span>
+                <span class="helper-text">例如：全屋 Wi-Fi、智能灯光、窗帘、电动幕布、门锁、摄像头、安防、传感器、语音控制、影音系统等。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="smart_system_layout" value="全屋智能"> 全屋智能</label>
+                    <label class="option-label"><input type="checkbox" name="smart_system_layout" value="基础安全防护布局"> 基础安全防护布局</label>
+                    <label class="option-label"><input type="checkbox" name="smart_system_layout" value="舒适生活体验布局"> 舒适生活体验布局</label>
+                    <label class="option-label"><input type="checkbox" name="smart_system_layout" value="能源高效管理布局"> 能源高效管理布局</label>
+                </div>
+                <textarea name="smart_system_layout_supplement" placeholder="补充说明（选填）" style="margin-top: 10px;"></textarea>
+            </div>
+
+            
+        </div>
+
+        <!-- ================= 模块 05：卫浴与生理防御 ================= -->
+        <div class="module">
+            <span class="module-badge">05. 健康舒适</span>
+            <div class="module-title">模块 05 | 卫浴撕裂与生理防御</div>
+            
+            <div class="question">
+                <span class="question-text">21. 早上家人是否经常因为同时要用马桶和洗手台而发生严重冲突？</span>
+                <span class="helper-text">若经常，系统将强制执行【卫浴撕裂手术】，砸墙做三分离设计。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="bathroom_conflict" value="经常，急需分离"> 经常，急需分离</label>
+                    <label class="option-label"><input type="checkbox" name="bathroom_conflict" value="偶尔或没感觉"> 偶尔或没感觉</label>
+                </div>
+            
+    <textarea name="bathroom_conflict_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            
+
+            
+
+            <div class="question">
+                <span class="question-text">22. 您的睡眠神经是否脆弱（极易被细微声音惊醒）？</span>
+                <span class="helper-text">据此判定是否下发减震隔音包和断桥铝系统窗派单。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="sleep_sound" value="对楼上冲水声极度敏感"> 对楼上冲水声极度敏感</label>
+                    <label class="option-label"><input type="checkbox" name="sleep_sound" value="对窗外车流马路噪音敏感"> 对窗外车流马路噪音敏感</label>
+                    <label class="option-label"><input type="checkbox" name="sleep_sound" value="倒头就睡，完全不敏感"> 倒头就睡，完全不敏感</label>
+                </div>
+            
+    <textarea name="sleep_sound_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">23. 对卧室的光线避光敏感度？</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="light" value="必须绝对全黑（要求遮光率 100%）"> 必须绝对全黑（要求遮光率 100%）</label>
+                    <label class="option-label"><input type="checkbox" name="light" value="可以有微弱光线"> 可以有微弱光线</label>
+                    <label class="option-label"><input type="checkbox" name="light" value="喜欢被早上自然光叫醒"> 喜欢被早上自然光叫醒</label>
+                </div>
+            
+    <textarea name="light_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">24. 为了获取极致安静，是否愿意牺牲卧室 5-10cm 层高做一个【架空隔音地台 (STC50+)】？</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="double_floor" value="愿意，安静大过天"> 愿意，安静大过天</label>
+                    <label class="option-label"><input type="checkbox" name="double_floor" value="没必要，常规找平即可"> 没必要，常规找平即可</label>
+                </div>
+            
+    <textarea name="double_floor_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+        </div>
+
+        <!-- ================= 模块 06：代谢系统与审美抉择 ================= -->
+        <div class="module" style="border-left-color: #d4af37;">
+            <span class="module-badge" style="background: #d4af37; color: #000;">06. 生活取向</span>
+            <div class="module-title" style="color: #d4af37;">模块 06 | 代谢系统与功能审美抉择</div>
+            
+            <div class="question">
+                <span class="question-text">25. 您最痛恨的家务死角是什么？</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="worst_housework" value="卫生间马桶后方"> 卫生间马桶后方</label>
+                    <label class="option-label"><input type="checkbox" name="worst_housework" value="厨房炉灶缝隙"> 厨房炉灶缝隙</label>
+                    <label class="option-label"><input type="checkbox" name="worst_housework" value="床底"> 床底</label>
+                    <label class="option-label"><input type="checkbox" name="worst_housework" value="沙发底部"> 沙发底部</label>
+                    <label class="option-label"><input type="checkbox" name="worst_housework" value="衣柜顶部"> 衣柜顶部</label>
+                </div>
+                <textarea name="worst_housework_supplement" placeholder="补充说明（选填）" style="margin-top: 10px;"></textarea>
+            </div>
+
+            
+
+            <div class="question">
+                <span class="question-text">26. 晾衣服的偏好？</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="dry_clothes" value="绝对不想在客厅看到阳台挂着内衣裤，全靠烘干机"> 绝对不想在客厅看到阳台挂着内衣裤，全靠烘干机</label>
+                    <label class="option-label"><input type="checkbox" name="dry_clothes" value="必须有阳光紫外线杀毒的执念"> 必须有阳光紫外线杀毒的执念</label>
+                </div>
+            
+    <textarea name="dry_clothes_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">27. 主理人灵魂拷问 1：关于“家务”与“面子”</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="aesthetic_1" value="绝对的极简无死角"> 绝对的极简无死角</label>
+                    <label class="option-label"><input type="checkbox" name="aesthetic_1" value="愿意为了表面奢华而每天增加半小时家务（复杂雕花、积灰水晶灯）"> 愿意为了表面奢华而每天增加半小时家务（复杂雕花、积灰水晶灯）</label>
+                </div>
+            
+    <textarea name="aesthetic_1_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">28. 主理人灵魂拷问 2：关于“收纳哲学”</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="aesthetic_2" value="功能即美：把 80% 杂物全部隐藏进通顶柜，只展出 20% 精品"> 功能即美：把 80% 杂物全部隐藏进通顶柜，只展出 20% 精品</label>
+                    <label class="option-label"><input type="checkbox" name="aesthetic_2" value="展示即美：喜欢做满墙容易落灰的开放格子放手办和书"> 展示即美：喜欢做满墙容易落灰的开放格子放手办和书</label>
+                </div>
+            
+    <textarea name="aesthetic_2_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            <div class="question">
+                <span class="question-text">29. 主理人灵魂拷问 3：当“好用”与“好看”发生致命冲突时，您的底线是：</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="aesthetic_3" value="无条件让步给功能性（AXS 极客精神）"> 无条件让步给功能性（AXS 极客精神）</label>
+                    <label class="option-label"><input type="checkbox" name="aesthetic_3" value="必须兼顾好看，哪怕牺牲一些居住体验"> 必须兼顾好看，哪怕牺牲一些居住体验</label>
+                </div>
+            
+    <textarea name="aesthetic_3_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+        </div>
+
+        <!-- ================= 模块 07：皮肤与执念 ================= -->
+        <div class="module">
+            <span class="module-badge">07. 美学愿景</span>
+            <div class="module-title">模块 07 | 视觉皮肤与未来演进</div>
+            
+            <div class="question">
+                <span class="question-text">30. 在满足极致功能的前提下，您目前最倾向的“表层视觉风格”是？</span>
+                <span class="helper-text">选择强装饰的欧式法式将触发系统红线预警机制。</span>
+                                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="日式侘寂"> 日式侘寂</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="奶油风"> 奶油风</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="现代中式"> 现代中式</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="意式极简"> 意式极简</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="北欧风"> 北欧风</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="工业风"> 工业风</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="地中海风"> 地中海风</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="新古典风"> 新古典风</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="波西米亚风"> 波西米亚风</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="轻法式风"> 轻法式风</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="复古混搭风"> 复古混搭风</label>
+                    <label class="option-label"><input type="checkbox" name="visual_style" value="自然禅意风"> 自然禅意风</label>
+                </div>
+            
+    <textarea name="visual_style_supplement" class="supplement-input" placeholder="补充说明（选填）" style="width: 100%; margin-top: 15px; padding: 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white;"></textarea>
+</div>
+
+            
+
+            <div class="question">
+                <span class="question-text">31. 您对现在居住的房屋，最不能忍受的一个状态是？</span>
+                <input type="text" id="unbearable_status" name="unbearable_status" placeholder="例如：永远感觉台面很乱 / 衣服没地方晾">
+            </div>
+
+            <div class="question">
+                <span class="question-text">32. 终极一问：如果这次花几十万装修的新家，只能解决一个执念，您希望是什么？</span>
+                <textarea id="ultimate_dream" name="ultimate_dream" placeholder="请尽情倾诉您的居住梦想..."></textarea>
+            </div>
+        </div>
+
+        
+        <div style="display: flex; gap: 20px; margin-top: 40px;">
+            <button type="button" class="submit-btn" id="savePageBtn" style="flex: 1; background: #1a1a1a; color: #d4af37; border: 1px solid #d4af37;">1: 保存当前页面</button>
+            <button type="button" class="submit-btn" id="saveAsBtn" style="flex: 1;">2: 另存为 JSON</button>
+        </div>
+    </form>
+
+
+    
+    <section id="resultPanel" class="result-panel" aria-live="polite">
+        <div class="module-badge">AXS Report</div>
+        <div class="module-title">客户需求数据已生成</div>
+        <p class="helper-text">JSON 文件已下载，或者您可以在此复制 Markdown 格式。</p>
+        <div class="result-actions">
+            <button type="button" class="action-btn" id="copyReport">查看/复制 JSON 数据</button>
+        </div>
+        <textarea id="reportOutput" class="report-output" readonly></textarea>
+    </section>
+</div>
+
+
+<!-- Extreme UI Elements -->
+<div class="grain-overlay"></div>
+<div class="cyber-grid"></div>
+<div id="custom-cursor-dot"></div>
+<div id="custom-cursor-ring"></div>
+
+<script>
+    // 1. Custom Cursor Logic
+    const cursorDot = document.getElementById('custom-cursor-dot');
+    const cursorRing = document.getElementById('custom-cursor-ring');
+    
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let ringX = mouseX;
+    let ringY = mouseY;
+    
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorDot.style.left = `${mouseX}px`;
+        cursorDot.style.top = `${mouseY}px`;
+    });
+    
+    // Smooth trailing effect for ring
+    function renderCursor() {
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        cursorRing.style.left = `${ringX}px`;
+        cursorRing.style.top = `${ringY}px`;
+        requestAnimationFrame(renderCursor);
+    }
+    requestAnimationFrame(renderCursor);
+
+    // Hover states for cursor
+    const hoverElements = document.querySelectorAll('input, label, button, textarea, a');
+    hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+
+    // 2. Staggered Reveals (Intersection Observer)
+    const modules = document.querySelectorAll('.module, .warm-box');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-visible');
+                // Optional: stop observing once revealed
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    modules.forEach((mod, index) => {
+        // Add staggered transition delay based on index for initial load
+        mod.style.transitionDelay = `${index * 0.05}s`;
+        observer.observe(mod);
+    });
+    
+    // Remove delay after initial reveal so hover effects are instant
+    setTimeout(() => {
+        modules.forEach(mod => mod.style.transitionDelay = '0s');
+    }, 2000);
+</script>
+
+<script>
+    const form = document.getElementById("axsSurveyForm");
+    const resultPanel = document.getElementById("resultPanel");
+    const reportOutput = document.getElementById("reportOutput");
+    
+    // 提取表单值并生成 JSON
+    function buildReportJSON() {
+        const formData = new FormData(form);
+        const jsonObj = {};
+        for (let [key, value] of formData.entries()) {
+            if (value instanceof File) {
+                if (!value.name) continue;
+                value = value.name;
+            }
+            if (!jsonObj[key]) {
+                jsonObj[key] = value;
+            } else {
+                if (!Array.isArray(jsonObj[key])) {
+                    jsonObj[key] = [jsonObj[key]];
+                }
+                jsonObj[key].push(value);
+            }
+        }
+        return JSON.stringify(jsonObj, null, 4);
+    }
+
+    // 下载 JSON 文件
+    function downloadJSON() {
+        const jsonStr = buildReportJSON();
+        const blob = new Blob([jsonStr], { type: "application/json;charset=utf-8" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        
+        const formData = new FormData(form);
+        const username = (formData.get("username") || "客户").replace(/[\/\:\*\?"<>\|]/g, "").trim();
+        link.download = `AXS_客户调研_${username}_${new Date().toISOString().split("T")[0]}.json`;
+        
+        link.click();
+        URL.revokeObjectURL(link.href);
+    }
+
+    // 保存当前页面按钮
+    document.getElementById("savePageBtn").addEventListener("click", function() {
+        downloadJSON();
+        alert("当前页面数据已成功保存为 JSON 文件！");
+    });
+
+    // 另存为按钮
+    document.getElementById("saveAsBtn").addEventListener("click", function() {
+        downloadJSON();
+    });
+
+    // 防止默认提交
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+    });
+
+    // 查看并复制数据
+    document.getElementById("copyReport").addEventListener("click", async function () {
+        const jsonStr = buildReportJSON();
+        try {
+            await navigator.clipboard.writeText(jsonStr);
+            this.textContent = "复制成功！";
+            setTimeout(() => this.textContent = "查看/复制 JSON 数据", 1800);
+        } catch (error) {
+            alert("复制失败，请手动复制");
+        }
+    });
+</script>
+
+<!-- Mascots -->
+<img src="./builder_boy.png" class="mascot mascot-left" alt="Builder Boy">
+<img src="./designer_girl.png" class="mascot mascot-right" alt="Designer Girl">
+
+</body>
+</html>
