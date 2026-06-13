@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AXS 居住形态深度勘探雷达 (满配级)</title>
     <!-- 
-    [版本编号: V1.1]
-    [最后修改: 2026-06-13 22:31]
-    [修改内容: 增加 localStorage 表单防丢失自动保存机制]
+    [版本编号: V1.6]
+    [最后修改: 2026-06-13 22:47]
+    [修改内容: 回退为本地直读模式，准备配合自动化脚本强制拉取 MP3]
     -->
     
 <style>
@@ -570,6 +570,42 @@
     @media (max-width: 800px) {
         .mascot { display: none; }
     }
+
+    /* === [版本编号: V1.2] 久石让风格音乐播放器样式 === */
+    #music-btn {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgba(20, 20, 20, 0.65);
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 9999; /* 保证在最上层 */
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+        font-size: 1.2rem;
+        opacity: 0.7;
+    }
+    #music-btn:hover {
+        transform: scale(1.1);
+        background: rgba(212, 175, 55, 0.15);
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    }
+    .music-playing {
+        animation: spin 6s linear infinite;
+        opacity: 1 !important;
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.3) !important;
+    }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    /* ============================================== */
 </style>
 
 </head>
@@ -1381,6 +1417,69 @@
 <!-- Mascots -->
 <img src="./builder_boy.png" class="mascot mascot-left" alt="Builder Boy">
 <img src="./designer_girl.png" class="mascot mascot-right" alt="Designer Girl">
+
+<!-- === [版本编号: V1.6] 极速本地沉浸音乐 === -->
+<audio id="bg-music" loop>
+    <!-- 强制读取同目录下的 bgm.mp3 文件 -->
+    <source src="./bgm.mp3" type="audio/mpeg">
+</audio>
+<div id="music-btn" title="播放/暂停音乐">🎵</div>
+
+<script>
+    // 音乐播放器控制逻辑
+    const musicBtn = document.getElementById('music-btn');
+    const bgMusic = document.getElementById('bg-music');
+    // 调低音量，营造舒缓不刺耳的填表氛围
+    bgMusic.volume = 0.4; 
+    let isMusicPlaying = false;
+
+    function playMusic() {
+        if (!isMusicPlaying) {
+            bgMusic.play().then(() => {
+                musicBtn.classList.add('music-playing');
+                musicBtn.style.opacity = '1';
+                isMusicPlaying = true;
+            }).catch(e => console.log("浏览器限制了纯自动播放，等待下一次交互..."));
+        }
+    }
+
+    function toggleMusic() {
+        if (isMusicPlaying) {
+            bgMusic.pause();
+            musicBtn.classList.remove('music-playing');
+            musicBtn.style.opacity = '0.7';
+            isMusicPlaying = false;
+        } else {
+            playMusic();
+        }
+    }
+
+    musicBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // 阻止冒泡
+        toggleMusic();
+    });
+
+    // === [版本编号: V1.3] 突破现代浏览器限制的自动播放引擎 ===
+    // 现代 Chrome/Safari 严禁在无交互时直接播放音乐
+    // 我们通过劫持用户的“第一次任意自然动作”（比如滑动、点击输入框）来静默解锁音乐
+    const unlockMusic = () => {
+        if (!isMusicPlaying) playMusic();
+        document.removeEventListener('click', unlockMusic);
+        document.removeEventListener('keydown', unlockMusic);
+        document.removeEventListener('scroll', unlockMusic);
+        document.removeEventListener('touchstart', unlockMusic);
+    };
+
+    document.addEventListener('click', unlockMusic);
+    document.addEventListener('keydown', unlockMusic);
+    document.addEventListener('scroll', unlockMusic);
+    document.addEventListener('touchstart', unlockMusic);
+
+    // 尝试暴力强播（如果用户之前给过该网站权限就会成功）
+    playMusic();
+    // ==============================================
+</script>
+<!-- ============================================== -->
 
 </body>
 </html>
