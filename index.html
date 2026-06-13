@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AXS 居住形态深度勘探雷达 (满配级)</title>
     <!-- 
-    [版本编号: V1.6]
-    [最后修改: 2026-06-13 22:47]
-    [修改内容: 回退为本地直读模式，准备配合自动化脚本强制拉取 MP3]
+    [版本编号: V1.7]
+    [最后修改: 2026-06-13 22:49]
+    [修改内容: 彻底重构底层音乐状态机，原生支持 Autoplay 并修复状态丢失问题]
     -->
     
 <style>
@@ -1418,65 +1418,59 @@
 <img src="./builder_boy.png" class="mascot mascot-left" alt="Builder Boy">
 <img src="./designer_girl.png" class="mascot mascot-right" alt="Designer Girl">
 
-<!-- === [版本编号: V1.6] 极速本地沉浸音乐 === -->
-<audio id="bg-music" loop>
+<!-- === [版本编号: V1.7] 极速本地沉浸音乐 === -->
+<audio id="bg-music" loop autoplay>
     <!-- 强制读取同目录下的 bgm.mp3 文件 -->
     <source src="./bgm.mp3" type="audio/mpeg">
 </audio>
 <div id="music-btn" title="播放/暂停音乐">🎵</div>
 
 <script>
-    // 音乐播放器控制逻辑
+    // 音乐播放器控制逻辑（基于真实状态机重构）
     const musicBtn = document.getElementById('music-btn');
     const bgMusic = document.getElementById('bg-music');
     // 调低音量，营造舒缓不刺耳的填表氛围
     bgMusic.volume = 0.4; 
-    let isMusicPlaying = false;
 
-    function playMusic() {
-        if (!isMusicPlaying) {
-            bgMusic.play().then(() => {
-                musicBtn.classList.add('music-playing');
-                musicBtn.style.opacity = '1';
-                isMusicPlaying = true;
-            }).catch(e => console.log("浏览器限制了纯自动播放，等待下一次交互..."));
-        }
-    }
-
-    function toggleMusic() {
-        if (isMusicPlaying) {
-            bgMusic.pause();
-            musicBtn.classList.remove('music-playing');
-            musicBtn.style.opacity = '0.7';
-            isMusicPlaying = false;
-        } else {
-            playMusic();
-        }
-    }
-
-    musicBtn.addEventListener('click', function(e) {
-        e.stopPropagation(); // 阻止冒泡
-        toggleMusic();
+    // 监听真实的音频状态来控制 UI，防止代码跟实际播放情况脱节
+    bgMusic.addEventListener('play', () => {
+        musicBtn.classList.add('music-playing');
+        musicBtn.style.opacity = '1';
     });
 
-    // === [版本编号: V1.3] 突破现代浏览器限制的自动播放引擎 ===
-    // 现代 Chrome/Safari 严禁在无交互时直接播放音乐
-    // 我们通过劫持用户的“第一次任意自然动作”（比如滑动、点击输入框）来静默解锁音乐
+    bgMusic.addEventListener('pause', () => {
+        musicBtn.classList.remove('music-playing');
+        musicBtn.style.opacity = '0.7';
+    });
+
+    // 按钮手动控制
+    musicBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // 阻止冒泡
+        if (bgMusic.paused) {
+            bgMusic.play().catch(e => console.log("播放被拦截", e));
+        } else {
+            bgMusic.pause();
+        }
+    });
+
+    // === [版本编号: V1.7] 终极突破机制 ===
+    // 如果浏览器无情拦截了 HTML 里的 autoplay 属性
+    // 我们会在用户的“第一次滚动或点击”时硬启动它
     const unlockMusic = () => {
-        if (!isMusicPlaying) playMusic();
+        if (bgMusic.paused) {
+            bgMusic.play().catch(e => {});
+        }
+        // 成功触发一次后，销毁这些监听器，避免耗费性能
         document.removeEventListener('click', unlockMusic);
+        window.removeEventListener('scroll', unlockMusic);
         document.removeEventListener('keydown', unlockMusic);
-        document.removeEventListener('scroll', unlockMusic);
         document.removeEventListener('touchstart', unlockMusic);
     };
 
     document.addEventListener('click', unlockMusic);
+    window.addEventListener('scroll', unlockMusic); // 绑定到 window 确保能捕获滚动
     document.addEventListener('keydown', unlockMusic);
-    document.addEventListener('scroll', unlockMusic);
     document.addEventListener('touchstart', unlockMusic);
-
-    // 尝试暴力强播（如果用户之前给过该网站权限就会成功）
-    playMusic();
     // ==============================================
 </script>
 <!-- ============================================== -->
