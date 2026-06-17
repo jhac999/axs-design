@@ -1066,6 +1066,7 @@
             body: JSON.stringify({
                 _subject: "【AXS设计工作室】收到一份新的客户需求表单！",
                 _template: "table",
+                _captcha: "false",
                 数据内容: jsonData
             })
         })
@@ -1082,7 +1083,7 @@
             }
         })
         .catch(error => {
-            alert("网络连接异常，请点击【另存为 JSON】并手动发送给我们。");
+            alert("网络连接异常: " + error.message + "\n（如果您安装了拦截广告插件，请将其关闭后重试，或者按 F12 查看控制台报错）\n请点击【另存为 JSON】手动发送。");
             btn.textContent = originalText;
             btn.disabled = false;
         });
