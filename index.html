@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AXS 居住形态深度勘探雷达 (满配级)</title>
-    <!-- 
-    [版本编号: V1.7]
-    [最后修改: 2026-06-13 22:49]
-    [修改内容: 彻底重构底层音乐状态机，原生支持 Autoplay 并修复状态丢失问题]
-    -->
     
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
@@ -399,213 +394,6 @@
             font-size: 2em;
         }
     }
-
-    /* EXTREME AESTHETICS OVERRIDES */
-    
-    /* 1. Custom Cursor */
-    body {
-        cursor: none;
-    }
-    a, button, input, label, textarea {
-        cursor: none !important;
-    }
-
-    #custom-cursor-dot {
-        position: fixed;
-        top: 0; left: 0;
-        width: 8px; height: 8px;
-        background: var(--accent);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transform: translate(-50%, -50%);
-        box-shadow: 0 0 10px var(--accent);
-        transition: width 0.2s, height 0.2s;
-    }
-
-    #custom-cursor-ring {
-        position: fixed;
-        top: 0; left: 0;
-        width: 32px; height: 32px;
-        border: 1px solid rgba(212, 175, 55, 0.5);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9998;
-        transform: translate(-50%, -50%);
-        transition: width 0.3s, height 0.3s, border-color 0.3s, transform 0.1s ease-out;
-    }
-
-    .cursor-hover #custom-cursor-dot {
-        width: 0; height: 0;
-    }
-
-    .cursor-hover #custom-cursor-ring {
-        width: 48px; height: 48px;
-        border-color: var(--accent);
-        background: rgba(212, 175, 55, 0.1);
-        backdrop-filter: blur(2px);
-    }
-
-    /* 2. Grain Overlay */
-    .grain-overlay {
-        position: fixed;
-        top: 0; left: 0; width: 100vw; height: 100vh;
-        pointer-events: none;
-        z-index: 9000;
-        opacity: 0.04;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    }
-
-    /* 3. Cyber-Grid Distortion */
-    .cyber-grid {
-        position: fixed;
-        bottom: -20vh;
-        left: -50vw;
-        width: 200vw;
-        height: 60vh;
-        background-image: 
-            linear-gradient(rgba(212, 175, 55, 0.2) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(212, 175, 55, 0.2) 1px, transparent 1px);
-        background-size: 40px 40px;
-        transform: perspective(600px) rotateX(75deg);
-        transform-origin: top;
-        z-index: -1;
-        pointer-events: none;
-        animation: gridMove 10s linear infinite;
-        mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
-        -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
-    }
-
-    @keyframes gridMove {
-        0% { transform: perspective(600px) rotateX(75deg) translateY(0); }
-        100% { transform: perspective(600px) rotateX(75deg) translateY(40px); }
-    }
-
-    /* 4. Dramatic Shadows & Depth */
-    .module {
-        background: rgba(12, 12, 12, 0.7);
-        border: 1px solid rgba(212, 175, 55, 0.2);
-        box-shadow: 
-            0 30px 60px rgba(0, 0, 0, 0.9),
-            0 0 40px rgba(212, 175, 55, 0.05),
-            inset 0 1px 0 rgba(255, 255, 255, 0.05);
-        opacity: 0;
-        transform: translateY(40px) scale(0.98);
-        transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
-    }
-
-    .module.reveal-visible {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-    .module:hover {
-        transform: translateY(-5px) scale(1.01);
-        box-shadow: 
-            0 40px 80px rgba(0, 0, 0, 1),
-            0 0 60px rgba(212, 175, 55, 0.1),
-            inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        border-color: rgba(212, 175, 55, 0.5);
-    }
-    
-    .header h1 {
-        text-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 5px 15px rgba(0,0,0,0.8);
-        letter-spacing: 4px;
-    }
-
-
-    
-    
-    
-    
-    /* Mascot Characters */
-    .mascot {
-        position: fixed;
-        top: 50%;
-        width: 600px;
-        z-index: 0;
-        pointer-events: none;
-        mix-blend-mode: screen; 
-        opacity: 0.95;
-        filter: contrast(1.3) brightness(0.85);
-        -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 60%, transparent 100%);
-        mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 60%, transparent 100%);
-        transform-origin: center center;
-    }
-
-    .mascot-left {
-        left: 18%; /* Center point is 18% from the left edge */
-        animation: walkInPlaceLeft 1.4s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
-    }
-
-    .mascot-right {
-        left: 82%; /* Center point is 82% from the left edge */
-        animation: walkInPlaceRight 1.5s cubic-bezier(0.4, 0.0, 0.2, 1) infinite 0.7s;
-    }
-
-    @keyframes walkInPlaceLeft {
-        0% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
-        25% { transform: translate(-50%, calc(-50% - 15px)) scaleY(1.02) rotate(1.5deg); }
-        50% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
-        75% { transform: translate(-50%, calc(-50% - 15px)) scaleY(1.02) rotate(-1.5deg); }
-        100% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
-    }
-    
-    @keyframes walkInPlaceRight {
-        0% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
-        25% { transform: translate(-50%, calc(-50% - 15px)) scaleY(1.02) rotate(1.5deg); }
-        50% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
-        75% { transform: translate(-50%, calc(-50% - 15px)) scaleY(1.02) rotate(-1.5deg); }
-        100% { transform: translate(-50%, -50%) scaleY(1) rotate(0deg); }
-    }
-
-    @media (max-width: 1600px) {
-        .mascot { width: 500px; opacity: 0.8; }
-        .mascot-left { left: 15%; }
-        .mascot-right { left: 85%; }
-    }
-    @media (max-width: 1200px) {
-        .mascot { width: 400px; opacity: 0.5; }
-    }
-    @media (max-width: 800px) {
-        .mascot { display: none; }
-    }
-
-    /* === [版本编号: V1.2] 久石让风格音乐播放器样式 === */
-    #music-btn {
-        position: fixed;
-        top: 30px;
-        right: 30px;
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        background: rgba(20, 20, 20, 0.65);
-        border: 1px solid var(--accent);
-        color: var(--accent);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 9999; /* 保证在最上层 */
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
-        font-size: 1.2rem;
-        opacity: 0.7;
-    }
-    #music-btn:hover {
-        transform: scale(1.1);
-        background: rgba(212, 175, 55, 0.15);
-        opacity: 1;
-        box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
-    }
-    .music-playing {
-        animation: spin 6s linear infinite;
-        opacity: 1 !important;
-        box-shadow: 0 0 25px rgba(212, 175, 55, 0.3) !important;
-    }
-    @keyframes spin { 100% { transform: rotate(360deg); } }
-    /* ============================================== */
 </style>
 
 </head>
@@ -1201,7 +989,7 @@
 
         
         <div style="display: flex; gap: 20px; margin-top: 40px;">
-            <button type="button" class="submit-btn" id="savePageBtn" style="flex: 1; background: #1a1a1a; color: #d4af37; border: 1px solid #d4af37;">1: 保存当前页面</button>
+            <button type="button" class="submit-btn" id="savePageBtn" style="flex: 1; background: #1a1a1a; color: #d4af37; border: 1px solid #d4af37;">1: 提交表单至工作室</button>
             <button type="button" class="submit-btn" id="saveAsBtn" style="flex: 1;">2: 另存为 JSON</button>
         </div>
     </form>
@@ -1218,74 +1006,6 @@
         <textarea id="reportOutput" class="report-output" readonly></textarea>
     </section>
 </div>
-
-
-<!-- Extreme UI Elements -->
-<div class="grain-overlay"></div>
-<div class="cyber-grid"></div>
-<div id="custom-cursor-dot"></div>
-<div id="custom-cursor-ring"></div>
-
-<script>
-    // 1. Custom Cursor Logic
-    const cursorDot = document.getElementById('custom-cursor-dot');
-    const cursorRing = document.getElementById('custom-cursor-ring');
-    
-    let mouseX = window.innerWidth / 2;
-    let mouseY = window.innerHeight / 2;
-    let ringX = mouseX;
-    let ringY = mouseY;
-    
-    window.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursorDot.style.left = `${mouseX}px`;
-        cursorDot.style.top = `${mouseY}px`;
-    });
-    
-    // Smooth trailing effect for ring
-    function renderCursor() {
-        ringX += (mouseX - ringX) * 0.15;
-        ringY += (mouseY - ringY) * 0.15;
-        cursorRing.style.left = `${ringX}px`;
-        cursorRing.style.top = `${ringY}px`;
-        requestAnimationFrame(renderCursor);
-    }
-    requestAnimationFrame(renderCursor);
-
-    // Hover states for cursor
-    const hoverElements = document.querySelectorAll('input, label, button, textarea, a');
-    hoverElements.forEach(el => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
-
-    // 2. Staggered Reveals (Intersection Observer)
-    const modules = document.querySelectorAll('.module, .warm-box');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('reveal-visible');
-                // Optional: stop observing once revealed
-                // observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    });
-
-    modules.forEach((mod, index) => {
-        // Add staggered transition delay based on index for initial load
-        mod.style.transitionDelay = `${index * 0.05}s`;
-        observer.observe(mod);
-    });
-    
-    // Remove delay after initial reveal so hover effects are instant
-    setTimeout(() => {
-        modules.forEach(mod => mod.style.transitionDelay = '0s');
-    }, 2000);
-</script>
 
 <script>
     const form = document.getElementById("axsSurveyForm");
@@ -1328,10 +1048,44 @@
         URL.revokeObjectURL(link.href);
     }
 
-    // 保存当前页面按钮
+    // 提交表单至工作室邮箱
     document.getElementById("savePageBtn").addEventListener("click", function() {
-        downloadJSON();
-        alert("当前页面数据已成功保存为 JSON 文件！");
+        const btn = this;
+        const originalText = btn.textContent;
+        btn.textContent = "正在发送...";
+        btn.disabled = true;
+
+        const jsonData = buildReportJSON();
+
+        fetch("https://formsubmit.co/ajax/el/hayifo", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                _subject: "【AXS设计工作室】收到一份新的客户需求表单！",
+                _template: "table",
+                数据内容: jsonData
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success) {
+                alert("感谢提交！主理人稍后会尽快与您联系。");
+                btn.textContent = "已成功发送";
+                btn.style.background = "#2a2a2a";
+            } else {
+                alert("发送失败，请点击【另存为 JSON】并手动发送给我们。");
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+        })
+        .catch(error => {
+            alert("网络连接异常，请点击【另存为 JSON】并手动发送给我们。");
+            btn.textContent = originalText;
+            btn.disabled = false;
+        });
     });
 
     // 另存为按钮
@@ -1355,125 +1109,6 @@
             alert("复制失败，请手动复制");
         }
     });
-
-    // === [版本编号: V1.1] [最后修改: 2026-06-13 22:31] 表单防丢失自动保存机制 ===
-    const STORAGE_KEY = 'axs_survey_autosave';
-
-    function saveFormData() {
-        const formData = new FormData(form);
-        const data = {};
-        for (let [key, value] of formData.entries()) {
-            if (value instanceof File) continue; // 跳过文件类型的保存
-            
-            if (!data[key]) {
-                data[key] = value;
-            } else {
-                if (!Array.isArray(data[key])) {
-                    data[key] = [data[key]];
-                }
-                data[key].push(value);
-            }
-        }
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    }
-
-    function loadFormData() {
-        const savedData = localStorage.getItem(STORAGE_KEY);
-        if (savedData) {
-            try {
-                const data = JSON.parse(savedData);
-                for (const key in data) {
-                    const values = Array.isArray(data[key]) ? data[key] : [data[key]];
-                    // 使用 CSS 属性选择器精确匹配 name，考虑中文字段或特殊字符，加上引号
-                    const inputs = form.querySelectorAll(`[name="${key}"]`);
-                    
-                    if (inputs.length === 0) continue;
-                    
-                    if (inputs[0].type === 'checkbox' || inputs[0].type === 'radio') {
-                        inputs.forEach(input => {
-                            if (values.includes(input.value)) {
-                                input.checked = true;
-                            }
-                        });
-                    } else if (inputs[0].type !== 'file') {
-                        inputs[0].value = values[0];
-                    }
-                }
-            } catch (e) {
-                console.error("加载自动保存数据失败", e);
-            }
-        }
-    }
-
-    // 监听所有输入行为并保存
-    form.addEventListener('input', saveFormData);
-    form.addEventListener('change', saveFormData);
-    
-    // 初始化时加载数据
-    loadFormData();
-    // ==============================================
 </script>
-
-<!-- Mascots -->
-<img src="./builder_boy.png" class="mascot mascot-left" alt="Builder Boy">
-<img src="./designer_girl.png" class="mascot mascot-right" alt="Designer Girl">
-
-<!-- === [版本编号: V1.7] 极速本地沉浸音乐 === -->
-<audio id="bg-music" loop autoplay>
-    <!-- 强制读取同目录下的 bgm.mp3 文件 -->
-    <source src="./bgm.mp3" type="audio/mpeg">
-</audio>
-<div id="music-btn" title="播放/暂停音乐">🎵</div>
-
-<script>
-    // 音乐播放器控制逻辑（基于真实状态机重构）
-    const musicBtn = document.getElementById('music-btn');
-    const bgMusic = document.getElementById('bg-music');
-    // 调低音量，营造舒缓不刺耳的填表氛围
-    bgMusic.volume = 0.4; 
-
-    // 监听真实的音频状态来控制 UI，防止代码跟实际播放情况脱节
-    bgMusic.addEventListener('play', () => {
-        musicBtn.classList.add('music-playing');
-        musicBtn.style.opacity = '1';
-    });
-
-    bgMusic.addEventListener('pause', () => {
-        musicBtn.classList.remove('music-playing');
-        musicBtn.style.opacity = '0.7';
-    });
-
-    // 按钮手动控制
-    musicBtn.addEventListener('click', function(e) {
-        e.stopPropagation(); // 阻止冒泡
-        if (bgMusic.paused) {
-            bgMusic.play().catch(e => console.log("播放被拦截", e));
-        } else {
-            bgMusic.pause();
-        }
-    });
-
-    // === [版本编号: V1.7] 终极突破机制 ===
-    // 如果浏览器无情拦截了 HTML 里的 autoplay 属性
-    // 我们会在用户的“第一次滚动或点击”时硬启动它
-    const unlockMusic = () => {
-        if (bgMusic.paused) {
-            bgMusic.play().catch(e => {});
-        }
-        // 成功触发一次后，销毁这些监听器，避免耗费性能
-        document.removeEventListener('click', unlockMusic);
-        window.removeEventListener('scroll', unlockMusic);
-        document.removeEventListener('keydown', unlockMusic);
-        document.removeEventListener('touchstart', unlockMusic);
-    };
-
-    document.addEventListener('click', unlockMusic);
-    window.addEventListener('scroll', unlockMusic); // 绑定到 window 确保能捕获滚动
-    document.addEventListener('keydown', unlockMusic);
-    document.addEventListener('touchstart', unlockMusic);
-    // ==============================================
-</script>
-<!-- ============================================== -->
-
 </body>
 </html>
