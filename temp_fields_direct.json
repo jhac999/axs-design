@@ -1,0 +1,1358 @@
+{
+  "ok": true,
+  "identity": "user",
+  "data": {
+    "fields": [
+      {
+        "defaultValue": null,
+        "id": "fld9vxSpQj",
+        "name": "6. 家庭常住成员构成及孩子年龄段：",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldCYRQcEc",
+        "multiple": true,
+        "name": "25. 对卧室的光线避光敏感度？",
+        "options": [
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "必须绝对全黑（要求遮光率 100%）"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "可以有微弱光线"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "喜欢被早上自然光叫醒"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldDsY6ilq",
+        "multiple": true,
+        "name": "11. 您回家后，包包、钥匙、穿过的外套一般习惯放在哪里？",
+        "options": [
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "进门鞋柜台面"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "玄关挂钩/挂衣区"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "客厅沙发"
+          },
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "餐桌/岛台"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "卧室"
+          },
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "经常随手乱放"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fld4pfzI6T",
+        "multiple": true,
+        "name": "空间 07｜厨房：烹饪习惯和设备需求是什么？",
+        "options": [
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "中厨爆炒"
+          },
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "西厨/轻食"
+          },
+          {
+            "hue": "Lime",
+            "lightness": "Lighter",
+            "name": "大备菜台面"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "双开门/大冰箱"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "洗碗机"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "蒸烤箱"
+          },
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "净水系统"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldNzFVbzD",
+        "multiple": true,
+        "name": "18. 极度重要！请勾选您已有或必买的【重型电器】：",
+        "options": [
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "双开大冰箱 (宽度\u003e80cm)"
+          },
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "独立热泵烘干机"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "13套以上大型洗碗机"
+          },
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "嵌入式大容量蒸烤箱"
+          },
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "24小时不间断 NAS 服务器 / 极路由"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "全屋软水/前置净水系统"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldYKo4HOQ",
+        "multiple": true,
+        "name": "20. 智能系统的基础布局：",
+        "options": [
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "基础安全防护布局"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "舒适生活体验布局"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "能源高效管理布局"
+          },
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "全屋智能"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fld0lWMNYQ",
+        "name": "1. 怎么称呼您？",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldux5WSj1",
+        "multiple": true,
+        "name": "27. 您最痛恨的家务死角是什么？",
+        "options": [
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "沙发底部"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "床底"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "厨房炉灶缝隙"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "卫生间马桶后侧"
+          },
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "衣柜顶部"
+          },
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fld65hUtr4",
+        "multiple": true,
+        "name": "空间 08｜卫生间：是否需要干湿分离或三分离？",
+        "options": [
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "干湿分离"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "三分离"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "双台盆"
+          },
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "化妆/护肤区"
+          },
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "老人小孩友好"
+          },
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "强收纳"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fld4FUNtRa",
+        "multiple": true,
+        "name": "14. 是否接受入户做一个 3-5cm 的【下沉式落尘区】？",
+        "options": [
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "强烈需要"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "不需要，我习惯全屋地面平铺"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldDZ8RE16",
+        "name": "10. 常住男/女主人净身高(cm)及厨房主要操作者惯用手：",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      },
+      {
+        "id": "fldLMTIiM2",
+        "name": "4. 客户意向设计图上传：",
+        "type": "attachment"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldVCbR0AZ",
+        "multiple": true,
+        "name": "12. 快递或外卖到家后，您通常在哪个区域拆解处理？",
+        "options": [
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "门外拆完"
+          },
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "玄关拆解"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "餐桌/岛台拆解"
+          },
+          {
+            "hue": "Lime",
+            "lightness": "Lighter",
+            "name": "厨房拆解"
+          },
+          {
+            "hue": "Lime",
+            "lightness": "Lighter",
+            "name": "客厅地面拆解"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "需要快递暂存区"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fld8q1QWC3",
+        "multiple": true,
+        "name": "空间 11｜书房：需要独立办公、阅读、学习或电竞功能吗？",
+        "options": [
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "独立办公"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "双人办公"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "孩子学习"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "阅读藏书"
+          },
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "电竞设备"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "视频会议"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "音乐工作室"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fld6kz7JJj",
+        "multiple": true,
+        "name": "空间 10｜阳台：更偏生活阳台、休闲阳台，还是复合阳台？",
+        "options": [
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "洗烘家政"
+          },
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "晾晒"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "储物柜"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "绿植"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "宠物"
+          },
+          {
+            "hue": "Lime",
+            "lightness": "Lighter",
+            "name": "休闲观景"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "flda47QVTF",
+        "multiple": false,
+        "name": "9. 宠物情况：",
+        "options": [
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "无"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "猫"
+          },
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "狗"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": ""
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldza4TJYY",
+        "multiple": true,
+        "name": "33. 在满足极致功能的前提下，您目前最倾向的“表层视觉风格”是？",
+        "options": [
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "日式侘寂"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "奶油风"
+          },
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "现代中式"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "意式极简"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "北欧风"
+          },
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "工业风"
+          },
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "地中海风"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "新古典风"
+          },
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "波西米亚风"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "轻法式风"
+          },
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "复古混搭风"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "自然禅意风"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldYdjYxmZ",
+        "multiple": true,
+        "name": "31. 主理人灵魂拷问 2：关于“收纳哲学”",
+        "options": [
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "功能即美：把 80% 杂物全部隐藏进通顶柜，只展出 20% 精品"
+          },
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "展示即美：喜欢做满墙容易落灰的开放格子放手办和书"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldWCjlG2w",
+        "name": "35. 您对现在居住的房屋，最不能忍受的一个状态是？",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldXkI7Gi8",
+        "multiple": true,
+        "name": "空间 03｜次卧 2：希望保留固定卧室，还是做弹性空间？",
+        "options": [
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "固定卧室"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "儿童房"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "客房"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "书房"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "衣帽间"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "影音/多功能房"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldtpixEif",
+        "multiple": true,
+        "name": "26. 为了获取极致安静，是否愿意牺牲卧室 5-10cm 层高做一个【架空隔音地台 (STC50+)】？",
+        "options": [
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "愿意，安静大过天"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "没必要，常规找平即可"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fld8nTzIja",
+        "name": "2. 房屋绝对信息（小区/户型/面积）：",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldy3xw4Dn",
+        "name": "36. 终极一问：如果这次花几十万装修的新家，只能解决一个执念，您希望是什么？",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldXb7XB5K",
+        "multiple": true,
+        "name": "30. 主理人灵魂拷问 1：关于“家务”与“面子”",
+        "options": [
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "绝对的极简无死角"
+          },
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "愿意为了表面奢华而每天增加半小时家务（复杂雕花、积灰水晶灯）"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldhQNJ75R",
+        "multiple": true,
+        "name": "空间 09｜玄关 / 入户区：进门第一步需要解决什么？",
+        "options": [
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "大鞋柜"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "换鞋凳"
+          },
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "挂衣区"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "包钥匙随手放"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "快递暂存"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "落尘区"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldOL5rMvS",
+        "multiple": true,
+        "name": "21. 早上家人是否经常因为同时要用马桶和洗手台而发生严重冲突？",
+        "options": [
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "经常，急需分离"
+          },
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "偶尔或没感觉"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldlqffHjA",
+        "multiple": true,
+        "name": "空间 12｜休闲区：希望在家里留出怎样的放松角落？",
+        "options": [
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "茶区"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "阅读角"
+          },
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "冥想放空"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "健身"
+          },
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "亲子游戏"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "音乐/手作"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldHOlwT8U",
+        "multiple": true,
+        "name": "空间 13｜储物 / 家政区：哪些东西最需要被妥善隐藏？",
+        "options": [
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "清洁工具"
+          },
+          {
+            "hue": "Lime",
+            "lightness": "Lighter",
+            "name": "囤货"
+          },
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "行李箱"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "换季衣物"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "工具箱"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "儿童/宠物用品"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fld4bsRzgN",
+        "name": "15. 在家醒着的时候，您最常待的空间是？",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldYDiPDQf",
+        "name": "17. 做饭的习惯以及在现居所遇到的最痛点是什么？",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldB16U6Xx",
+        "multiple": true,
+        "name": "24. 您的睡眠神经是否脆弱（极易被细微声音惊醒）？",
+        "options": [
+          {
+            "hue": "Blue",
+            "lightness": "Lighter",
+            "name": "对楼上冲水声极度敏感"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "对窗外车流马路噪音敏感"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "倒头就睡，完全不敏感"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldvTpqDlB",
+        "multiple": true,
+        "name": "空间 02｜次卧 1：主要给谁使用？",
+        "options": [
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "儿童房"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "老人房"
+          },
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "长期客房"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "书房兼卧室"
+          },
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "衣柜收纳"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldqvOTOnv",
+        "name": "7. 男主人出生日期与时间：",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      },
+      {
+        "id": "fldPv0xI9L",
+        "name": "3. 户型图上传：",
+        "type": "attachment"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldeTydNIa",
+        "multiple": true,
+        "name": "19. 扫拖机器人是否需要预留【自动上下水基站】？",
+        "options": [
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "是的，必须解放双手"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "不需要，人工加水"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldOcSQTW5",
+        "multiple": true,
+        "name": "32. 主理人灵魂拷问 3：当“好用”与“好看”发生致命冲突时，您的底线是：",
+        "options": [
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "无条件让步给功能性（AXS 极客精神）"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "必须兼顾好看，哪怕牺牲一些居住体验"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldsVs3iOG",
+        "multiple": true,
+        "name": "13. 下班回家后，您通常是马上开始做家务收拾，还是先瘫一会儿？",
+        "options": [
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "马上收拾"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "先坐下休息"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "先换衣洗手"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "先处理孩子/宠物"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "经常把东西临时放着"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "希望系统帮我降低家务"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldXW4vvek",
+        "multiple": true,
+        "name": "空间 05｜客厅：它最重要的生活角色是什么？",
+        "options": [
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "家庭陪伴"
+          },
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "会客"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "观影"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "亲子活动"
+          },
+          {
+            "hue": "Lime",
+            "lightness": "Lighter",
+            "name": "游戏/娱乐"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "展示收纳"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldgUSgTG8",
+        "multiple": true,
+        "name": "29. 晾衣服的偏好？",
+        "options": [
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "绝对不想在客厅看到阳台挂着内衣裤，全靠烘干机"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "必须有阳光紫外线杀毒的执念"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldlbmaCDj",
+        "multiple": true,
+        "name": "空间 01｜主卧：希望它承担哪些功能？",
+        "options": [
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "纯睡眠"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "主卫"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "衣帽间"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "梳妆区"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "办公/阅读"
+          },
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "隔音遮光"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldYKRFHf3",
+        "multiple": true,
+        "name": "空间结构调整：您对非承重墙调整的接受度是？",
+        "options": [
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "可以接受合理调整"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "尽量少动墙体"
+          },
+          {
+            "hue": "Lime",
+            "lightness": "Lighter",
+            "name": "不接受墙体调整"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldcoKNqxY",
+        "name": "8. 女主人出生日期与时间：",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldQrMYqxf",
+        "multiple": false,
+        "name": "5. 预算控制绝对红线范围：",
+        "options": [
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "15-30万"
+          },
+          {
+            "hue": "Turquoise",
+            "lightness": "Lighter",
+            "name": "30-50万"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "50-80万"
+          },
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "80万以上"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": ""
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldBxPIYa6",
+        "multiple": true,
+        "name": "空间 06｜就餐区：餐桌主要承担哪些场景？",
+        "options": [
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "日常吃饭"
+          },
+          {
+            "hue": "Carmine",
+            "lightness": "Lighter",
+            "name": "家庭聚餐"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "办公"
+          },
+          {
+            "hue": "Red",
+            "lightness": "Lighter",
+            "name": "辅导作业"
+          },
+          {
+            "hue": "Green",
+            "lightness": "Lighter",
+            "name": "手工/兴趣"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "临时置物"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldeyJ7QAj",
+        "multiple": true,
+        "name": "空间 04｜次卧 3：是否需要长期床位或特殊功能？",
+        "options": [
+          {
+            "hue": "Orange",
+            "lightness": "Lighter",
+            "name": "无此空间"
+          },
+          {
+            "hue": "Lime",
+            "lightness": "Lighter",
+            "name": "长期床位"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "储物间"
+          },
+          {
+            "hue": "Wathet",
+            "lightness": "Lighter",
+            "name": "办公"
+          },
+          {
+            "hue": "Yellow",
+            "lightness": "Lighter",
+            "name": "健身"
+          },
+          {
+            "hue": "Purple",
+            "lightness": "Lighter",
+            "name": "亲子活动"
+          },
+          {
+            "hue": "Gray",
+            "lightness": "Lighter",
+            "name": "其它"
+          }
+        ],
+        "type": "select"
+      },
+      {
+        "defaultValue": null,
+        "id": "fldCecQp0M",
+        "name": "16. 餐桌的真实使用场景（按高低频排序）？",
+        "style": {
+          "type": "plain"
+        },
+        "type": "text"
+      }
+    ],
+    "total": 46
+  },
+  "_notice": {
+    "update": {
+      "command": "lark-cli update",
+      "current": "1.0.46",
+      "latest": "1.0.47",
+      "message": "lark-cli 1.0.47 available, current 1.0.46, run: lark-cli update"
+    }
+  }
+}

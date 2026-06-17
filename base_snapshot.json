@@ -1,0 +1,5758 @@
+[
+  {
+    "schema": {
+      "base": {
+        "id": 7647085547533405380,
+        "token": "XfSUbWQSkam1hts6KExclg4xn76",
+        "name": "AXS客户需求深度调研库",
+        "rev": 9,
+        "subType": 0,
+        "tenantID": 7607875584536005820,
+        "extra": null,
+        "schemaVersion": 5,
+        "archiveEnabled": 0,
+        "objType": 8,
+        "timezone": "",
+        "bizType": 0,
+        "exType": 1,
+        "blocks": [
+          "tblxeUgvzATyEAEt"
+        ],
+        "blockInfos": {
+          "tblxeUgvzATyEAEt": {
+            "id": "tblxeUgvzATyEAEt",
+            "name": "数据表"
+          }
+        },
+        "trashBlockMap": {},
+        "rankInfo": {
+          "initRank": "i00000000",
+          "rankStep": 1048576
+        },
+        "tables": [],
+        "tableInfos": {},
+        "trashTableMap": {},
+        "limit": {
+          "rowsLimitGrayEnable": false,
+          "rowsLimit": 20000,
+          "copyRecordNumLimit": 20000,
+          "tableRowsLimitMap": {
+            "tblxeUgvzATyEAEt": 20000,
+            "tblOqDfGuKTrKoiQ": 20000,
+            "tbl4v3hKKewsxwwu": 20000
+          },
+          "rowsAddOnEnable": true,
+          "tableRowsAddOnEnableMap": {
+            "tblOqDfGuKTrKoiQ": true,
+            "tbl4v3hKKewsxwwu": true,
+            "tblxeUgvzATyEAEt": true
+          },
+          "isBasicTableRowsLimitEnable": true,
+          "tableMaxRowsLimit": 2000000,
+          "autoSandboxUpgradeEnable": true,
+          "rowsAddOnInfo": {
+            "tenantRowsAddOnEnable": false,
+            "tableUpgradeRowsDefaultType": 1,
+            "tableUpgradeBasicRows": 18000,
+            "tableUpgradeRowsMap": {
+              "tbl4v3hKKewsxwwu": {
+                "type": 1
+              },
+              "tblxeUgvzATyEAEt": {
+                "type": 1
+              },
+              "tblOqDfGuKTrKoiQ": {
+                "type": 1
+              }
+            },
+            "rowsAddOnV3Enable": true
+          }
+        },
+        "canSkipFormulaCountLimit": false,
+        "upgradeInfos": {
+          "canUpgradeBase": "to_sv5"
+        },
+        "enableBaseLocale": true
+      },
+      "owner": "7607875642234768606",
+      "tableMap": {
+        "tblxeUgvzATyEAEt": {
+          "id": "tblxeUgvzATyEAEt",
+          "name": "数据表"
+        },
+        "tblOqDfGuKTrKoiQ": {
+          "id": "tblOqDfGuKTrKoiQ",
+          "name": "调研数据"
+        },
+        "tbl4v3hKKewsxwwu": {
+          "id": "tbl4v3hKKewsxwwu",
+          "name": "AXS设计工作室表单"
+        }
+      },
+      "data": {
+        "table": {
+          "meta": {
+            "id": "tblxeUgvzATyEAEt",
+            "name": "",
+            "rev": 0,
+            "flag": 0,
+            "schemaVersion": 5,
+            "recordsNum": 0,
+            "depRev": "",
+            "exType": 0,
+            "level": 0,
+            "fxdbBirthRev": 0,
+            "archiveEnabled": 0,
+            "archiveRecordsNum": 0
+          },
+          "views": [
+            "vewV5qhi4t"
+          ],
+          "viewMap": {
+            "vewV5qhi4t": {
+              "id": "vewV5qhi4t",
+              "name": "表格",
+              "isPrivate": false,
+              "type": 1,
+              "owner": "0",
+              "publicLevel": 0,
+              "privateViewOwner": null,
+              "property": {
+                "records": null,
+                "fields": [
+                  "fldjzdp1fv",
+                  "flddxkWvcA",
+                  "fldtGdUq69",
+                  "fldOdYMZUl"
+                ],
+                "sortInfo": [],
+                "group": [],
+                "filterInfo": null,
+                "colInfos": {},
+                "rowHeightLevel": 1,
+                "frozenColCount": 1,
+                "cardViewSetting": null,
+                "hierarchyConfig": null,
+                "colorInfo": null
+              }
+            }
+          },
+          "fieldMap": {
+            "fldjzdp1fv": {
+              "name": "文本",
+              "isPrimary": true,
+              "type": 1,
+              "description": {}
+            },
+            "flddxkWvcA": {
+              "name": "单选",
+              "isPrimary": false,
+              "type": 3,
+              "property": {
+                "defaultValue": null,
+                "options": [],
+                "optionsType": 0,
+                "optionsRule": null
+              },
+              "description": {}
+            },
+            "fldtGdUq69": {
+              "name": "日期",
+              "isPrimary": false,
+              "type": 5,
+              "property": {
+                "displayTimeZone": false,
+                "autoFill": false,
+                "dateFormat": "yyyy/MM/dd",
+                "timeFormat": ""
+              },
+              "description": {}
+            },
+            "fldOdYMZUl": {
+              "name": "附件",
+              "isPrimary": false,
+              "type": 17,
+              "property": {
+                "capture": []
+              },
+              "description": {}
+            }
+          },
+          "fieldGroups": null,
+          "userMap": {
+            "7607875642234768606": {
+              "name": "用户865799",
+              "enName": "用户865799",
+              "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00v1_bdf565c7-5dd8-4453-8b8b-8810fa8dc6bg~?image_size=72x72&cut_type=default-face&quality=&format=jpeg&sticker_format=.webp"
+            }
+          },
+          "milestoneMap": {},
+          "resourceMap": {
+            "attachments": {
+              "data": {}
+            }
+          },
+          "rankInfo": {
+            "nextRank": "i00000000"
+          },
+          "primaryKey": "fldjzdp1fv"
+        },
+        "recordMap": null,
+        "recordMeta": null
+      },
+      "structVersion": 1
+    }
+  },
+  {
+    "schema": {
+      "base": {
+        "id": 7647085547533405380,
+        "token": "XfSUbWQSkam1hts6KExclg4xn76",
+        "name": "AXS客户需求深度调研库",
+        "rev": 9,
+        "subType": 0,
+        "tenantID": 7607875584536005820,
+        "extra": null,
+        "schemaVersion": 5,
+        "archiveEnabled": 0,
+        "objType": 8,
+        "timezone": "",
+        "bizType": 0,
+        "exType": 1,
+        "blocks": [
+          "tblxeUgvzATyEAEt",
+          "tblOqDfGuKTrKoiQ"
+        ],
+        "blockInfos": {
+          "tblxeUgvzATyEAEt": {
+            "id": "tblxeUgvzATyEAEt",
+            "name": "数据表"
+          },
+          "tblOqDfGuKTrKoiQ": {
+            "id": "tblOqDfGuKTrKoiQ",
+            "name": "调研数据"
+          }
+        },
+        "trashBlockMap": {},
+        "rankInfo": {
+          "initRank": "i00000000",
+          "rankStep": 1048576
+        },
+        "tables": [],
+        "tableInfos": {},
+        "trashTableMap": {},
+        "limit": {
+          "rowsLimitGrayEnable": false,
+          "rowsLimit": 20000,
+          "copyRecordNumLimit": 20000,
+          "tableRowsLimitMap": {
+            "tblxeUgvzATyEAEt": 20000,
+            "tblOqDfGuKTrKoiQ": 20000,
+            "tbl4v3hKKewsxwwu": 20000
+          },
+          "rowsAddOnEnable": true,
+          "tableRowsAddOnEnableMap": {
+            "tblxeUgvzATyEAEt": true,
+            "tblOqDfGuKTrKoiQ": true,
+            "tbl4v3hKKewsxwwu": true
+          },
+          "isBasicTableRowsLimitEnable": true,
+          "tableMaxRowsLimit": 2000000,
+          "autoSandboxUpgradeEnable": true,
+          "rowsAddOnInfo": {
+            "tenantRowsAddOnEnable": false,
+            "tableUpgradeRowsDefaultType": 1,
+            "tableUpgradeBasicRows": 18000,
+            "tableUpgradeRowsMap": {
+              "tbl4v3hKKewsxwwu": {
+                "type": 1
+              },
+              "tblxeUgvzATyEAEt": {
+                "type": 1
+              },
+              "tblOqDfGuKTrKoiQ": {
+                "type": 1
+              }
+            },
+            "rowsAddOnV3Enable": true
+          }
+        },
+        "canSkipFormulaCountLimit": false,
+        "upgradeInfos": {
+          "canUpgradeBase": "to_sv5"
+        },
+        "enableBaseLocale": true
+      },
+      "owner": "7607875642234768606",
+      "tableMap": {
+        "tbl4v3hKKewsxwwu": {
+          "id": "tbl4v3hKKewsxwwu",
+          "name": "AXS设计工作室表单"
+        },
+        "tblxeUgvzATyEAEt": {
+          "id": "tblxeUgvzATyEAEt",
+          "name": "数据表"
+        },
+        "tblOqDfGuKTrKoiQ": {
+          "id": "tblOqDfGuKTrKoiQ",
+          "name": "调研数据"
+        }
+      },
+      "data": {
+        "table": {
+          "meta": {
+            "id": "tblOqDfGuKTrKoiQ",
+            "name": "",
+            "rev": 0,
+            "flag": 0,
+            "schemaVersion": 5,
+            "recordsNum": 0,
+            "depRev": "",
+            "exType": 0,
+            "level": 0,
+            "fxdbBirthRev": 0,
+            "archiveEnabled": 0,
+            "archiveRecordsNum": 0
+          },
+          "views": [
+            "vewefrHXTB"
+          ],
+          "viewMap": {
+            "vewefrHXTB": {
+              "id": "vewefrHXTB",
+              "name": "Grid View",
+              "isPrivate": false,
+              "type": 1,
+              "owner": "0",
+              "publicLevel": 0,
+              "privateViewOwner": null,
+              "property": {
+                "records": null,
+                "fields": [
+                  "fld1BhpiHH"
+                ],
+                "sortInfo": [],
+                "group": [],
+                "filterInfo": null,
+                "colInfos": {},
+                "rowHeightLevel": 1,
+                "frozenColCount": 1,
+                "cardViewSetting": null,
+                "hierarchyConfig": null,
+                "colorInfo": null
+              }
+            }
+          },
+          "fieldMap": {
+            "fld1BhpiHH": {
+              "name": "ID",
+              "isPrimary": false,
+              "type": 1005,
+              "property": {
+                "ruleFieldOptions": [
+                  {
+                    "type": 2,
+                    "value": "NO."
+                  },
+                  {
+                    "value": "3",
+                    "type": 1
+                  }
+                ],
+                "isAdvancedRules": true,
+                "reformatExistingRecord": true
+              },
+              "description": {},
+              "fieldUIType": "AutoNumber"
+            }
+          },
+          "fieldGroups": null,
+          "userMap": {
+            "7607875642234768606": {
+              "name": "用户865799",
+              "enName": "用户865799",
+              "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00v1_bdf565c7-5dd8-4453-8b8b-8810fa8dc6bg~?image_size=72x72&cut_type=default-face&quality=&format=jpeg&sticker_format=.webp"
+            }
+          },
+          "milestoneMap": {},
+          "resourceMap": {},
+          "rankInfo": {
+            "nextRank": "i00000000"
+          },
+          "primaryKey": "fld1BhpiHH"
+        },
+        "recordMap": null,
+        "recordMeta": null
+      },
+      "structVersion": 1
+    }
+  },
+  {
+    "schema": {
+      "base": {
+        "id": 7647085547533405380,
+        "token": "XfSUbWQSkam1hts6KExclg4xn76",
+        "name": "AXS客户需求深度调研库",
+        "rev": 9,
+        "subType": 0,
+        "tenantID": 7607875584536005820,
+        "extra": null,
+        "schemaVersion": 5,
+        "archiveEnabled": 0,
+        "objType": 8,
+        "timezone": "",
+        "bizType": 0,
+        "exType": 1,
+        "blocks": [
+          "tblxeUgvzATyEAEt",
+          "tblOqDfGuKTrKoiQ",
+          "tbl4v3hKKewsxwwu"
+        ],
+        "blockInfos": {
+          "tbl4v3hKKewsxwwu": {
+            "id": "tbl4v3hKKewsxwwu",
+            "name": "AXS设计工作室表单"
+          },
+          "tblxeUgvzATyEAEt": {
+            "id": "tblxeUgvzATyEAEt",
+            "name": "数据表"
+          },
+          "tblOqDfGuKTrKoiQ": {
+            "id": "tblOqDfGuKTrKoiQ",
+            "name": "调研数据"
+          }
+        },
+        "trashBlockMap": {},
+        "rankInfo": {
+          "initRank": "i00000000",
+          "rankStep": 1048576
+        },
+        "tables": [],
+        "tableInfos": {},
+        "trashTableMap": {},
+        "limit": {
+          "rowsLimitGrayEnable": false,
+          "rowsLimit": 20000,
+          "copyRecordNumLimit": 20000,
+          "tableRowsLimitMap": {
+            "tblxeUgvzATyEAEt": 20000,
+            "tblOqDfGuKTrKoiQ": 20000,
+            "tbl4v3hKKewsxwwu": 20000
+          },
+          "rowsAddOnEnable": true,
+          "tableRowsAddOnEnableMap": {
+            "tblxeUgvzATyEAEt": true,
+            "tblOqDfGuKTrKoiQ": true,
+            "tbl4v3hKKewsxwwu": true
+          },
+          "isBasicTableRowsLimitEnable": true,
+          "tableMaxRowsLimit": 2000000,
+          "autoSandboxUpgradeEnable": true,
+          "rowsAddOnInfo": {
+            "tenantRowsAddOnEnable": false,
+            "tableUpgradeRowsDefaultType": 1,
+            "tableUpgradeBasicRows": 18000,
+            "tableUpgradeRowsMap": {
+              "tblxeUgvzATyEAEt": {
+                "type": 1
+              },
+              "tblOqDfGuKTrKoiQ": {
+                "type": 1
+              },
+              "tbl4v3hKKewsxwwu": {
+                "type": 1
+              }
+            },
+            "rowsAddOnV3Enable": true
+          }
+        },
+        "canSkipFormulaCountLimit": false,
+        "upgradeInfos": {
+          "canUpgradeBase": "to_sv5"
+        },
+        "enableBaseLocale": true
+      },
+      "owner": "7607875642234768606",
+      "tableMap": {
+        "tbl4v3hKKewsxwwu": {
+          "id": "tbl4v3hKKewsxwwu",
+          "name": "AXS设计工作室表单"
+        },
+        "tblxeUgvzATyEAEt": {
+          "id": "tblxeUgvzATyEAEt",
+          "name": "数据表"
+        },
+        "tblOqDfGuKTrKoiQ": {
+          "id": "tblOqDfGuKTrKoiQ",
+          "name": "调研数据"
+        }
+      },
+      "data": {
+        "table": {
+          "meta": {
+            "id": "tbl4v3hKKewsxwwu",
+            "name": "",
+            "rev": 242,
+            "flag": 0,
+            "schemaVersion": 5,
+            "recordsNum": 3,
+            "depRev": "",
+            "exType": 0,
+            "level": 0,
+            "fxdbBirthRev": 0,
+            "archiveEnabled": 0,
+            "archiveRecordsNum": 0
+          },
+          "views": [
+            "vewW4Bin6S",
+            "vewVn1FefB",
+            "vewotBn0em",
+            "vewcl30Lrc",
+            "vew0LuadK4",
+            "vewTp3ELCV"
+          ],
+          "viewMap": {
+            "vewotBn0em": {
+              "id": "vewotBn0em",
+              "name": "表单 2 副本",
+              "isPrivate": false,
+              "type": 3,
+              "owner": "0",
+              "publicLevel": 0,
+              "bizType": 0,
+              "privateViewOwner": null,
+              "property": {
+                "fields": [
+                  "fld0lWMNYQ",
+                  "fld8nTzIja",
+                  "fldPv0xI9L",
+                  "fldLMTIiM2",
+                  "fldQrMYqxf",
+                  "fld9vxSpQj",
+                  "fldqvOTOnv",
+                  "fldcoKNqxY",
+                  "flda47QVTF",
+                  "fldDZ8RE16",
+                  "fldlbmaCDj",
+                  "fldXkI7Gi8",
+                  "fldvTpqDlB",
+                  "fldeyJ7QAj",
+                  "fldBxPIYa6",
+                  "fld4pfzI6T",
+                  "fldXW4vvek",
+                  "fld65hUtr4",
+                  "fldhQNJ75R",
+                  "fld6kz7JJj",
+                  "fldlqffHjA",
+                  "fldHOlwT8U",
+                  "fld8q1QWC3",
+                  "fldYKRFHf3",
+                  "fldDsY6ilq",
+                  "fldVCbR0AZ",
+                  "fldsVs3iOG",
+                  "fld4FUNtRa",
+                  "fld4bsRzgN",
+                  "fldCecQp0M",
+                  "fldYDiPDQf",
+                  "fldNzFVbzD",
+                  "fldeTydNIa",
+                  "fldYKo4HOQ",
+                  "fldOL5rMvS",
+                  "fldB16U6Xx",
+                  "fldCYRQcEc",
+                  "fldtpixEif",
+                  "fldux5WSj1",
+                  "fldgUSgTG8",
+                  "fldYdjYxmZ",
+                  "fldXb7XB5K",
+                  "fldOcSQTW5",
+                  "fldza4TJYY",
+                  "fldWCjlG2w",
+                  "fldy3xw4Dn"
+                ],
+                "formBanner": "",
+                "fieldInfos": {
+                  "fldYdjYxmZ": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "31. 主理人灵魂拷问 2：关于“收纳哲学”"
+                  },
+                  "fldqvOTOnv": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "7. 男主人出生日期与时间："
+                  },
+                  "fldq5h9glM": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "23. 家人是否有严重鼻炎、哮喘，或对甲醛/粉尘极度敏感？"
+                  },
+                  "fld8nTzIja": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "2. 房屋绝对信息（小区/户型/面积）："
+                  },
+                  "fldXb7XB5K": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "30. 主理人灵魂拷问 1：关于“家务”与“面子”"
+                  },
+                  "fldB16U6Xx": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "24. 您的睡眠神经是否脆弱（极易被细微声音惊醒）？"
+                  },
+                  "fld6kz7JJj": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 10｜阳台：更偏生活阳台、休闲阳台，还是复合阳台？"
+                  },
+                  "fldPv0xI9L": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "3. 户型图上传："
+                  },
+                  "fldeTydNIa": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "19. 扫拖机器人是否需要预留【自动上下水基站】？"
+                  },
+                  "fldlbmaCDj": {
+                    "required": true,
+                    "visible": true,
+                    "title": "空间 01｜主卧：希望它承担哪些功能？",
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {
+                      "content": []
+                    },
+                    "mappingName": "空间 01｜主卧：希望它承担哪些功能？"
+                  },
+                  "fldBxPIYa6": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 06｜就餐区：餐桌主要承担哪些场景？"
+                  },
+                  "fldvTpqDlB": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 02｜次卧 1：主要给谁使用？"
+                  },
+                  "flduVq2Zyu": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "34. 未来 5 年内，家庭最可能发生的重大人口/习惯变数？"
+                  },
+                  "fldDsY6ilq": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "11. 您回家后，包包、钥匙、穿过的外套一般习惯放在哪里？"
+                  },
+                  "fldza4TJYY": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "33. 在满足极致功能的前提下，您目前最倾向的“表层视觉风格”是？"
+                  },
+                  "flda47QVTF": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "9. 宠物情况："
+                  },
+                  "fldgUSgTG8": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "29. 晾衣服的偏好？"
+                  },
+                  "fldCYRQcEc": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "25. 对卧室的光线避光敏感度？"
+                  },
+                  "fldXkI7Gi8": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 03｜次卧 2：希望保留固定卧室，还是做弹性空间？"
+                  },
+                  "fldhQNJ75R": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 09｜玄关 / 入户区：进门第一步需要解决什么？"
+                  },
+                  "fldOL5rMvS": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "21. 早上家人是否经常因为同时要用马桶和洗手台而发生严重冲突？"
+                  },
+                  "fldtpixEif": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "26. 为了获取极致安静，是否愿意牺牲卧室 5-10cm 层高做一个【架空隔音地台 (STC50+)】？"
+                  },
+                  "fldCecQp0M": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "16. 餐桌的真实使用场景（按高低频排序）？"
+                  },
+                  "fld8q1QWC3": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 11｜书房：需要独立办公、阅读、学习或电竞功能吗？"
+                  },
+                  "fldeyJ7QAj": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 04｜次卧 3：是否需要长期床位或特殊功能？"
+                  },
+                  "fldDZ8RE16": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "10. 常住男/女主人净身高(cm)及厨房主要操作者惯用手："
+                  },
+                  "fldXW4vvek": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 05｜客厅：它最重要的生活角色是什么？"
+                  },
+                  "fldhT0qUu1": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "28. 扫地机器人目前在您家最容易卡住的地方？"
+                  },
+                  "fldNzFVbzD": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "18. 极度重要！请勾选您已有或必买的【重型电器】："
+                  },
+                  "fld0lWMNYQ": {
+                    "required": true,
+                    "visible": true,
+                    "title": "1. 怎么称呼您？",
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {
+                      "content": []
+                    },
+                    "mappingName": "1. 怎么称呼您？"
+                  },
+                  "fldYKo4HOQ": {
+                    "required": true,
+                    "visible": true,
+                    "title": "20. 智能系统的基础布局：",
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {
+                      "content": []
+                    },
+                    "mappingName": "20. 智能系统的基础布局："
+                  },
+                  "fldux5WSj1": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "27. 您最痛恨的家务死角是什么？"
+                  },
+                  "fldlqffHjA": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 12｜休闲区：希望在家里留出怎样的放松角落？"
+                  },
+                  "fldLMTIiM2": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "4. 客户意向设计图上传："
+                  },
+                  "fld9vxSpQj": {
+                    "required": true,
+                    "visible": true,
+                    "title": "6. 家庭常住成员构成及孩子年龄段：",
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {
+                      "content": []
+                    },
+                    "mappingName": "6. 家庭常住成员构成及孩子年龄段："
+                  },
+                  "fld210Glii": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "21. 请填写您必买的最庞大/最异型的电器的预估尺寸（长宽高）："
+                  },
+                  "fld65hUtr4": {
+                    "required": true,
+                    "visible": true,
+                    "title": "空间 08｜卫生间：是否需要干湿分离或三分离？",
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {
+                      "content": []
+                    },
+                    "mappingName": "空间 08｜卫生间：是否需要干湿分离或三分离？"
+                  },
+                  "fldOcSQTW5": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "32. 主理人灵魂拷问 3：当“好用”与“好看”发生致命冲突时，您的底线是："
+                  },
+                  "fldsVs3iOG": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "13. 下班回家后，您通常是马上开始做家务收拾，还是先瘫一会儿？"
+                  },
+                  "fldYKRFHf3": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间结构调整：您对非承重墙调整的接受度是？"
+                  },
+                  "fldcoKNqxY": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "8. 女主人出生日期与时间："
+                  },
+                  "fldKI0cRDk": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "22. 女主人的化妆与护肤动线习惯是？"
+                  },
+                  "fldy3xw4Dn": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "36. 终极一问：如果这次花几十万装修的新家，只能解决一个执念，您希望是什么？"
+                  },
+                  "fldQrMYqxf": {
+                    "required": true,
+                    "visible": true,
+                    "title": "5. 预算控制绝对红线范围：",
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {
+                      "content": []
+                    },
+                    "mappingName": "5. 预算控制绝对红线范围："
+                  },
+                  "fldWCjlG2w": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "35. 您对现在居住的房屋，最不能忍受的一个状态是？"
+                  },
+                  "fld4FUNtRa": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "14. 是否接受入户做一个 3-5cm 的【下沉式落尘区】？"
+                  },
+                  "fld4bsRzgN": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "15. 在家醒着的时候，您最常待的空间是？"
+                  },
+                  "fld4pfzI6T": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 07｜厨房：烹饪习惯和设备需求是什么？"
+                  },
+                  "fldYDiPDQf": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "17. 做饭的习惯以及在现居所遇到的最痛点是什么？"
+                  },
+                  "fldVCbR0AZ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "12. 快递或外卖到家后，您通常在哪个区域拆解处理？"
+                  },
+                  "fldHOlwT8U": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": "空间 13｜储物 / 家政区：哪些东西最需要被妥善隐藏？"
+                  }
+                },
+                "primaryKey": "fld0lWMNYQ",
+                "formBannerInfo": null,
+                "isFormV2": true,
+                "themeSettings": {
+                  "background": {
+                    "color": "",
+                    "imageToken": "",
+                    "defaultImage": null
+                  },
+                  "illustration": {
+                    "token": "9",
+                    "layout": "background",
+                    "mimeType": "image/png",
+                    "height": 1856,
+                    "width": 2464,
+                    "defaultImage": null,
+                    "backgroundUrl": "",
+                    "mobileBackgroundUrl": ""
+                  },
+                  "title": {
+                    "font": "text-title",
+                    "border": "",
+                    "background": "",
+                    "hoverBackground": "",
+                    "activeBackground": ""
+                  },
+                  "description": {
+                    "font": "",
+                    "border": "",
+                    "background": "",
+                    "hoverBackground": "",
+                    "activeBackground": ""
+                  },
+                  "fieldCardTitle": {
+                    "font": "text-title",
+                    "border": "",
+                    "background": "",
+                    "hoverBackground": "",
+                    "activeBackground": ""
+                  },
+                  "fieldCardPlaceholder": {
+                    "font": "",
+                    "border": "",
+                    "background": "",
+                    "hoverBackground": "",
+                    "activeBackground": ""
+                  },
+                  "option": {
+                    "font": "text-title",
+                    "border": "line-border-component",
+                    "background": "N50",
+                    "hoverBackground": "",
+                    "activeBackground": "",
+                    "optionIcon": {
+                      "font": "",
+                      "border": "text-title",
+                      "background": "component-outlined-bg",
+                      "hoverBackground": "",
+                      "activeBackground": ""
+                    }
+                  },
+                  "editor": {
+                    "font": "",
+                    "border": "",
+                    "background": "",
+                    "hoverBackground": "",
+                    "activeBackground": ""
+                  },
+                  "submitBtn": {
+                    "font": "",
+                    "border": "",
+                    "background": "",
+                    "hoverBackground": "",
+                    "activeBackground": ""
+                  },
+                  "fieldSerialNumber": {
+                    "font": "text-title",
+                    "border": "",
+                    "background": "",
+                    "hoverBackground": "",
+                    "activeBackground": ""
+                  },
+                  "officialThemeTag": "gray",
+                  "themeColor": "#1F2329",
+                  "displayFormat": null,
+                  "addQuestionBackgroundColor": "",
+                  "selectImgHoverBackgroundColor": "",
+                  "selectImgHoverLeftBackgroundColor": ""
+                },
+                "newThemeSettings": null,
+                "userCustomSubmitButton": null,
+                "userCustomStartButton": null,
+                "userCustomSubmitResultPage": null,
+                "redirectAfterSubmit": null,
+                "tableQuestionConfigs": null,
+                "formSortOrder": null
+              }
+            },
+            "vewW4Bin6S": {
+              "id": "vewW4Bin6S",
+              "name": "AXS客户需求深度调研库",
+              "isPrivate": false,
+              "type": 1,
+              "owner": "0",
+              "publicLevel": 0,
+              "privateViewOwner": null,
+              "property": {
+                "records": [
+                  "rec27wBgaFKU48",
+                  "recvlzyqjeG3CL",
+                  "recvlzMPBRljfW"
+                ],
+                "fields": [
+                  "fld0lWMNYQ",
+                  "fld8nTzIja",
+                  "fldPv0xI9L",
+                  "fldLMTIiM2",
+                  "fldQrMYqxf",
+                  "fld9vxSpQj",
+                  "fldqvOTOnv",
+                  "fldcoKNqxY",
+                  "flda47QVTF",
+                  "fldDZ8RE16",
+                  "fldlbmaCDj",
+                  "fldXkI7Gi8",
+                  "fldvTpqDlB",
+                  "fldeyJ7QAj",
+                  "fldBxPIYa6",
+                  "fld4pfzI6T",
+                  "fldXW4vvek",
+                  "fld65hUtr4",
+                  "fldhQNJ75R",
+                  "fld6kz7JJj",
+                  "fldlqffHjA",
+                  "fldHOlwT8U",
+                  "fld8q1QWC3",
+                  "fldYKRFHf3",
+                  "fldDsY6ilq",
+                  "fldVCbR0AZ",
+                  "fldsVs3iOG",
+                  "fld4FUNtRa",
+                  "fld4bsRzgN",
+                  "fldCecQp0M",
+                  "fldYDiPDQf",
+                  "fldNzFVbzD",
+                  "fldeTydNIa",
+                  "fldYKo4HOQ",
+                  "fldOL5rMvS",
+                  "fldB16U6Xx",
+                  "fldCYRQcEc",
+                  "fldtpixEif",
+                  "fldux5WSj1",
+                  "fldgUSgTG8",
+                  "fldYdjYxmZ",
+                  "fldXb7XB5K",
+                  "fldOcSQTW5",
+                  "fldza4TJYY",
+                  "fldWCjlG2w",
+                  "fldy3xw4Dn"
+                ],
+                "sortInfo": [],
+                "group": [],
+                "filterInfo": null,
+                "colInfos": {
+                  "fld0lWMNYQ": {
+                    "width": 218,
+                    "hidden": false
+                  }
+                },
+                "rowHeightLevel": 1,
+                "frozenColCount": 1,
+                "cardViewSetting": null,
+                "hierarchyConfig": null,
+                "colorInfo": null
+              }
+            },
+            "vewcl30Lrc": {
+              "id": "vewcl30Lrc",
+              "name": "表单 3",
+              "isPrivate": false,
+              "type": 3,
+              "owner": "0",
+              "publicLevel": 0,
+              "bizType": 0,
+              "privateViewOwner": null,
+              "property": {
+                "fields": [
+                  "fld0lWMNYQ",
+                  "fld8nTzIja",
+                  "fldPv0xI9L",
+                  "fldLMTIiM2",
+                  "fldQrMYqxf",
+                  "fld9vxSpQj",
+                  "fldqvOTOnv",
+                  "fldcoKNqxY",
+                  "flda47QVTF",
+                  "fldDZ8RE16",
+                  "fldlbmaCDj",
+                  "fldXkI7Gi8",
+                  "fldvTpqDlB",
+                  "fldeyJ7QAj",
+                  "fldBxPIYa6",
+                  "fld4pfzI6T",
+                  "fldXW4vvek",
+                  "fld65hUtr4",
+                  "fldhQNJ75R",
+                  "fld6kz7JJj",
+                  "fldlqffHjA",
+                  "fldHOlwT8U",
+                  "fld8q1QWC3",
+                  "fldYKRFHf3",
+                  "fldDsY6ilq",
+                  "fldVCbR0AZ",
+                  "fldsVs3iOG",
+                  "fld4FUNtRa",
+                  "fld4bsRzgN",
+                  "fldCecQp0M",
+                  "fldYDiPDQf",
+                  "fldNzFVbzD",
+                  "fldeTydNIa",
+                  "fldYKo4HOQ",
+                  "fldOL5rMvS",
+                  "fldB16U6Xx",
+                  "fldCYRQcEc",
+                  "fldtpixEif",
+                  "fldux5WSj1",
+                  "fldgUSgTG8",
+                  "fldYdjYxmZ",
+                  "fldXb7XB5K",
+                  "fldOcSQTW5",
+                  "fldza4TJYY",
+                  "fldWCjlG2w",
+                  "fldy3xw4Dn"
+                ],
+                "formBanner": "",
+                "fieldInfos": {
+                  "fldYKo4HOQ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld8nTzIja": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldlqffHjA": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldOcSQTW5": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldVCbR0AZ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldOL5rMvS": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldDZ8RE16": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldBxPIYa6": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4pfzI6T": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld8q1QWC3": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldtpixEif": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldQrMYqxf": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldux5WSj1": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXW4vvek": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldeTydNIa": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld65hUtr4": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXkI7Gi8": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldqvOTOnv": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYKRFHf3": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld6kz7JJj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldCecQp0M": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXb7XB5K": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldCYRQcEc": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "flda47QVTF": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldvTpqDlB": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldDsY6ilq": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4FUNtRa": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYdjYxmZ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldLMTIiM2": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldHOlwT8U": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldWCjlG2w": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldNzFVbzD": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldza4TJYY": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld0lWMNYQ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldB16U6Xx": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldeyJ7QAj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldgUSgTG8": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYDiPDQf": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldPv0xI9L": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldhQNJ75R": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldlbmaCDj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldy3xw4Dn": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld9vxSpQj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldsVs3iOG": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4bsRzgN": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldcoKNqxY": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  }
+                },
+                "primaryKey": "fld0lWMNYQ",
+                "formBannerInfo": null,
+                "isFormV2": false,
+                "themeSettings": null,
+                "newThemeSettings": null,
+                "userCustomSubmitButton": null,
+                "userCustomStartButton": null,
+                "userCustomSubmitResultPage": null,
+                "redirectAfterSubmit": null,
+                "tableQuestionConfigs": null,
+                "formSortOrder": null
+              }
+            },
+            "vewTp3ELCV": {
+              "id": "vewTp3ELCV",
+              "name": "表单 5",
+              "isPrivate": false,
+              "type": 3,
+              "owner": "0",
+              "publicLevel": 0,
+              "bizType": 0,
+              "privateViewOwner": null,
+              "property": {
+                "fields": [
+                  "fld0lWMNYQ",
+                  "fld8nTzIja",
+                  "fldPv0xI9L",
+                  "fldLMTIiM2",
+                  "fldQrMYqxf",
+                  "fld9vxSpQj",
+                  "fldqvOTOnv",
+                  "fldcoKNqxY",
+                  "flda47QVTF",
+                  "fldDZ8RE16",
+                  "fldlbmaCDj",
+                  "fldXkI7Gi8",
+                  "fldvTpqDlB",
+                  "fldeyJ7QAj",
+                  "fldBxPIYa6",
+                  "fld4pfzI6T",
+                  "fldXW4vvek",
+                  "fld65hUtr4",
+                  "fldhQNJ75R",
+                  "fld6kz7JJj",
+                  "fldlqffHjA",
+                  "fldHOlwT8U",
+                  "fld8q1QWC3",
+                  "fldYKRFHf3",
+                  "fldDsY6ilq",
+                  "fldVCbR0AZ",
+                  "fldsVs3iOG",
+                  "fld4FUNtRa",
+                  "fld4bsRzgN",
+                  "fldCecQp0M",
+                  "fldYDiPDQf",
+                  "fldNzFVbzD",
+                  "fldeTydNIa",
+                  "fldYKo4HOQ",
+                  "fldOL5rMvS",
+                  "fldB16U6Xx",
+                  "fldCYRQcEc",
+                  "fldtpixEif",
+                  "fldux5WSj1",
+                  "fldgUSgTG8",
+                  "fldYdjYxmZ",
+                  "fldXb7XB5K",
+                  "fldOcSQTW5",
+                  "fldza4TJYY",
+                  "fldWCjlG2w",
+                  "fldy3xw4Dn"
+                ],
+                "formBanner": "",
+                "fieldInfos": {
+                  "fldvTpqDlB": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldhQNJ75R": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldCYRQcEc": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldlbmaCDj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld8nTzIja": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYdjYxmZ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldy3xw4Dn": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4bsRzgN": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld8q1QWC3": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldQrMYqxf": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld9vxSpQj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldsVs3iOG": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldPv0xI9L": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldza4TJYY": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldcoKNqxY": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldqvOTOnv": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldDsY6ilq": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldHOlwT8U": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4FUNtRa": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldB16U6Xx": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld65hUtr4": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4pfzI6T": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYKo4HOQ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXkI7Gi8": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldBxPIYa6": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld6kz7JJj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYDiPDQf": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldCecQp0M": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXb7XB5K": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldgUSgTG8": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldWCjlG2w": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldDZ8RE16": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldLMTIiM2": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldOcSQTW5": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldeyJ7QAj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldVCbR0AZ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldeTydNIa": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld0lWMNYQ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldtpixEif": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldlqffHjA": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "flda47QVTF": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYKRFHf3": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldux5WSj1": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldOL5rMvS": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldNzFVbzD": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXW4vvek": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  }
+                },
+                "primaryKey": "fld0lWMNYQ",
+                "formBannerInfo": null,
+                "isFormV2": false,
+                "themeSettings": null,
+                "newThemeSettings": null,
+                "userCustomSubmitButton": null,
+                "userCustomStartButton": null,
+                "userCustomSubmitResultPage": null,
+                "redirectAfterSubmit": null,
+                "tableQuestionConfigs": null,
+                "formSortOrder": null
+              }
+            },
+            "vew0LuadK4": {
+              "id": "vew0LuadK4",
+              "name": "表单 4",
+              "isPrivate": false,
+              "type": 3,
+              "owner": "0",
+              "publicLevel": 0,
+              "bizType": 0,
+              "privateViewOwner": null,
+              "property": {
+                "fields": [
+                  "fld0lWMNYQ",
+                  "fld8nTzIja",
+                  "fldPv0xI9L",
+                  "fldLMTIiM2",
+                  "fldQrMYqxf",
+                  "fld9vxSpQj",
+                  "fldqvOTOnv",
+                  "fldcoKNqxY",
+                  "flda47QVTF",
+                  "fldDZ8RE16",
+                  "fldlbmaCDj",
+                  "fldXkI7Gi8",
+                  "fldvTpqDlB",
+                  "fldeyJ7QAj",
+                  "fldBxPIYa6",
+                  "fld4pfzI6T",
+                  "fldXW4vvek",
+                  "fld65hUtr4",
+                  "fldhQNJ75R",
+                  "fld6kz7JJj",
+                  "fldlqffHjA",
+                  "fldHOlwT8U",
+                  "fld8q1QWC3",
+                  "fldYKRFHf3",
+                  "fldDsY6ilq",
+                  "fldVCbR0AZ",
+                  "fldsVs3iOG",
+                  "fld4FUNtRa",
+                  "fld4bsRzgN",
+                  "fldCecQp0M",
+                  "fldYDiPDQf",
+                  "fldNzFVbzD",
+                  "fldeTydNIa",
+                  "fldYKo4HOQ",
+                  "fldOL5rMvS",
+                  "fldB16U6Xx",
+                  "fldCYRQcEc",
+                  "fldtpixEif",
+                  "fldux5WSj1",
+                  "fldgUSgTG8",
+                  "fldYdjYxmZ",
+                  "fldXb7XB5K",
+                  "fldOcSQTW5",
+                  "fldza4TJYY",
+                  "fldWCjlG2w",
+                  "fldy3xw4Dn"
+                ],
+                "formBanner": "",
+                "fieldInfos": {
+                  "fldqvOTOnv": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldDZ8RE16": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldNzFVbzD": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldeyJ7QAj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldCecQp0M": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld8q1QWC3": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYdjYxmZ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldux5WSj1": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldlqffHjA": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYDiPDQf": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYKo4HOQ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldHOlwT8U": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXkI7Gi8": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYKRFHf3": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldPv0xI9L": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldVCbR0AZ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4pfzI6T": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "flda47QVTF": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXW4vvek": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld9vxSpQj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldgUSgTG8": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldy3xw4Dn": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXb7XB5K": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldB16U6Xx": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldDsY6ilq": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldvTpqDlB": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldCYRQcEc": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldcoKNqxY": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldtpixEif": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldlbmaCDj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4FUNtRa": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld0lWMNYQ": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldOL5rMvS": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldLMTIiM2": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldWCjlG2w": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldBxPIYa6": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldsVs3iOG": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldhQNJ75R": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld8nTzIja": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld6kz7JJj": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4bsRzgN": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldza4TJYY": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldOcSQTW5": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldQrMYqxf": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldeTydNIa": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld65hUtr4": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  }
+                },
+                "primaryKey": "fld0lWMNYQ",
+                "formBannerInfo": null,
+                "isFormV2": false,
+                "themeSettings": null,
+                "newThemeSettings": null,
+                "userCustomSubmitButton": null,
+                "userCustomStartButton": null,
+                "userCustomSubmitResultPage": null,
+                "redirectAfterSubmit": null,
+                "tableQuestionConfigs": null,
+                "formSortOrder": null
+              }
+            },
+            "vewVn1FefB": {
+              "id": "vewVn1FefB",
+              "name": "AXS客户需求表",
+              "isPrivate": false,
+              "type": 3,
+              "owner": "0",
+              "publicLevel": 0,
+              "bizType": 0,
+              "privateViewOwner": null,
+              "property": {
+                "fields": [
+                  "fld0lWMNYQ",
+                  "fld8nTzIja",
+                  "fldPv0xI9L",
+                  "fldLMTIiM2",
+                  "fldQrMYqxf",
+                  "fld9vxSpQj",
+                  "fldqvOTOnv",
+                  "fldcoKNqxY",
+                  "flda47QVTF",
+                  "fldDZ8RE16",
+                  "fldlbmaCDj",
+                  "fldXkI7Gi8",
+                  "fldvTpqDlB",
+                  "fldeyJ7QAj",
+                  "fldBxPIYa6",
+                  "fld4pfzI6T",
+                  "fldXW4vvek",
+                  "fld65hUtr4",
+                  "fldhQNJ75R",
+                  "fld6kz7JJj",
+                  "fldlqffHjA",
+                  "fldHOlwT8U",
+                  "fld8q1QWC3",
+                  "fldYKRFHf3",
+                  "fldDsY6ilq",
+                  "fldVCbR0AZ",
+                  "fldsVs3iOG",
+                  "fld4FUNtRa",
+                  "fld4bsRzgN",
+                  "fldCecQp0M",
+                  "fldYDiPDQf",
+                  "fldNzFVbzD",
+                  "fldeTydNIa",
+                  "fldYKo4HOQ",
+                  "fldOL5rMvS",
+                  "fldB16U6Xx",
+                  "fldCYRQcEc",
+                  "fldtpixEif",
+                  "fldux5WSj1",
+                  "fldgUSgTG8",
+                  "fldYdjYxmZ",
+                  "fldXb7XB5K",
+                  "fldOcSQTW5",
+                  "fldza4TJYY",
+                  "fldWCjlG2w",
+                  "fldy3xw4Dn"
+                ],
+                "formBanner": "",
+                "fieldInfos": {
+                  "fld0lWMNYQ": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld9vxSpQj": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldq5h9glM": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldlbmaCDj": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld210Glii": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld65hUtr4": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYKRFHf3": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldWCjlG2w": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYKo4HOQ": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXW4vvek": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld8nTzIja": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldhQNJ75R": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldeTydNIa": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldDsY6ilq": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXkI7Gi8": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldHOlwT8U": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldy3xw4Dn": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldvTpqDlB": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldPv0xI9L": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldB16U6Xx": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldNzFVbzD": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "flda47QVTF": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldtpixEif": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldOcSQTW5": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldKI0cRDk": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldhT0qUu1": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld8q1QWC3": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldCecQp0M": {
+                    "required": true,
+                    "visible": false,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldOL5rMvS": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldDZ8RE16": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldcoKNqxY": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4pfzI6T": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldVCbR0AZ": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldQrMYqxf": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "flduVq2Zyu": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldgUSgTG8": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldBxPIYa6": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldsVs3iOG": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldLMTIiM2": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldeyJ7QAj": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYDiPDQf": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4FUNtRa": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld4bsRzgN": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldza4TJYY": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldqvOTOnv": {
+                    "required": false,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldCYRQcEc": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldux5WSj1": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fld6kz7JJj": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldYdjYxmZ": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldlqffHjA": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  },
+                  "fldXb7XB5K": {
+                    "required": true,
+                    "visible": true,
+                    "optionFilter": {
+                      "conjunction": null,
+                      "conditions": []
+                    },
+                    "description": {},
+                    "mappingName": ""
+                  }
+                },
+                "primaryKey": "fld0lWMNYQ",
+                "formBannerInfo": null,
+                "isFormV2": false,
+                "themeSettings": null,
+                "newThemeSettings": null,
+                "userCustomSubmitButton": null,
+                "userCustomStartButton": null,
+                "userCustomSubmitResultPage": null,
+                "redirectAfterSubmit": null,
+                "tableQuestionConfigs": null,
+                "formSortOrder": {
+                  "sortOrder": [
+                    "fld0lWMNYQ",
+                    "fld8nTzIja",
+                    "fldPv0xI9L",
+                    "fldLMTIiM2",
+                    "fldQrMYqxf",
+                    "fld9vxSpQj",
+                    "fldqvOTOnv",
+                    "fldcoKNqxY",
+                    "flda47QVTF",
+                    "fldDZ8RE16",
+                    "fldlbmaCDj",
+                    "fldXkI7Gi8",
+                    "fldvTpqDlB",
+                    "fldeyJ7QAj",
+                    "fldBxPIYa6",
+                    "fld4pfzI6T",
+                    "fldXW4vvek",
+                    "fld65hUtr4",
+                    "fldhQNJ75R",
+                    "fld6kz7JJj",
+                    "fldlqffHjA",
+                    "fldHOlwT8U",
+                    "fld8q1QWC3",
+                    "fldYKRFHf3",
+                    "fldDsY6ilq",
+                    "fldVCbR0AZ",
+                    "fldsVs3iOG",
+                    "fld4FUNtRa",
+                    "fld4bsRzgN",
+                    "fldCecQp0M",
+                    "fldYDiPDQf",
+                    "fldNzFVbzD",
+                    "fldeTydNIa",
+                    "fldYKo4HOQ",
+                    "fld210Glii",
+                    "fldOL5rMvS",
+                    "fldKI0cRDk",
+                    "fldq5h9glM",
+                    "fldB16U6Xx",
+                    "fldCYRQcEc",
+                    "fldtpixEif",
+                    "fldux5WSj1",
+                    "fldhT0qUu1",
+                    "fldgUSgTG8",
+                    "fldYdjYxmZ",
+                    "fldXb7XB5K",
+                    "fldOcSQTW5",
+                    "fldza4TJYY",
+                    "flduVq2Zyu",
+                    "fldWCjlG2w",
+                    "fldy3xw4Dn"
+                  ]
+                }
+              }
+            }
+          },
+          "fieldMap": {
+            "fldsVs3iOG": {
+              "name": "13. 下班回家后，您通常是马上开始做家务收拾，还是先瘫一会儿？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "color": 5,
+                    "id": "optpZDp8wI",
+                    "name": "马上收拾"
+                  },
+                  {
+                    "name": "先坐下休息",
+                    "color": 2,
+                    "id": "optjkALuId"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optkkAOXlC",
+                    "name": "先换衣洗手"
+                  },
+                  {
+                    "color": 2,
+                    "id": "optFWdEqP0",
+                    "name": "先处理孩子/宠物"
+                  },
+                  {
+                    "id": "opteboKwPy",
+                    "name": "经常把东西临时放着",
+                    "color": 10
+                  },
+                  {
+                    "color": 10,
+                    "id": "optOzayfbA",
+                    "name": "希望系统帮我降低家务"
+                  },
+                  {
+                    "color": 10,
+                    "id": "opt9TTtuAy",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "fldYKo4HOQ": {
+              "name": "20. 智能系统的基础布局：",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "optionsType": 0,
+                "options": [
+                  {
+                    "color": 1,
+                    "id": "optg60jT6z",
+                    "name": "基础安全防护布局"
+                  },
+                  {
+                    "color": 2,
+                    "id": "optBVx3OYh",
+                    "name": "舒适生活体验布局"
+                  },
+                  {
+                    "name": "能源高效管理布局",
+                    "color": 3,
+                    "id": "optmkiGyaH"
+                  },
+                  {
+                    "id": "optLGmpz2J",
+                    "name": "全屋智能",
+                    "color": 0
+                  }
+                ]
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom"
+              }
+            },
+            "fldNzFVbzD": {
+              "name": "18. 极度重要！请勾选您已有或必买的【重型电器】：",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "id": "optVkX5xC0",
+                    "name": "双开大冰箱 (宽度>80cm)",
+                    "color": 0
+                  },
+                  {
+                    "color": 7,
+                    "id": "optkeO1qCR",
+                    "name": "独立热泵烘干机"
+                  },
+                  {
+                    "id": "optPGW7Ckv",
+                    "name": "13套以上大型洗碗机",
+                    "color": 3
+                  },
+                  {
+                    "name": "嵌入式大容量蒸烤箱",
+                    "color": 5,
+                    "id": "optGdv2WBU"
+                  },
+                  {
+                    "name": "24小时不间断 NAS 服务器 / 极路由",
+                    "color": 4,
+                    "id": "optbgal9kD"
+                  },
+                  {
+                    "name": "全屋软水/前置净水系统",
+                    "color": 10,
+                    "id": "optA7gPqzH"
+                  },
+                  {
+                    "name": "其它",
+                    "color": 10,
+                    "id": "optHFO21Hk"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "fldQrMYqxf": {
+              "name": "5. 预算控制绝对红线范围：",
+              "isPrimary": false,
+              "type": 3,
+              "property": {
+                "optionsType": 0,
+                "options": [
+                  {
+                    "color": 4,
+                    "id": "optomfJEgK",
+                    "name": "15-30万"
+                  },
+                  {
+                    "name": "30-50万",
+                    "color": 4,
+                    "id": "optOr0sei9"
+                  },
+                  {
+                    "id": "optTQCWE24",
+                    "name": "50-80万",
+                    "color": 10
+                  },
+                  {
+                    "color": 7,
+                    "id": "optnCWuFpa",
+                    "name": "80万以上"
+                  },
+                  {
+                    "name": "",
+                    "color": 10,
+                    "id": "optSt8rcTV"
+                  }
+                ]
+              },
+              "description": {},
+              "fieldUIType": "SingleSelect",
+              "exInfo": {
+                "fieldUIType": "SingleSelect"
+              }
+            },
+            "fld8q1QWC3": {
+              "name": "空间 11｜书房：需要独立办公、阅读、学习或电竞功能吗？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "color": 10,
+                    "id": "optov3Z2v1",
+                    "name": "独立办公"
+                  },
+                  {
+                    "name": "双人办公",
+                    "color": 2,
+                    "id": "optqiJHJde"
+                  },
+                  {
+                    "id": "optgtYxPxa",
+                    "name": "孩子学习",
+                    "color": 3
+                  },
+                  {
+                    "color": 6,
+                    "id": "optIDS247U",
+                    "name": "阅读藏书"
+                  },
+                  {
+                    "color": 0,
+                    "id": "optIlKAdvV",
+                    "name": "电竞设备"
+                  },
+                  {
+                    "name": "视频会议",
+                    "color": 6,
+                    "id": "optEtR3ODp"
+                  },
+                  {
+                    "color": 10,
+                    "id": "opt3pv9U52",
+                    "name": "音乐工作室"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "fld4bsRzgN": {
+              "name": "15. 在家醒着的时候，您最常待的空间是？",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "manual": true,
+                "scan": false
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fldy3xw4Dn": {
+              "name": "36. 终极一问：如果这次花几十万装修的新家，只能解决一个执念，您希望是什么？",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "manual": true,
+                "scan": false
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fldlqffHjA": {
+              "name": "空间 12｜休闲区：希望在家里留出怎样的放松角落？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "color": 3,
+                    "id": "optTUfbmom",
+                    "name": "茶区"
+                  },
+                  {
+                    "name": "阅读角",
+                    "color": 1,
+                    "id": "opt3ArdOGB"
+                  },
+                  {
+                    "color": 4,
+                    "id": "opt77JSjtq",
+                    "name": "冥想放空"
+                  },
+                  {
+                    "color": 3,
+                    "id": "optL6Q2mBY",
+                    "name": "健身"
+                  },
+                  {
+                    "color": 0,
+                    "id": "opts8yz7jf",
+                    "name": "亲子游戏"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optBZTK3Q3",
+                    "name": "音乐/手作"
+                  },
+                  {
+                    "name": "其它",
+                    "color": 10,
+                    "id": "optzmPirUa"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect"
+              }
+            },
+            "fldeTydNIa": {
+              "name": "19. 扫拖机器人是否需要预留【自动上下水基站】？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "name": "是的，必须解放双手",
+                    "color": 4,
+                    "id": "optOl3HLkj"
+                  },
+                  {
+                    "color": 8,
+                    "id": "optzuGkmFP",
+                    "name": "不需要，人工加水"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optAcwTWG7",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect"
+              }
+            },
+            "fldYdjYxmZ": {
+              "name": "31. 主理人灵魂拷问 2：关于“收纳哲学”",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "optionsType": 0,
+                "options": [
+                  {
+                    "name": "功能即美：把 80% 杂物全部隐藏进通顶柜，只展出 20% 精品",
+                    "color": 1,
+                    "id": "optUeisNmq"
+                  },
+                  {
+                    "id": "optamt6xDI",
+                    "name": "展示即美：喜欢做满墙容易落灰的开放格子放手办和书",
+                    "color": 7
+                  },
+                  {
+                    "color": 10,
+                    "id": "optgVw3FZn",
+                    "name": "其它"
+                  }
+                ]
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "fld6kz7JJj": {
+              "name": "空间 10｜阳台：更偏生活阳台、休闲阳台，还是复合阳台？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "optionsType": 0,
+                "options": [
+                  {
+                    "name": "洗烘家政",
+                    "color": 2,
+                    "id": "optRwORam3"
+                  },
+                  {
+                    "color": 0,
+                    "id": "optpI0XgQk",
+                    "name": "晾晒"
+                  },
+                  {
+                    "color": 6,
+                    "id": "optmJ3hQ04",
+                    "name": "储物柜"
+                  },
+                  {
+                    "id": "opts9IAqDP",
+                    "name": "绿植",
+                    "color": 3
+                  },
+                  {
+                    "color": 3,
+                    "id": "optPB1VEtd",
+                    "name": "宠物"
+                  },
+                  {
+                    "color": 9,
+                    "id": "optPyIzuSK",
+                    "name": "休闲观景"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optYePenUt",
+                    "name": "其它"
+                  }
+                ]
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5
+              }
+            },
+            "fldDsY6ilq": {
+              "name": "11. 您回家后，包包、钥匙、穿过的外套一般习惯放在哪里？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "optionsType": 0,
+                "options": [
+                  {
+                    "color": 6,
+                    "id": "optjVYkP4D",
+                    "name": "进门鞋柜台面"
+                  },
+                  {
+                    "id": "optm2crcpD",
+                    "name": "玄关挂钩/挂衣区",
+                    "color": 3
+                  },
+                  {
+                    "color": 1,
+                    "id": "optIC3R2cF",
+                    "name": "客厅沙发"
+                  },
+                  {
+                    "name": "餐桌/岛台",
+                    "color": 7,
+                    "id": "optKT1yCeP"
+                  },
+                  {
+                    "color": 8,
+                    "id": "optie9B0Co",
+                    "name": "卧室"
+                  },
+                  {
+                    "id": "optXLfJhL4",
+                    "name": "经常随手乱放",
+                    "color": 5
+                  },
+                  {
+                    "id": "optaodOrKF",
+                    "name": "其它",
+                    "color": 10
+                  }
+                ]
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom"
+              }
+            },
+            "fldLMTIiM2": {
+              "name": "4. 客户意向设计图上传：",
+              "isPrimary": false,
+              "type": 17,
+              "property": {
+                "capture": []
+              },
+              "description": {},
+              "fieldUIType": "Attachment",
+              "exInfo": {
+                "fieldUIType": "Attachment"
+              }
+            },
+            "fldgUSgTG8": {
+              "name": "29. 晾衣服的偏好？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "id": "opt3nJvt6q",
+                    "name": "绝对不想在客厅看到阳台挂着内衣裤，全靠烘干机",
+                    "color": 5
+                  },
+                  {
+                    "color": 1,
+                    "id": "opt7iiCKvK",
+                    "name": "必须有阳光紫外线杀毒的执念"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optzXC3xrp",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom"
+              }
+            },
+            "fldDZ8RE16": {
+              "name": "10. 常住男/女主人净身高(cm)及厨房主要操作者惯用手：",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "manual": true,
+                "scan": false
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fldXb7XB5K": {
+              "name": "30. 主理人灵魂拷问 1：关于“家务”与“面子”",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "optionsType": 0,
+                "options": [
+                  {
+                    "color": 4,
+                    "id": "optxD8hIRD",
+                    "name": "绝对的极简无死角"
+                  },
+                  {
+                    "color": 5,
+                    "id": "optTtCXJcb",
+                    "name": "愿意为了表面奢华而每天增加半小时家务（复杂雕花、积灰水晶灯）"
+                  },
+                  {
+                    "id": "optUWkcyQB",
+                    "name": "其它",
+                    "color": 10
+                  }
+                ]
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom"
+              }
+            },
+            "fld4FUNtRa": {
+              "name": "14. 是否接受入户做一个 3-5cm 的【下沉式落尘区】？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "name": "强烈需要",
+                    "color": 1,
+                    "id": "optKUBgk9v"
+                  },
+                  {
+                    "color": 2,
+                    "id": "optLbDJFA2",
+                    "name": "不需要，我习惯全屋地面平铺"
+                  },
+                  {
+                    "name": "其它",
+                    "color": 10,
+                    "id": "optj9B7Xev"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5
+              }
+            },
+            "fldOL5rMvS": {
+              "name": "21. 早上家人是否经常因为同时要用马桶和洗手台而发生严重冲突？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "color": 1,
+                    "id": "opt615rlU9",
+                    "name": "经常，急需分离"
+                  },
+                  {
+                    "color": 4,
+                    "id": "optnmgfFpn",
+                    "name": "偶尔或没感觉"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optDam2YmZ",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "fldCecQp0M": {
+              "name": "16. 餐桌的真实使用场景（按高低频排序）？",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "manual": true,
+                "scan": false
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fldYDiPDQf": {
+              "name": "17. 做饭的习惯以及在现居所遇到的最痛点是什么？",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "manual": true,
+                "scan": false
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fldHOlwT8U": {
+              "name": "空间 13｜储物 / 家政区：哪些东西最需要被妥善隐藏？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "id": "opth0mP0Bc",
+                    "name": "清洁工具",
+                    "color": 0
+                  },
+                  {
+                    "color": 9,
+                    "id": "optec8bVJa",
+                    "name": "囤货"
+                  },
+                  {
+                    "name": "行李箱",
+                    "color": 5,
+                    "id": "optKZtVGuy"
+                  },
+                  {
+                    "id": "optPoMbOj7",
+                    "name": "换季衣物",
+                    "color": 8
+                  },
+                  {
+                    "id": "optL7RPt48",
+                    "name": "工具箱",
+                    "color": 10
+                  },
+                  {
+                    "id": "opt6Wx63Dq",
+                    "name": "儿童/宠物用品",
+                    "color": 6
+                  },
+                  {
+                    "name": "其它",
+                    "color": 10,
+                    "id": "optRhqIDa8"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "fld9vxSpQj": {
+              "name": "6. 家庭常住成员构成及孩子年龄段：",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "scan": false,
+                "manual": true
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fld4pfzI6T": {
+              "name": "空间 07｜厨房：烹饪习惯和设备需求是什么？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "id": "optFJILcmP",
+                    "name": "中厨爆炒",
+                    "color": 1
+                  },
+                  {
+                    "name": "西厨/轻食",
+                    "color": 4,
+                    "id": "optTtRwPg4"
+                  },
+                  {
+                    "color": 9,
+                    "id": "optY0WZWmk",
+                    "name": "大备菜台面"
+                  },
+                  {
+                    "color": 1,
+                    "id": "optTPT0lK7",
+                    "name": "双开门/大冰箱"
+                  },
+                  {
+                    "color": 8,
+                    "id": "optSDEKlBq",
+                    "name": "洗碗机"
+                  },
+                  {
+                    "color": 1,
+                    "id": "opt07Bcsqn",
+                    "name": "蒸烤箱"
+                  },
+                  {
+                    "id": "optEGO8Joi",
+                    "name": "净水系统",
+                    "color": 7
+                  },
+                  {
+                    "color": 10,
+                    "id": "optHUAmbnQ",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "fldYKRFHf3": {
+              "name": "空间结构调整：您对非承重墙调整的接受度是？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "id": "optDHDir91",
+                    "name": "可以接受合理调整",
+                    "color": 5
+                  },
+                  {
+                    "id": "optTI0L5sh",
+                    "name": "尽量少动墙体",
+                    "color": 3
+                  },
+                  {
+                    "color": 9,
+                    "id": "optTucJREh",
+                    "name": "不接受墙体调整"
+                  },
+                  {
+                    "name": "其它",
+                    "color": 10,
+                    "id": "optfQocxrN"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5
+              }
+            },
+            "fldXkI7Gi8": {
+              "name": "空间 03｜次卧 2：希望保留固定卧室，还是做弹性空间？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "color": 4,
+                    "id": "optwaX9X0U",
+                    "name": "固定卧室"
+                  },
+                  {
+                    "color": 2,
+                    "id": "optGITq562",
+                    "name": "儿童房"
+                  },
+                  {
+                    "id": "optu9zXthp",
+                    "name": "客房",
+                    "color": 10
+                  },
+                  {
+                    "name": "书房",
+                    "color": 10,
+                    "id": "optRHFGRsU"
+                  },
+                  {
+                    "id": "optI171bya",
+                    "name": "衣帽间",
+                    "color": 8
+                  },
+                  {
+                    "id": "optmUwpHw3",
+                    "name": "影音/多功能房",
+                    "color": 8
+                  },
+                  {
+                    "id": "optdXIRUEp",
+                    "name": "其它",
+                    "color": 10
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "flda47QVTF": {
+              "name": "9. 宠物情况：",
+              "isPrimary": false,
+              "type": 3,
+              "property": {
+                "options": [
+                  {
+                    "id": "optCUFJrxc",
+                    "name": "无",
+                    "color": 10
+                  },
+                  {
+                    "id": "optBRUaWK8",
+                    "name": "猫",
+                    "color": 3
+                  },
+                  {
+                    "color": 7,
+                    "id": "optlnDba0Y",
+                    "name": "狗"
+                  },
+                  {
+                    "color": 10,
+                    "id": "opt4kGPgKK",
+                    "name": ""
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "SingleSelect",
+              "exInfo": {
+                "fieldUIType": "SingleSelect"
+              }
+            },
+            "fldOcSQTW5": {
+              "name": "32. 主理人灵魂拷问 3：当“好用”与“好看”发生致命冲突时，您的底线是：",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "color": 7,
+                    "id": "optXKwPy9J",
+                    "name": "无条件让步给功能性（AXS 极客精神）"
+                  },
+                  {
+                    "id": "opt4GVBWg0",
+                    "name": "必须兼顾好看，哪怕牺牲一些居住体验",
+                    "color": 8
+                  },
+                  {
+                    "color": 10,
+                    "id": "optbX1D2Up",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom"
+              }
+            },
+            "fldvTpqDlB": {
+              "name": "空间 02｜次卧 1：主要给谁使用？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "name": "儿童房",
+                    "color": 2,
+                    "id": "optzlLba0e"
+                  },
+                  {
+                    "color": 3,
+                    "id": "opt5HIUGu4",
+                    "name": "老人房"
+                  },
+                  {
+                    "color": 4,
+                    "id": "opt1QOYvwb",
+                    "name": "长期客房"
+                  },
+                  {
+                    "color": 1,
+                    "id": "optUien2c9",
+                    "name": "书房兼卧室"
+                  },
+                  {
+                    "id": "optUPftsQk",
+                    "name": "衣柜收纳",
+                    "color": 7
+                  },
+                  {
+                    "color": 10,
+                    "id": "optZASmils",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect"
+              }
+            },
+            "fldeyJ7QAj": {
+              "name": "空间 04｜次卧 3：是否需要长期床位或特殊功能？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "name": "无此空间",
+                    "color": 1,
+                    "id": "optLcDYDxr"
+                  },
+                  {
+                    "id": "optUMbb7Mb",
+                    "name": "长期床位",
+                    "color": 9
+                  },
+                  {
+                    "name": "储物间",
+                    "color": 3,
+                    "id": "optCC18D5g"
+                  },
+                  {
+                    "color": 2,
+                    "id": "optF41PTPz",
+                    "name": "办公"
+                  },
+                  {
+                    "color": 3,
+                    "id": "optx5928zT",
+                    "name": "健身"
+                  },
+                  {
+                    "color": 6,
+                    "id": "opt4qUxBJv",
+                    "name": "亲子活动"
+                  },
+                  {
+                    "name": "其它",
+                    "color": 10,
+                    "id": "opt9pPcM1e"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5
+              }
+            },
+            "fldqvOTOnv": {
+              "name": "7. 男主人出生日期与时间：",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "manual": true,
+                "scan": false
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fld8nTzIja": {
+              "name": "2. 房屋绝对信息（小区/户型/面积）：",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "manual": true,
+                "scan": false
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fldza4TJYY": {
+              "name": "33. 在满足极致功能的前提下，您目前最倾向的“表层视觉风格”是？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "id": "optkwQgkMM",
+                    "name": "日式侘寂",
+                    "color": 3
+                  },
+                  {
+                    "color": 10,
+                    "id": "optEGfzIHC",
+                    "name": "奶油风"
+                  },
+                  {
+                    "name": "现代中式",
+                    "color": 0,
+                    "id": "optyaMrVF6"
+                  },
+                  {
+                    "id": "optRPxLzzh",
+                    "name": "意式极简",
+                    "color": 1
+                  },
+                  {
+                    "name": "北欧风",
+                    "color": 2,
+                    "id": "optZCFXeyk"
+                  },
+                  {
+                    "id": "optuiRTsNC",
+                    "name": "工业风",
+                    "color": 4
+                  },
+                  {
+                    "name": "地中海风",
+                    "color": 5,
+                    "id": "optPUuHfQT"
+                  },
+                  {
+                    "color": 6,
+                    "id": "optpXWN4CW",
+                    "name": "新古典风"
+                  },
+                  {
+                    "color": 7,
+                    "id": "opt9EWPD1q",
+                    "name": "波西米亚风"
+                  },
+                  {
+                    "color": 8,
+                    "id": "optwEfE3bQ",
+                    "name": "轻法式风"
+                  },
+                  {
+                    "name": "复古混搭风",
+                    "color": 0,
+                    "id": "optR0HxF4c"
+                  },
+                  {
+                    "name": "自然禅意风",
+                    "color": 1,
+                    "id": "optTuikAxS"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optRfvrs4C",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "fldVCbR0AZ": {
+              "name": "12. 快递或外卖到家后，您通常在哪个区域拆解处理？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "optionsType": 0,
+                "options": [
+                  {
+                    "color": 1,
+                    "id": "opt9JXei4y",
+                    "name": "门外拆完"
+                  },
+                  {
+                    "color": 0,
+                    "id": "opt3QK9XQJ",
+                    "name": "玄关拆解"
+                  },
+                  {
+                    "color": 6,
+                    "id": "optsQ5Kg0c",
+                    "name": "餐桌/岛台拆解"
+                  },
+                  {
+                    "color": 9,
+                    "id": "optZmzbDGe",
+                    "name": "厨房拆解"
+                  },
+                  {
+                    "color": 9,
+                    "id": "optbQzx5px",
+                    "name": "客厅地面拆解"
+                  },
+                  {
+                    "name": "需要快递暂存区",
+                    "color": 6,
+                    "id": "optO2kRyMx"
+                  },
+                  {
+                    "name": "其它",
+                    "color": 10,
+                    "id": "optxy5lAED"
+                  }
+                ]
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "fldlbmaCDj": {
+              "name": "空间 01｜主卧：希望它承担哪些功能？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "optionsType": 0,
+                "options": [
+                  {
+                    "id": "optfh5PFwW",
+                    "name": "纯睡眠",
+                    "color": 4
+                  },
+                  {
+                    "color": 8,
+                    "id": "opti6fAlKG",
+                    "name": "主卫"
+                  },
+                  {
+                    "id": "optoIH4hVh",
+                    "name": "衣帽间",
+                    "color": 8
+                  },
+                  {
+                    "name": "梳妆区",
+                    "color": 1,
+                    "id": "optLH8mTxB"
+                  },
+                  {
+                    "color": 2,
+                    "id": "optH2yKTK1",
+                    "name": "办公/阅读"
+                  },
+                  {
+                    "name": "隔音遮光",
+                    "color": 1,
+                    "id": "optMxhreSY"
+                  },
+                  {
+                    "id": "optSgdmkjI",
+                    "name": "其它",
+                    "color": 10
+                  }
+                ]
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5
+              }
+            },
+            "fldcoKNqxY": {
+              "name": "8. 女主人出生日期与时间：",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "scan": false,
+                "manual": true
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fldXW4vvek": {
+              "name": "空间 05｜客厅：它最重要的生活角色是什么？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "color": 4,
+                    "id": "opt7e5WKnZ",
+                    "name": "家庭陪伴"
+                  },
+                  {
+                    "name": "会客",
+                    "color": 7,
+                    "id": "optXjlikaz"
+                  },
+                  {
+                    "color": 2,
+                    "id": "optyrvPxCU",
+                    "name": "观影"
+                  },
+                  {
+                    "color": 6,
+                    "id": "opt7yXnsuv",
+                    "name": "亲子活动"
+                  },
+                  {
+                    "name": "游戏/娱乐",
+                    "color": 9,
+                    "id": "optuMzLpnX"
+                  },
+                  {
+                    "id": "optQ3hev56",
+                    "name": "展示收纳",
+                    "color": 3
+                  },
+                  {
+                    "id": "optbTad2HJ",
+                    "name": "其它",
+                    "color": 10
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect"
+              }
+            },
+            "fldhQNJ75R": {
+              "name": "空间 09｜玄关 / 入户区：进门第一步需要解决什么？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "name": "大鞋柜",
+                    "color": 1,
+                    "id": "optWQ8jQS1"
+                  },
+                  {
+                    "color": 3,
+                    "id": "optREA2Fk5",
+                    "name": "换鞋凳"
+                  },
+                  {
+                    "id": "optasATKB6",
+                    "name": "挂衣区",
+                    "color": 0
+                  },
+                  {
+                    "name": "包钥匙随手放",
+                    "color": 2,
+                    "id": "optBgGt5Oy"
+                  },
+                  {
+                    "color": 1,
+                    "id": "optEXGw4zU",
+                    "name": "快递暂存"
+                  },
+                  {
+                    "color": 2,
+                    "id": "opt1BRCqcF",
+                    "name": "落尘区"
+                  },
+                  {
+                    "name": "其它",
+                    "color": 10,
+                    "id": "optjpcO3as"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect"
+              }
+            },
+            "fldBxPIYa6": {
+              "name": "空间 06｜就餐区：餐桌主要承担哪些场景？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "id": "optDkKpOir",
+                    "name": "日常吃饭",
+                    "color": 1
+                  },
+                  {
+                    "id": "optulykIMu",
+                    "name": "家庭聚餐",
+                    "color": 8
+                  },
+                  {
+                    "color": 2,
+                    "id": "optYyqTocy",
+                    "name": "办公"
+                  },
+                  {
+                    "color": 5,
+                    "id": "optVJLvQD2",
+                    "name": "辅导作业"
+                  },
+                  {
+                    "name": "手工/兴趣",
+                    "color": 7,
+                    "id": "optpNaDzRq"
+                  },
+                  {
+                    "color": 3,
+                    "id": "optDOrJRxf",
+                    "name": "临时置物"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optfIogmbN",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5
+              }
+            },
+            "fldux5WSj1": {
+              "name": "27. 您最痛恨的家务死角是什么？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "id": "optgG9Tu1u",
+                    "name": "沙发底部",
+                    "color": 0
+                  },
+                  {
+                    "name": "床底",
+                    "color": 1,
+                    "id": "optAsXJGZD"
+                  },
+                  {
+                    "name": "厨房炉灶缝隙",
+                    "color": 2,
+                    "id": "optWOvuCt4"
+                  },
+                  {
+                    "name": "卫生间马桶后侧",
+                    "color": 3,
+                    "id": "optxHNos1C"
+                  },
+                  {
+                    "color": 4,
+                    "id": "optlmQng7z",
+                    "name": "衣柜顶部"
+                  },
+                  {
+                    "color": 5,
+                    "id": "opt2Kfrhn0",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect"
+              }
+            },
+            "fldPv0xI9L": {
+              "name": "3. 户型图上传：",
+              "isPrimary": false,
+              "type": 17,
+              "property": {
+                "capture": []
+              },
+              "description": {},
+              "fieldUIType": "Attachment",
+              "exInfo": {
+                "fieldUIType": "Attachment"
+              }
+            },
+            "fld65hUtr4": {
+              "name": "空间 08｜卫生间：是否需要干湿分离或三分离？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "name": "干湿分离",
+                    "color": 3,
+                    "id": "optsYtvKP0"
+                  },
+                  {
+                    "color": 2,
+                    "id": "opt1wZZqNs",
+                    "name": "三分离"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optrjByHk8",
+                    "name": "双台盆"
+                  },
+                  {
+                    "color": 4,
+                    "id": "optpYtXfxk",
+                    "name": "化妆/护肤区"
+                  },
+                  {
+                    "color": 5,
+                    "id": "optnyiMiWW",
+                    "name": "老人小孩友好"
+                  },
+                  {
+                    "name": "强收纳",
+                    "color": 4,
+                    "id": "opthvHMr4q"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optD5ctu0K",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5
+              }
+            },
+            "fldB16U6Xx": {
+              "name": "24. 您的睡眠神经是否脆弱（极易被细微声音惊醒）？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "color": 0,
+                    "id": "optNIfICa7",
+                    "name": "对楼上冲水声极度敏感"
+                  },
+                  {
+                    "id": "opt5Ta8p2Y",
+                    "name": "对窗外车流马路噪音敏感",
+                    "color": 6
+                  },
+                  {
+                    "id": "optIJLUFnK",
+                    "name": "倒头就睡，完全不敏感",
+                    "color": 6
+                  },
+                  {
+                    "name": "其它",
+                    "color": 10,
+                    "id": "optAsyktUE"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5
+              }
+            },
+            "fldCYRQcEc": {
+              "name": "25. 对卧室的光线避光敏感度？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "id": "optnkaiRvE",
+                    "name": "必须绝对全黑（要求遮光率 100%）",
+                    "color": 1
+                  },
+                  {
+                    "color": 3,
+                    "id": "opt3LVQOmk",
+                    "name": "可以有微弱光线"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optCrMtQFB",
+                    "name": "喜欢被早上自然光叫醒"
+                  },
+                  {
+                    "color": 10,
+                    "id": "optTheI79B",
+                    "name": "其它"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5,
+                "disableCredential": true
+              }
+            },
+            "fld0lWMNYQ": {
+              "name": "1. 怎么称呼您？",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "manual": true,
+                "scan": false
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fldWCjlG2w": {
+              "name": "35. 您对现在居住的房屋，最不能忍受的一个状态是？",
+              "isPrimary": false,
+              "type": 1,
+              "description": {},
+              "fieldUIType": "Text",
+              "allowedEditModes": {
+                "manual": true,
+                "scan": false
+              },
+              "exInfo": {
+                "fieldUIType": "Text"
+              }
+            },
+            "fldtpixEif": {
+              "name": "26. 为了获取极致安静，是否愿意牺牲卧室 5-10cm 层高做一个【架空隔音地台 (STC50+)】？",
+              "isPrimary": false,
+              "type": 4,
+              "property": {
+                "options": [
+                  {
+                    "color": 2,
+                    "id": "optd5SPpIA",
+                    "name": "愿意，安静大过天"
+                  },
+                  {
+                    "id": "optrI888Bp",
+                    "name": "没必要，常规找平即可",
+                    "color": 2
+                  },
+                  {
+                    "name": "其它",
+                    "color": 10,
+                    "id": "optdFAZj5g"
+                  }
+                ],
+                "optionsType": 0
+              },
+              "description": {},
+              "fieldUIType": "MultiSelect",
+              "exInfo": {
+                "disableCredential": true,
+                "fieldUIType": "MultiSelect",
+                "colOrCustomRowType": "custom",
+                "customRows": 5
+              }
+            }
+          },
+          "fieldGroups": null,
+          "userMap": {
+            "7607875642234768606": {
+              "name": "用户865799",
+              "enName": "用户865799",
+              "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00v1_bdf565c7-5dd8-4453-8b8b-8810fa8dc6bg~?image_size=72x72&cut_type=default-face&quality=&format=jpeg&sticker_format=.webp"
+            },
+            "7645986139886652610": {
+              "name": "访客 43508",
+              "enName": "Guest User 43508",
+              "avatarUrl": "https://s3-imfile.feishucdn.com/static-resource/v1/09c2f0c1-c364-4575-b826-3588a51b2e9e~?image_size=72x72&cut_type=default-face&quality=&format=jpeg&sticker_format=.webp"
+            }
+          },
+          "milestoneMap": {},
+          "resourceMap": {
+            "attachments": {
+              "data": {
+                "fldPv0xI9L": {}
+              }
+            }
+          },
+          "rankInfo": {
+            "nextRank": "i0001vf9c",
+            "rankMap": {
+              "recvlzMPBRljfW": "i00018y68",
+              "rec27wBgaFKU48": "i00000000",
+              "recvlzyqjeG3CL": "i0000mh34"
+            }
+          },
+          "primaryKey": "fld0lWMNYQ"
+        },
+        "recordMap": {
+          "recvlzMPBRljfW": {
+            "fldOL5rMvS": {
+              "value": [
+                "opt615rlU9"
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fld4bsRzgN": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                {
+                  "type": "text",
+                  "text": "书房"
+                }
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldVCbR0AZ": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "opt9JXei4y",
+                "optsQ5Kg0c",
+                "opt3QK9XQJ"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldLMTIiM2": {
+              "value": null
+            },
+            "fldDsY6ilq": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optjVYkP4D",
+                "optm2crcpD"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldcoKNqxY": null,
+            "fldlqffHjA": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optTUfbmom",
+                "opt3ArdOGB",
+                "opt77JSjtq",
+                "optL6Q2mBY",
+                "optBZTK3Q3"
+              ]
+            },
+            "fldux5WSj1": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optAsXJGZD",
+                "optgG9Tu1u",
+                "optxHNos1C"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldCYRQcEc": {
+              "value": [
+                "opt3LVQOmk",
+                "optnkaiRvE"
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fldhQNJ75R": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optWQ8jQS1",
+                "optREA2Fk5",
+                "optasATKB6",
+                "optBgGt5Oy",
+                "opt1BRCqcF",
+                "optEXGw4zU"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldXb7XB5K": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optxD8hIRD"
+              ]
+            },
+            "fldQrMYqxf": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": "optomfJEgK"
+            },
+            "fldYDiPDQf": {
+              "value": [
+                {
+                  "text": "台子高低不合适、 功能不够",
+                  "type": "text"
+                }
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fld4FUNtRa": {
+              "value": [
+                "optKUBgk9v"
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fldBxPIYa6": {
+              "value": [
+                "optDkKpOir",
+                "optulykIMu"
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fldXkI7Gi8": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optwaX9X0U",
+                "optGITq562"
+              ]
+            },
+            "fldB16U6Xx": {
+              "value": [
+                "optNIfICa7",
+                "opt5Ta8p2Y"
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fldYKRFHf3": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optTucJREh"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldvTpqDlB": {
+              "value": [
+                "optzlLba0e",
+                "optUien2c9"
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fld9vxSpQj": {
+              "value": [
+                {
+                  "type": "text",
+                  "text": "爸爸妈妈 两个女儿"
+                }
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fldza4TJYY": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optkwQgkMM",
+                "optyaMrVF6"
+              ]
+            },
+            "fldDZ8RE16": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                {
+                  "text": "男173 女163",
+                  "type": "text"
+                }
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fld8q1QWC3": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optIDS247U",
+                "optIlKAdvV"
+              ]
+            },
+            "fldlbmaCDj": {
+              "value": [
+                "optfh5PFwW",
+                "opti6fAlKG",
+                "optoIH4hVh",
+                "optLH8mTxB"
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fldXW4vvek": {
+              "value": [
+                "opt7e5WKnZ",
+                "optXjlikaz",
+                "optyrvPxCU",
+                "opt7yXnsuv",
+                "optbTad2HJ"
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fld6kz7JJj": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optPyIzuSK",
+                "optmJ3hQ04"
+              ]
+            },
+            "fldYdjYxmZ": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optUeisNmq"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldCecQp0M": null,
+            "flda47QVTF": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": "optBRUaWK8"
+            },
+            "fld4pfzI6T": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optFJILcmP",
+                "optTPT0lK7",
+                "optTtRwPg4",
+                "optSDEKlBq",
+                "opt07Bcsqn",
+                "optEGO8Joi"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldYKo4HOQ": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optBVx3OYh"
+              ]
+            },
+            "fldgUSgTG8": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "opt7iiCKvK"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldWCjlG2w": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                {
+                  "text": "乱",
+                  "type": "text"
+                }
+              ]
+            },
+            "fld65hUtr4": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optsYtvKP0",
+                "optrjByHk8",
+                "optpYtXfxk",
+                "opthvHMr4q"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldy3xw4Dn": {
+              "value": [
+                {
+                  "text": "储物空间和功能使用",
+                  "type": "text"
+                }
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fldNzFVbzD": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optVkX5xC0",
+                "optPGW7Ckv",
+                "optGdv2WBU",
+                "optbgal9kD",
+                "optA7gPqzH"
+              ]
+            },
+            "fldtpixEif": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optrI888Bp"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldqvOTOnv": null,
+            "fldPv0xI9L": {
+              "value": null
+            },
+            "fldsVs3iOG": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optpZDp8wI"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fld0lWMNYQ": {
+              "value": [
+                {
+                  "text": "阿仙森",
+                  "type": "text"
+                }
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            },
+            "fldeTydNIa": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optOl3HLkj"
+              ]
+            },
+            "fldeyJ7QAj": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optUMbb7Mb",
+                "optF41PTPz"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldOcSQTW5": {
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "optXKwPy9J"
+              ],
+              "modifiedTime": 1780574903
+            },
+            "fldHOlwT8U": {
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606",
+              "value": [
+                "opth0mP0Bc",
+                "optKZtVGuy",
+                "optL7RPt48"
+              ]
+            },
+            "fld8nTzIja": {
+              "value": [
+                {
+                  "type": "text",
+                  "text": "150"
+                }
+              ],
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            }
+          },
+          "recvlzyqjeG3CL": {
+            "fld4bsRzgN": null,
+            "fldWCjlG2w": null,
+            "fldLMTIiM2": {
+              "value": null
+            },
+            "flda47QVTF": null,
+            "fldlqffHjA": null,
+            "fldqvOTOnv": null,
+            "fldza4TJYY": null,
+            "fldQrMYqxf": null,
+            "fldCYRQcEc": null,
+            "fldYDiPDQf": null,
+            "fld8q1QWC3": null,
+            "fldDZ8RE16": null,
+            "fldVCbR0AZ": null,
+            "fldlbmaCDj": null,
+            "fld4FUNtRa": null,
+            "fldXb7XB5K": null,
+            "fldtpixEif": null,
+            "fldYKo4HOQ": null,
+            "fldNzFVbzD": null,
+            "fldHOlwT8U": null,
+            "fldDsY6ilq": null,
+            "fldYdjYxmZ": null,
+            "fldBxPIYa6": null,
+            "fldXW4vvek": null,
+            "fldB16U6Xx": null,
+            "fldgUSgTG8": null,
+            "fld0lWMNYQ": null,
+            "fld65hUtr4": null,
+            "fldeyJ7QAj": null,
+            "fldOcSQTW5": null,
+            "fld6kz7JJj": null,
+            "fldXkI7Gi8": null,
+            "fld9vxSpQj": null,
+            "fldux5WSj1": null,
+            "fldsVs3iOG": null,
+            "fldy3xw4Dn": null,
+            "fldhQNJ75R": null,
+            "fldPv0xI9L": {
+              "value": null
+            },
+            "fld4pfzI6T": null,
+            "fldeTydNIa": null,
+            "fldOL5rMvS": null,
+            "fldCecQp0M": null,
+            "fldvTpqDlB": null,
+            "fldYKRFHf3": null,
+            "fldcoKNqxY": null,
+            "fld8nTzIja": null
+          },
+          "rec27wBgaFKU48": {
+            "fld4bsRzgN": null,
+            "fldB16U6Xx": null,
+            "fldXkI7Gi8": null,
+            "fldsVs3iOG": null,
+            "fldy3xw4Dn": null,
+            "fldtpixEif": null,
+            "fldDsY6ilq": null,
+            "fldWCjlG2w": null,
+            "fldDZ8RE16": null,
+            "fldlqffHjA": null,
+            "fldza4TJYY": null,
+            "fld0lWMNYQ": null,
+            "fldYDiPDQf": null,
+            "fldYKRFHf3": null,
+            "fld9vxSpQj": null,
+            "fldXW4vvek": null,
+            "fldCYRQcEc": null,
+            "fldOL5rMvS": null,
+            "fld4pfzI6T": null,
+            "fldcoKNqxY": null,
+            "fldQrMYqxf": null,
+            "fldYdjYxmZ": null,
+            "fldCecQp0M": null,
+            "fldVCbR0AZ": null,
+            "fldPv0xI9L": {
+              "value": null
+            },
+            "fldlbmaCDj": null,
+            "fld65hUtr4": null,
+            "fld6kz7JJj": null,
+            "fldux5WSj1": null,
+            "fldNzFVbzD": null,
+            "fldeTydNIa": null,
+            "fld8nTzIja": null,
+            "fldHOlwT8U": null,
+            "fldhQNJ75R": null,
+            "flda47QVTF": null,
+            "fldBxPIYa6": null,
+            "fldLMTIiM2": {
+              "value": null
+            },
+            "fldOcSQTW5": null,
+            "fld8q1QWC3": null,
+            "fldqvOTOnv": null,
+            "fldgUSgTG8": null,
+            "fldeyJ7QAj": null,
+            "fld4FUNtRa": null,
+            "fldXb7XB5K": null,
+            "fldvTpqDlB": null,
+            "fldYKo4HOQ": null
+          }
+        },
+        "recordMeta": {
+          "recvlzyqjeG3CL": {
+            "recMeta": {
+              "rev": 0,
+              "createdTime": 1780571470,
+              "createdUser": "7607875642234768606",
+              "modifiedTime": 1780571470,
+              "modifiedUser": "7607875642234768606"
+            }
+          },
+          "rec27wBgaFKU48": {
+            "recMeta": {
+              "rev": 5,
+              "createdTime": 1780476441,
+              "createdUser": "7645986139886652610",
+              "modifiedTime": 1780571303,
+              "modifiedUser": "7607875642234768606"
+            }
+          },
+          "recvlzMPBRljfW": {
+            "recMeta": {
+              "rev": 0,
+              "createdTime": 1780574903,
+              "createdUser": "7607875642234768606",
+              "modifiedTime": 1780574903,
+              "modifiedUser": "7607875642234768606"
+            }
+          }
+        }
+      },
+      "structVersion": 1
+    }
+  }
+]

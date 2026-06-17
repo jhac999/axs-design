@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXS 最终图文提案演示 | 极客视场模式</title>
+    <style>
+        :root {
+            --accent-gold: #d4af37;
+            --text-main: #ffffff;
+            --font-main: "Inter", -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+
+        /* 音乐播放器和粒子效果样式 */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 10;
+            opacity: 0.6;
+        }
+
+        #music-btn {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+        #music-btn:hover {
+            transform: scale(1.1);
+            background: rgba(212, 175, 55, 0.2);
+        }
+        .music-playing {
+            animation: spin 4s linear infinite;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* 打印到 PDF 的专属排版 */
+        @media print {
+            body, .presentation-container, .slide {
+                height: auto !important;
+                overflow: visible !important;
+                background-color: #000 !important;
+            }
+            .slide {
+                page-break-after: always;
+                min-height: 100vh;
+            }
+            .bg-img, .pano-bg {
+                position: absolute !important;
+                height: 100% !important;
+            }
+            #music-btn, #particles-canvas, #start-overlay {
+                display: none !important;
+            }
+            .frag { opacity: 1 !important; margin-top: 0 !important; }
+        }
+
+        /* 沉浸式入场弹窗 (解决自动播放限制) */
+        #start-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: opacity 0.8s ease;
+        }
+        #start-overlay h1 {
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+        }
+        #start-overlay p {
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 2px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #000;
+            color: var(--text-main);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+        }
+
+        .presentation-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .slide {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            scroll-snap-align: start;
+            overflow: hidden;
+        }
+
+        .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 改为 contain，防止切图 */
+            z-index: 1;
+        }
+
+        .slide.active .bg-img {
+            /* 移除可能影响图片质量的 filter 和 transform */
+        }
+
+        /* 3D 720 全景漫游效果 */
+        .pano-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: auto 100%;
+            background-position: 0% 50%;
+            background-repeat: repeat-x;
+            filter: brightness(0.2) saturate(0.3) contrast(1.1);
+            transition: filter 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 1;
+        }
+        .slide.active .pano-bg {
+            filter: brightness(1) saturate(1.05) contrast(1.05);
+            animation: pan360 45s ease-in-out infinite;
+        }
+        @keyframes pan360 {
+            0% { background-position: 0% 50%; transform: scale(1.02); }
+            50% { background-position: 100% 50%; transform: scale(1.15); }
+            100% { background-position: 0% 50%; transform: scale(1.02); }
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.6) 100%);
+            z-index: 2;
+        }
+
+        .frag {
+            position: absolute;
+            z-index: 3;
+            max-width: 28vw;
+            padding: 25px 35px;
+            background: linear-gradient(135deg, rgba(10, 10, 12, 0.65), rgba(0, 0, 0, 0.2));
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-gold);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            opacity: 0;
+            margin-top: 40px; 
+            transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .slide.active .frag {
+            opacity: 1;
+            margin-top: 0;
+        }
+
+        .pos-bl { bottom: 10vh; left: 5vw; }
+        .pos-br { bottom: 10vh; right: 5vw; border-left: none; border-right: 3px solid var(--accent-gold); }
+        .pos-tl { top: 12vh; left: 5vw; }
+        .pos-tr { top: 12vh; right: 5vw; border-left: none; border-right: 3px solid var(--accent-gold); }
+        .pos-ml { top: 50%; left: 5vw; transform: translateY(-50%); margin-top: 0; margin-left: -40px; }
+        .slide.active .pos-ml { margin-left: 0; }
+        .pos-mr { top: 50%; right: 5vw; transform: translateY(-50%); margin-top: 0; margin-right: -40px; border-left: none; border-right: 3px solid var(--accent-gold); }
+        .slide.active .pos-mr { margin-right: 0; }
+
+        .delay-1 { transition-delay: 1.0s; }
+        .delay-2 { transition-delay: 2.5s; }
+        .delay-3 { transition-delay: 4.0s; }
+
+        .slide-tag {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            line-height: 1.3;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+        }
+
+        p.dialogue {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
+            font-style: italic;
+        }
+
+        p.theory {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+
+        .cover-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cover-slide .bg-img { display: none; }
+        .cover-slide .overlay { background: radial-gradient(circle at center, #1a1a24 0%, #000 100%); }
+        .cover-slide .frag { 
+            position: relative;
+            background: transparent; 
+            border: none; 
+            box-shadow: none; 
+            backdrop-filter: none;
+            text-align: center;
+            max-width: 800px;
+            inset: auto;
+            transform: none;
+            margin: 0;
+        }
+        .cover-slide h1 {
+            font-size: 4rem;
+            font-weight: 200;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-align: center;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+            40% { transform: translate(-50%, -10px); }
+            60% { transform: translate(-50%, -5px); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="presentation-container" id="container">
+    
+    <!-- Cover Slide -->
+    <section class="slide cover-slide active">
+        <div class="overlay"></div>
+        <div class="frag delay-1">
+            <div class="slide-tag">AXS DESIGN STUDIO</div>
+            <h1>最终图文提案演示</h1>
+            <p style="color: var(--accent-gold); letter-spacing: 5px; margin-bottom: 50px;">阿仙森全案极客宣讲系统</p>
+            <div class="theory" style="display: inline-block; text-align: left;">
+                <p style="margin-bottom: 5px;"><strong>AXS 提案信条：</strong>全程以硬核机电数据、环境心理学与大师理论进行空间推演。</p>
+                <p><strong>全局定调：</strong>基于深度心理数据定制的绝对安全空间 (3000K | 2.8m原顶 | 零人物)</p>
+            </div>
+        </div>
+        <div class="scroll-hint">进入全屏以开启沉浸视场<br>↓</div>
+    </section>
+
+    <!-- Slide 0: 整体俯瞰图 -->
+    <section class="slide">
+        <img src="00_整体空间鸟瞰图.png" class="bg-img" alt="俯瞰图">
+        <div class="overlay"></div>
+        <div class="frag pos-tl delay-1">
+            <div class="slide-tag">Part 0 | 全局动线透视</div>
+            <h2>上帝视角的空间骨架</h2>
+            <p class="dialogue">“在进入具体空间前，我们先用上帝视角俯瞰整个建筑的平面排布。这是所有的墙体拆改与洄游动线的根基。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 1: 客厅全景 -->
+    <section class="slide">
+        <img src="file:///C:/Users/Administrator/.gemini/antigravity-ide/brain/18e9e9e3-0aca-40b3-b08b-7c67b1a3821e/concept_ldk_living_1781360353708.png" class="bg-img" alt="客厅全景">
+        <div class="overlay"></div>
+        <div class="frag pos-bl delay-1">
+            <div class="slide-tag">Part 1 | 核心主线 LDK</div>
+            <h2>消灭空旷，降维造茧</h2>
+            <p class="dialogue">“请特别注意顶面尺度。我们下了死命令：保留 2.8m 原顶找平，放弃所有暗藏筒灯，全部改用极简明装轨道灯矩阵。”</p>
+        </div>
+        <div class="frag pos-br delay-2">
+            <p class="theory"><strong>⚡ 绝对光影控制</strong><br>全案的照明色温被死死锁定在 3000K 均质暖白光。拒绝割裂的光斑，只留给您温润的漫反射包裹感。</p>
+        </div>
+    </section>
+
+    <!-- Slide 2: 客餐厅一体 -->
+    <section class="slide">
+        <img src="file:///C:/Users/Administrator/.gemini/antigravity-ide/brain/18e9e9e3-0aca-40b3-b08b-7c67b1a3821e/concept_ldk_living_1781360353708.png" class="bg-img" alt="客餐厅">
+        <div class="overlay"></div>
+        <div class="frag pos-ml delay-1">
+            <div class="slide-tag">Part 1 | 洞察与共鸣</div>
+            <h2>为“茧居者”打造庇护所</h2>
+            <p class="dialogue">“基于您的物理数据模型，这套方案我们只做了一件事：做减法。我们剥离了 90% 的无效噪音，为您构建了一个绝对安全的物理系统。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 3: 入户玄关 -->
+    <section class="slide">
+        <img src="file:///C:/Users/Administrator/.gemini/antigravity-ide/brain/18e9e9e3-0aca-40b3-b08b-7c67b1a3821e/concept_entryway_1781360578841.png" class="bg-img" alt="玄关">
+        <div class="overlay"></div>
+        <div class="frag pos-tr delay-1">
+            <div class="slide-tag">Part 2 | 核心主线 归家</div>
+            <h2>零内耗动线</h2>
+            <p class="dialogue">“强行把‘脱鞋-喝水-躺下’压缩在两步之内，引入直饮水路。归家喝水，无需经过大脑思考。”</p>
+        </div>
+        <div class="frag pos-br delay-2">
+            <p class="theory"><strong>🧱 3cm 的微下沉落尘区</strong><br>致敬本间贵史的安全理念——从根源消除门槛绊脚隐患，为未来做足生命周期防线。</p>
+        </div>
+    </section>
+
+    <!-- Slide 4: 主卧 -->
+    <section class="slide">
+        <img src="file:///C:/Users/Administrator/.gemini/antigravity-ide/brain/18e9e9e3-0aca-40b3-b08b-7c67b1a3821e/concept_master_bedroom_1781360341566.png" class="bg-img" alt="主卧">
+        <div class="overlay"></div>
+        <div class="frag pos-bl delay-1">
+            <div class="slide-tag">Part 2 | 核心主线 休憩</div>
+            <h2>绝对静音舱</h2>
+            <p class="dialogue">“在这个空间里，没有任何多余的线条，只有纯粹的原木轻奢氛围与绝对深度的睡眠。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 5: 厨房 -->
+    <section class="slide">
+        <img src="file:///C:/Users/Administrator/.gemini/antigravity-ide/brain/18e9e9e3-0aca-40b3-b08b-7c67b1a3821e/concept_kitchen_1781360568783.png" class="bg-img" alt="厨房">
+        <div class="overlay"></div>
+        <div class="frag pos-ml delay-1">
+            <div class="slide-tag">Part 2 | 核心主线 烹饪</div>
+            <h2>死磕人体工学</h2>
+            <p class="dialogue">“厨房操作台做了 10 公分的高低台落差，水槽高、灶台低。做饭不再是纯粹的体力活。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 6: 公卫 -->
+    <section class="slide">
+        <img src="file:///C:/Users/Administrator/.gemini/antigravity-ide/brain/18e9e9e3-0aca-40b3-b08b-7c67b1a3821e/concept_bathroom_1781360557288.png" class="bg-img" alt="公卫">
+        <div class="overlay"></div>
+        <div class="frag pos-br delay-1">
+            <div class="slide-tag">Part 2 | 核心主线 卫浴</div>
+            <h2>极致干湿分离</h2>
+            <p class="dialogue">“公卫完全执行干湿彻底分离，确保最高频洗漱场景的动线效率最大化。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 7: 次卧 -->
+    <section class="slide">
+        <img src="07_次卧_效果图.png" class="bg-img" alt="次卧">
+        <div class="overlay"></div>
+        <div class="frag pos-tl delay-1">
+            <div class="slide-tag">Part 3 | 选配空间矩阵</div>
+            <h2>生命周期可变空间</h2>
+            <p class="dialogue">“用全生命周期设计的眼光看待这间房，柜体全部采用 ENF 级零甲醛添加的顶级板材，守护最底层的健康红线。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 8: 主卫 -->
+    <section class="slide">
+        <img src="08_主卫_效果图.png" class="bg-img" alt="主卫">
+        <div class="overlay"></div>
+        <div class="frag pos-mr delay-1">
+            <div class="slide-tag">Part 3 | 选配空间矩阵</div>
+            <h2>Spa 级微水泥避难所</h2>
+            <p class="dialogue">“主卧套房内的绝对私密领地。大面积微水泥无缝包裹，壁挂马桶隐形水箱，消灭了一切视觉杂乱与卫生死角。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 9: 阳台 -->
+    <section class="slide">
+        <img src="09_阳台_效果图.png" class="bg-img" alt="阳台">
+        <div class="overlay"></div>
+        <div class="frag pos-bl delay-1">
+            <div class="slide-tag">Part 3 | 选配空间矩阵</div>
+            <h2>复合休闲家政区</h2>
+            <p class="dialogue">“洗烘套装完美隐藏，同时保留观景功能，将原本割裂的阳台彻底融入室内。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 10: 书房 -->
+    <section class="slide">
+        <img src="10_书房_效果图.png" class="bg-img" alt="书房">
+        <div class="overlay"></div>
+        <div class="frag pos-tl delay-1">
+            <div class="slide-tag">Part 3 | 选配空间矩阵</div>
+            <h2>声学阻断书房</h2>
+            <p class="dialogue">“具备极高的声学阻断力。纯实木悬浮长桌，配合全遮光厚重窗帘，展现了完美的向内收敛性。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 11: 衣帽间 -->
+    <section class="slide">
+        <img src="11_衣帽间_效果图.png" class="bg-img" alt="衣帽间">
+        <div class="overlay"></div>
+        <div class="frag pos-br delay-1">
+            <div class="slide-tag">Part 3 | 选配空间矩阵</div>
+            <h2>高频收纳矩阵</h2>
+            <p class="dialogue">“精细化的收纳矩阵，防尘灯光系统，让每一次挑选衣物都充满仪式感。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 12: 电视特写 -->
+    <section class="slide">
+        <img src="12_电视特写_效果图.png" class="bg-img" alt="电视特写">
+        <div class="overlay"></div>
+        <div class="frag pos-ml delay-1">
+            <div class="slide-tag">Part 4 | 极致工艺交底</div>
+            <h2>毫米级材质碰撞</h2>
+            <p class="dialogue">“原石与木饰面的无缝拼缝，这不仅是美学，更是我们在工地极度严苛的施工准则。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 13: 床头特写 -->
+    <section class="slide">
+        <img src="13_床头特写_效果图.png" class="bg-img" alt="床头特写">
+        <div class="overlay"></div>
+        <div class="frag pos-tr delay-1">
+            <div class="slide-tag">Part 4 | 极致工艺交底</div>
+            <h2>床头光影退晕</h2>
+            <p class="dialogue">“感受主卧核心背景的氛围光影退晕、软包与木饰面毫米级的拼接逻辑。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 14: 餐边柜特写 -->
+    <section class="slide">
+        <img src="14_餐边柜特写_效果图.png" class="bg-img" alt="餐边柜特写">
+        <div class="overlay"></div>
+        <div class="frag pos-bl delay-1">
+            <div class="slide-tag">Part 4 | 极致工艺交底</div>
+            <h2>水吧极限吞吐量</h2>
+            <p class="dialogue">“验证小家电操作区高度及收纳极限吞吐量设计，暗埋管线做到零外露。”</p>
+        </div>
+    </section>
+
+    <!-- Slide 15: 720漫游 -->
+    <section class="slide pano-slide">
+        <div class="pano-bg" style="background-image: url('15_720漫游_效果图.png');"></div>
+        <div class="overlay"></div>
+        <div class="frag pos-tl delay-1">
+            <div class="slide-tag">Part 4 | 满配沉浸漫游</div>
+            <h2>720° VR 空间体验</h2>
+            <p class="dialogue">“这是最后的 VR 漫游。感受站在您家客厅中央，没有任何人影打扰的极致静谧感。”</p>
+        </div>
+        <div class="frag pos-br delay-3">
+            <p class="theory"><strong>最后一张底牌：</strong><br>所有的唯美视觉，都严格建立在 AutoCAD 毫米级坐标工程图上。<br>我们用绝对客观的数据，为您落地最主观的感官。</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- 粒子画布 -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- 音乐播放器 -->
+<audio id="bg-music" loop>
+    <!-- 使用一个优雅的轻音乐外链 -->
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=ambient-piano-amp-strings-10711.mp3" type="audio/mpeg">
+</audio>
+<div id="music-btn" title="播放/暂停音乐">🎵</div>
+
+<!-- 沉浸式入场弹窗 -->
+<div id="start-overlay">
+    <h1>AXS 极客视场</h1>
+    <p>[ 点击屏幕开启沉浸体验 ]</p>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const slides = document.querySelectorAll('.slide');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        slides.forEach(slide => {
+            observer.observe(slide);
+        });
+
+        // --- 音乐控制与入场逻辑 ---
+        const musicBtn = document.getElementById('music-btn');
+        const bgMusic = document.getElementById('bg-music');
+        const startOverlay = document.getElementById('start-overlay');
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicBtn.classList.remove('music-playing');
+                musicBtn.style.opacity = '0.5';
+            } else {
+                bgMusic.play().catch(e => console.log("等待交互"));
+                musicBtn.classList.add('music-playing');
+                musicBtn.style.opacity = '1';
+            }
+            isPlaying = !isPlaying;
+        }
+
+        musicBtn.addEventListener('click', toggleMusic);
+
+        // 点击入场弹窗时，解锁音乐并进入
+        startOverlay.addEventListener('click', () => {
+            startOverlay.style.opacity = '0';
+            setTimeout(() => startOverlay.style.display = 'none', 800);
+            if (!isPlaying) toggleMusic();
+        });
+
+        // --- 粒子系统逻辑 ---
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, particles = [];
+
+        function initParticles() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            particles = [];
+            for (let i = 0; i < 80; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    r: Math.random() * 2 + 0.5,
+                    dx: (Math.random() - 0.5) * 0.5,
+                    dy: (Math.random() - 0.5) * 0.5,
+                    alpha: Math.random() * 0.5 + 0.1
+                });
+            }
+        }
+
+        function drawParticles() {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach(p => {
+                p.x += p.dx;
+                p.y += p.dy;
+                
+                // 边界循环
+                if (p.x < 0) p.x = width;
+                if (p.x > width) p.x = 0;
+                if (p.y < 0) p.y = height;
+                if (p.y > height) p.y = 0;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(212, 175, 55, ${p.alpha})`; // 使用主题金色
+                ctx.fill();
+            });
+            requestAnimationFrame(drawParticles);
+        }
+
+        initParticles();
+        drawParticles();
+        window.addEventListener('resize', initParticles);
+    });
+</script>
+
+</body>
+</html>

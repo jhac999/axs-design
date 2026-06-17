@@ -1,0 +1,210 @@
+            </div>
+        </div>
+
+        <!-- ================= ģ 04LDK?================= -->
+        <div class="module">
+            <span class="module-badge">04. ?/span>
+            <div class="module-title">ģ 04 | LDK λ?/div>
+            
+            <div class="question">
+                <span class="question-text">15. ŵʱĿռ?/span>
+                <input type="text" id="main_active_area" name="main_active_area" placeholder="ɳ?/  / 鷿">
+            </div>
+
+            <div class="question">
+                <span class="question-text">16. ͵ʵʹóߵ򣩣</span>
+                <input type="text" id="dining_table_usage" name="dining_table_usage" placeholder="?ҵ 2칫 3?4Է">
+            </div>
+
+            <div class="question">
+                <span class="question-text">17. ϰż־ʹnô</span>
+                <input type="text" id="cooking_habit" name="cooking_habit" placeholder="̱̨샹кõĲ">
+            </div>
+
+            <div class="question">
+                <span class="question-text">18. أлġ͵</span>
+                <span class="helper-text">ϵͳݴ?4 ƽרǿ©?/span>
+                <div class="options-group">
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="˫?(>80cm)"> ˫?(>80cm)</label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="JM?> JM?/label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="13ϴϴ"> 13ϴϴ</label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="Ƕʽ?> Ƕʽ?/label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="24Сʱ?NAS ?/ ·?> 24Сʱ?NAS ?/ ·?/label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="ȫݺ/ǰˮϵ?> ȫݺ/ǰˮϵ?/label>
+                    <label class="option-label"><input type="checkbox" name="heavy_appliances" value="">  <input type="text" name="heavy_appliances_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <span class="question-text">19. ֻǷҪԶˮվ</span>
+                <span class="helper-text">ѡϵͳǿˮ·ͼֽʽˮ?/span>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="robot" value="Y˫?> Y˫?/label>
+                    <label class="option-label"><input type="radio" name="robot" value="Ҫ˹ˮ"> Ҫ˹ˮ</label>
+                    <label class="option-label"><input type="radio" name="robot" value="">  <input type="text" name="robot_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <span class="question-text">20. ϵͳĻ?/span>
+                <span class="helper-text">ȫ?Wi-Fiܵƹⴰ綯ĻͷӰϵͳ?/span>
+                <textarea name="smart_system_layout" placeholder="ϣϵͳԼص㸲ǵĿռʹó?></textarea>
+            </div>
+
+            <div class="question">
+                <span class="question-text">21. дӴ/͵ĵԤߣߣ</span>
+                <input type="text" id="large_appliance_size" name="large_appliance_size" placeholder="ŵϴ» 60x60x85cm">
+            </div>
+        </div>
+
+        <!-- ================= ģ 05ԡ ================= -->
+        <div class="module">
+            <span class="module-badge">05. ?/span>
+            <div class="module-title">ģ 05 | ˺?/div>
+            
+            <div class="question">
+                <span class="question-text">21. ϼ˕SΪͬʱҪGϴ̨سͻ</span>
+                <span class="helper-text">ϵͳǿִԡ˺֖G?/span>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="bathroom_conflict" value=""> </label>
+                    <label class="option-label"><input type="radio" name="bathroom_conflict" value="żû"> żû</label>
+                    <label class="option-label"><input type="radio" name="bathroom_conflict" value="">  <input type="text" name="bathroom_conflict_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <span class="question-text">22. Ů˵Ļ뻤ϰ?/span>
+                <input type="text" id="makeup_routine" name="makeup_routine" placeholder="ϲϴּվ / ?>
+            </div>
+
+            <div class="question">
+                <span class="question-text">23. ˕Sرȩ/۳?/span>
+                <input type="text" id="allergies" name="allergies" placeholder="޼?>
+            </div>
+
+            <div class="question">
+                <span class="question-text">24. ˯񾭕Sϸ΢ѣ</span>
+                <span class="helper-text">жS·ϵͳɵ?/span>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="sleep_sound" value="¥ϳˮ"> ¥ϳˮ</label>
+                    <label class="option-label"><input type="radio" name="sleep_sound" value="Դ⳵B?> Դ⳵B?/label>
+                    <label class="option-label"><input type="radio" name="sleep_sound" value="ͷ˯ȫ"> ͷ˯ȫ</label>
+                    <label class="option-label"><input type="radio" name="sleep_sound" value="">  <input type="text" name="sleep_sound_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <span class="question-text">25. ҵĹܹ߱жȣ</span>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="light" value="ȫڣڹ 100%?> ȫڣڹ 100%?/label>
+                    <label class="option-label"><input type="radio" name="light" value="߷΢?> ߷΢?/label>
+                    <label class="option-label"><input type="radio" name="light" value="ϲАȻⅥ"> ϲАȻⅥ</label>
+                    <label class="option-label"><input type="radio" name="light" value="">  <input type="text" name="light_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <span class="question-text">26. Ϊ˻ȡ°ǷԸ?5-10cm һؤܿո?(STC50+)</span>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="double_floor" value="Ը⣬"> Ը⣬</label>
+                    <label class="option-label"><input type="radio" name="double_floor" value="ûҪƽ"> ûҪƽ</label>
+                    <label class="option-label"><input type="radio" name="double_floor" value="">  <input type="text" name="double_floor_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= ģ 06лϵͳ ================= -->
+        <div class="module" style="border-left-color: #d4af37;">
+            <span class="module-badge" style="background: #d4af37; color: #000;">06. ȡ</span>
+            <div class="module-title" style="color: #d4af37;">ģ 06 | лϵͳ빦?/div>
+            
+            <div class="question">
+                <span class="question-text">27. ʹ޵ô</span>
+                <input type="text" id="worst_housework" name="worst_housework" placeholder="?/ ̨?/ f©ë?>
+            </div>
+
+            <div class="question">
+                <span class="question-text">28. GĿǰ׿סĵط</span>
+                <input type="text" id="robot_obstacle" name="robot_obstacle" placeholder="ؚ?/ Ź / ؞?>
+            </div>
+
+            <div class="question">
+                <span class="question-text">29. ·ƫ?/span>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="dry_clothes" value="̨¿㣬ȫ?> ̨¿㣬ȫ?/label>
+                    <label class="option-label"><input type="radio" name="dry_clothes" value="߶ִ"> ߶ִ</label>
+                    <label class="option-label"><input type="radio" name="dry_clothes" value="">  <input type="text" name="dry_clothes_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <span class="question-text">30. 꿽?1롰?/span>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="aesthetic_1" value="ļ޽ǣǽףȫ?> <strong>ļ?/strong>ףȫîk</label>
+                    <label class="option-label"><input type="radio" name="aesthetic_1" value="ԸΪ˱ݻÿӰСʱӵ񻨻ˮ?> ԸΪ˱ݻÿӰСʱӵ񻨻ˮ?/label>
+                    <label class="option-label"><input type="radio" name="aesthetic_1" value="">  <input type="text" name="aesthetic_1_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <span class="question-text">31. 꿽?2ѧ?/span>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="aesthetic_2" value="ܼ 80% ȫؽ߳?20% Ʒ"> <strong>ܼ</strong> 80% ȫؽ߳?20% Ʒ</label>
+                    <label class="option-label"><input type="radio" name="aesthetic_2" value="չʾϲҵĿŸӷְ"> <strong>չʾ</strong>ϲҵĿŸӷְ</label>
+                    <label class="option-label"><input type="radio" name="aesthetic_2" value="">  <input type="text" name="aesthetic_2_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <span class="question-text">32. 꿽?3롰ÿͻʱĵ?/span>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="aesthetic_3" value="ԣAXS ?> <strong>?/strong>AXS ?/label>
+                    <label class="option-label"><input type="radio" name="aesthetic_3" value="˺ÿһЩס?> ˺ÿһЩס?/label>
+                    <label class="option-label"><input type="radio" name="aesthetic_3" value="">  <input type="text" name="aesthetic_3_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= ģ 07Ƥִ ================= -->
+        <div class="module">
+            <span class="module-badge">07. Ը</span>
+            <div class="module-title">ģ 07 | δ?/div>
+            
+            <div class="question">
+                <span class="question-text">33. 㼫¹ܵǰ£Ŀǰı?/span>
+                <span class="helper-text">ѡǿεŷʽʽϵͳ߾?/span>
+                <div class="options-group">
+                    <label class="option-label"><input type="radio" name="visual_style" value="ʽ"> ʽ?(ľ / ԭ?</label>
+                    <label class="option-label"><input type="radio" name="visual_style" value="?> ִ?( / ͱͶ)</label>
+                    <label class="option-label"><input type="radio" name="visual_style" value="ִS"> ?( / )</label>
+                    <label class="option-label"><input type="radio" name="visual_style" value="ʽ"> ʽ (߼ڰ?</label>
+                    <label class="option-label"><input type="radio" name="visual_style" value="">  <input type="text" name="visual_style_other" class="other-text" placeholder="?></label>
+                </div>
+            </div>
+
+            <div class="question">
+                <span class="question-text">34.  5 ڣش?ϰ߱?/span>
+                <input type="text" id="future_changes" name="future_changes" placeholder="׼̥ / ĸz?/ Ӱ칫Ƶ">
+            </div>
+
+            <div class="question">
+                <span class="question-text">35. ھסķݣܵһ̬?/span>
+                <input type="text" id="unbearable_status" name="unbearable_status" placeholder="Զо̨?/ ·ûط">
+            </div>
+
+            <div class="question">
+                <span class="question-text">36. ռ⻨ʮװ޵¼ңϣô</span>
+                <textarea id="ultimate_dream" name="ultimate_dream" placeholder="뾡ľס..."></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">̽  ?/button>
+    </form>
+
+    <section id="resultPanel" class="result-panel" aria-live="polite">
+        <div class="module-badge">AXS Report</div>
+        <div class="module-title">ͻ󱨸</div>
+        <p class="helper-text">ѽƸʦΪ Markdown ļ鵵?/p>
+        <div class="result-actions">
+            <button type="button" class="action-btn" id="copyReport">Ʊ</button>
+            <button type="button" class="action-btn" id="downloadReport"> Markdown</button>

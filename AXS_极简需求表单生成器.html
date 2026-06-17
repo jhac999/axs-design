@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+	<title>AXS 设计工作室客户需求表单</title>
+	<style>
+		body { background-color: #1a1a1a; color: #fff; font-family: 'Helvetica Neue', Helvetica, sans-serif; margin: 0; padding: 20px; }
+		.container { max-width: 600px; margin: 0 auto; background: #262626; padding: 25px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+		.header { text-align: center; border-bottom: 2px solid #73181E; padding-bottom: 15px; margin-bottom: 20px; }
+		.header h1 { margin: 0; color: #F9C80E; font-size: 20px; letter-spacing: 1px; }
+		.form-group { margin-bottom: 18px; }
+		.form-group label { display: block; margin-bottom: 8px; color: #ccc; font-size: 14px; }
+		.form-control { width: 100%; padding: 12px; background: #333; border: 1px solid #444; border-radius: 6px; color: #fff; font-size: 15px; box-sizing: border-box; }
+		.form-control:focus { border-color: #F9C80E; outline: none; }
+		.btn-submit { width: 100%; background: linear-gradient(135deg, #F9C80E 0%, #d4a700 100%); color: #1a1a1a; padding: 15px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.2s; margin-top: 10px; }
+		.btn-submit:active { transform: scale(0.98); }
+		
+		/* 生成结果区域 */
+		#result-area { display: none; background: #111; padding: 20px; border-radius: 8px; border: 1px dashed #F9C80E; margin-top: 20px; }
+		.result-title { color: #F9C80E; font-size: 18px; text-align: center; margin-top: 0; }
+		.result-text { white-space: pre-wrap; font-family: monospace; color: #ddd; line-height: 1.6; font-size: 14px; margin: 15px 0; background: #222; padding: 15px; border-radius: 6px; border-left: 4px solid #73181E; }
+		.btn-copy { width: 100%; background: #73181E; color: #fff; padding: 12px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 15px; }
+	</style>
+</head>
+<body>
+
+<div class="container" id="form-container">
+	<div class="header">
+		<h1>AXS 设计工作室客户需求表单</h1>
+		<p style="font-size: 12px; color: #888; margin-top: 5px;">录入居住诉求，系统将自动生成您的专属底层指令代码</p>
+	</div>
+	
+	<div class="form-group">
+		<label>01 / 怎么称呼您？</label>
+		<input type="text" id="name" class="form-control" placeholder="如：格哥">
+	</div>
+	<div class="form-group">
+		<label>02 / 房屋所在小区名称</label>
+		<input type="text" id="community" class="form-control" placeholder="如：万科翡翠滨江">
+	</div>
+	<div class="form-group">
+		<label>03 / 房屋实际面积 (㎡)</label>
+		<input type="number" id="area" class="form-control" placeholder="如：200">
+	</div>
+	<div class="form-group">
+		<label>04 / 喜欢的整体装修风格</label>
+		<input type="text" id="style" class="form-control" placeholder="如：极简、微水泥、暗黑风">
+	</div>
+	<div class="form-group">
+		<label>05 / 您的常住人口与生活标签</label>
+		<input type="text" id="job" class="form-control" placeholder="如：2人住、独立音乐人、有2只猫">
+	</div>
+	<div class="form-group">
+		<label>06 / 期望基装预算上限 (万)</label>
+		<input type="number" id="budget" class="form-control" placeholder="如：12">
+	</div>
+	<div class="form-group">
+		<label>07 / 绝不妥协的居住底线 / 核心诉求</label>
+		<textarea id="needs" class="form-control" rows="4" placeholder="如：必须有一间独立的录音室、全屋必须无主灯、要超多隐形收纳..."></textarea>
+	</div>
+	
+	<button class="btn-submit" onclick="generateReport()">生 成 我 的 需 求 代 码</button>
+</div>
+
+<!-- 结果展示区 -->
+<div class="container" id="result-area">
+	<h3 class="result-title">📋 您的专属需求档案已封装</h3>
+	<p style="color: #888; font-size: 12px; text-align: center;">请点击下方按钮复制，并直接在微信里发给 AXS 主理人</p>
+	
+	<div class="result-text" id="outputText"></div>
+	
+	<button class="btn-copy" id="copyBtn" onclick="copyToClipboard()">一键复制，去微信发给主理人</button>
+</div>
+
+<script>
+	function generateReport() {
+		const name = document.getElementById('name').value;
+		const community = document.getElementById('community').value || "未填写";
+		const area = document.getElementById('area').value;
+		const style = document.getElementById('style').value || "未定";
+		const job = document.getElementById('job').value || "未填写";
+		const budget = document.getElementById('budget').value;
+		const needs = document.getElementById('needs').value;
+		
+		if(!name || !area || !budget) {
+			alert("请务必填写称呼、面积和预算！");
+			return;
+		}
+
+		// 格式化输出文本，融入 AXS 品牌调性与你指定的名字
+		const reportText = `【AXS 设计工作室客户需求表单】
+------------------------------
+▶ 客户：${name} (${job})
+▶ 坐标：${community}
+▶ 标尺：${area} 平方米
+▶ 风格锚点：${style}
+▶ 基装杠杆锁定上限：${budget} 万
+------------------------------
+【核心物理指令/居住诉求】
+${needs}
+------------------------------
+[系统验证完毕] 需求已固化。请 AXS 中枢接入，启动空间解构与设计流水线。`;
+
+		document.getElementById('outputText').innerText = reportText;
+		
+		// 切换 UI
+		document.getElementById('form-container').style.display = 'none';
+		document.getElementById('result-area').style.display = 'block';
+	}
+
+	function copyToClipboard() {
+		const text = document.getElementById('outputText').innerText;
+		navigator.clipboard.writeText(text).then(function() {
+			const btn = document.getElementById('copyBtn');
+			btn.innerText = "✅ 复制成功！快去微信粘贴吧";
+			btn.style.background = "#28a745";
+		}).catch(function(err) {
+			alert("复制失败，请手动长按选中文本复制。");
+		});
+	}
+</script>
+</body>
+</html>

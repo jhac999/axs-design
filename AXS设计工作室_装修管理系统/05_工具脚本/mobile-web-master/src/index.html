@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>AXS 空间美学与系统中枢</title>
+	
+	<!-- 引入 Google Fonts 高级字体 -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+	
+	<style>
+		/* AXS 黑金极简美学全局重设 */
+		* { box-sizing: border-box; margin: 0; padding: 0; }
+		html { font-size: 62.5%; -webkit-text-size-adjust: 100%; }
+		body {
+			background: #0A0A0A;
+			color: #E0E0E0;
+			font-family: 'Noto Sans SC', -apple-system, sans-serif;
+			-webkit-font-smoothing: antialiased;
+			line-height: 1.5;
+			padding-bottom: 75px;
+			overflow-x: hidden;
+		}
+		a { text-decoration: none; color: inherit; }
+		ul, ol { list-style: none; }
+		img { display: block; max-width: 100%; border: none; }
+
+		/* 顶部微光浮动搜索栏 */
+		#search_input {
+			width: 100%;
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			background: rgba(10, 10, 10, 0.85);
+			backdrop-filter: blur(10px);
+			border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+			padding: 12px 16px;
+		}
+		.search_box {
+			display: flex;
+			align-items: center;
+			background: #141414;
+			border: 1px solid rgba(201, 168, 76, 0.3);
+			border-radius: 6px;
+			height: 38px;
+			padding: 0 12px;
+			transition: border-color 0.3s;
+		}
+		.search_box:focus-within {
+			border-color: #C9A84C;
+			box-shadow: 0 0 8px rgba(201, 168, 76, 0.2);
+		}
+		.search_icon {
+			color: #C9A84C;
+			font-size: 16px;
+			margin-right: 8px;
+		}
+		.search_box input {
+			flex: 1;
+			background: transparent;
+			border: none;
+			outline: none;
+			color: #E0E0E0;
+			font-size: 1.3rem;
+			font-family: inherit;
+		}
+		.search_box input::placeholder {
+			color: #555;
+			font-weight: 300;
+		}
+
+		/* 轮播大图区域 */
+		.slide_box {
+			width: 100%;
+			height: 240px;
+			position: relative;
+			overflow: hidden;
+		}
+		.slide_inner {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			background-image: linear-gradient(rgba(10,10,10,0.1), rgba(10,10,10,0.9)), url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80');
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding: 24px 20px;
+		}
+		.slide_inner h2 {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 2.2rem;
+			font-weight: 700;
+			letter-spacing: 2px;
+			color: #FFF;
+			margin-bottom: 6px;
+			text-transform: uppercase;
+		}
+		.slide_inner p {
+			font-size: 1.2rem;
+			color: #C9A84C;
+			letter-spacing: 4px;
+			font-weight: 300;
+		}
+
+		/* 极致尊享礼包 Banner */
+		.banner_bottom {
+			padding: 16px;
+		}
+		.reg_card {
+			background: linear-gradient(135deg, #1A1710 0%, #11100C 100%);
+			border: 1px solid rgba(201, 168, 76, 0.25);
+			border-radius: 8px;
+			padding: 16px 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+		}
+		.reg_text h3 {
+			font-size: 1.4rem;
+			color: #E0E0E0;
+			font-weight: 500;
+			margin-bottom: 4px;
+		}
+		.reg_text h3 span {
+			color: #C9A84C;
+			font-weight: 700;
+			margin-left: 4px;
+		}
+		.reg_text p {
+			font-size: 1.1rem;
+			color: #666;
+			font-weight: 300;
+		}
+		.reg_btn button {
+			background: #C9A84C;
+			color: #0A0A0A;
+			border: none;
+			outline: none;
+			padding: 8px 16px;
+			border-radius: 4px;
+			font-size: 1.2rem;
+			font-weight: 700;
+			cursor: pointer;
+			transition: background 0.3s;
+		}
+		.reg_btn button:hover {
+			background: #D4B65A;
+		}
+
+		/* 社区交流 (四小格) */
+		.community {
+			padding: 8px 16px;
+		}
+		.section_title {
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: #FFF;
+			margin-bottom: 12px;
+			letter-spacing: 1px;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.section_title::before {
+			content: '';
+			display: inline-block;
+			width: 3px;
+			height: 14px;
+			background: #C9A84C;
+		}
+		.comm_grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
+		}
+		.comm_item {
+			background: #141414;
+			border: 1px solid #1F1F1F;
+			border-radius: 6px;
+			padding: 14px 12px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			transition: border-color 0.3s;
+		}
+		.comm_item:hover {
+			border-color: rgba(201, 168, 76, 0.4);
+		}
+		.comm_info h4 {
+			font-size: 1.3rem;
+			color: #E0E0E0;
+			margin-bottom: 2px;
+			font-weight: 500;
+		}
+		.comm_info p {
+			font-size: 1.1rem;
+			color: #666;
+			font-weight: 300;
+		}
+		.comm_icon {
+			font-size: 24px;
+			opacity: 0.85;
+		}
+
+		/* 今日推荐方案 (两栏) */
+		.recommend {
+			padding: 16px;
+		}
+		.recom_grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 12px;
+		}
+		.recom_card {
+			background: #141414;
+			border: 1px solid #1F1F1F;
+			border-radius: 8px;
+			overflow: hidden;
+			transition: transform 0.3s;
+		}
+		.recom_card:hover {
+			transform: translateY(-4px);
+		}
+		.recom_img {
+			width: 100%;
+			height: 110px;
+			background-size: cover;
+			background-position: center;
+		}
+		.recom_desc {
+			padding: 10px 12px;
+		}
+		.recom_desc h4 {
+			font-size: 1.2rem;
+			color: #E0E0E0;
+			font-weight: 500;
+			margin-bottom: 6px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.author_box {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+		.author_avatar {
+			width: 18px;
+			height: 18px;
+			border-radius: 50%;
+			background: #C9A84C;
+		}
+		.author_name {
+			font-size: 1rem;
+			color: #666;
+			font-weight: 300;
+		}
+
+		/* 避坑与标准 SOP 看板 (横向滚动) */
+		.sop_section {
+			padding: 16px;
+		}
+		.sop_scroll {
+			display: flex;
+			gap: 12px;
+			overflow-x: auto;
+			padding-bottom: 8px;
+		}
+		.sop_scroll::-webkit-scrollbar {
+			height: 4px;
+		}
+		.sop_scroll::-webkit-scrollbar-thumb {
+			background: #262626;
+			border-radius: 2px;
+		}
+		.sop_card {
+			flex: 0 0 130px;
+			background: #141414;
+			border: 1px solid #1F1F1F;
+			border-radius: 6px;
+			padding: 14px 10px;
+			text-align: center;
+		}
+		.sop_num {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: rgba(201, 168, 76, 0.25);
+			margin-bottom: 4px;
+		}
+		.sop_title {
+			font-size: 1.2rem;
+			color: #E0E0E0;
+			margin-bottom: 2px;
+			font-weight: 500;
+		}
+		.sop_desc {
+			font-size: 1rem;
+			color: #666;
+			font-weight: 300;
+		}
+
+		/* 精彩专题 (八宫格) */
+		.topic_section {
+			padding: 16px;
+			margin-bottom: 15px;
+		}
+		.topic_grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 8px;
+		}
+		.topic_item {
+			background: #141414;
+			border: 1px solid #1F1F1F;
+			border-radius: 6px;
+			aspect-ratio: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 6px;
+			transition: border-color 0.3s;
+		}
+		.topic_item:hover {
+			border-color: rgba(201, 168, 76, 0.4);
+		}
+		.topic_dot {
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: #C9A84C;
+		}
+		.topic_item span {
+			font-size: 1.1rem;
+			color: #A0A0A0;
+			font-weight: 400;
+		}
+
+		/* 底部固定导航栏 (5 Tab 架构) */
+		#nav_footer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background: rgba(13, 13, 13, 0.95);
+			backdrop-filter: blur(10px);
+			border-top: 1px solid rgba(201, 168, 76, 0.15);
+			z-index: 1000;
+			padding: 8px 0;
+		}
+		#nav_footer ul {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		#nav_footer li {
+			flex: 1;
+			text-align: center;
+		}
+		#nav_footer a {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			color: #666;
+			font-size: 1.1rem;
+			font-weight: 300;
+			transition: color 0.3s;
+		}
+		#nav_footer a.active {
+			color: #C9A84C;
+			font-weight: 500;
+		}
+		#nav_footer a.active svg {
+			fill: #C9A84C;
+		}
+		#nav_footer svg {
+			width: 22px;
+			height: 22px;
+			fill: #666;
+			margin-bottom: 4px;
+			transition: fill 0.3s;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- 顶部极简搜索 -->
+	<div id="search_input">
+		<div class="search_box">
+			<span class="search_icon">🔍</span>
+			<input type="text" placeholder="探索 AXS 空间美学与标准工艺..."/>
+		</div>
+	</div>
+
+	<!-- 轮播图区域 -->
+	<section class="slide_box">
+		<div class="slide_inner">
+			<h2>Aesthetics × System</h2>
+			<p>当代东方仪式美学 ➔ 秩序与克制</p>
+		</div>
+	</section>
+
+	<!-- 礼包 Banner -->
+	<section class="banner_bottom">
+		<div class="reg_card">
+			<div class="reg_text">
+				<h3>获取 <span>AXS 全案设计白皮书</span></h3>
+				<p>10% 项目管理费无差价模式说明</p>
+			</div>
+			<div class="reg_btn">
+				<button onclick="location.href='requirement_interactive.html'">立即获取</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- 社区交流 -->
+	<section class="community">
+		<h3 class="section_title">设计与交流</h3>
+		<div class="comm_grid">
+			<div class="comm_item" onclick="location.href='requirement_interactive.html'">
+				<div class="comm_info">
+					<h4>户型改造</h4>
+					<p>科学规划洄游动线</p>
+				</div>
+				<span class="comm_icon">📐</span>
+			</div>
+			<div class="comm_item" onclick="alert('主理人在线答疑中，已开启云端支持。')">
+				<div class="comm_info">
+					<h4>你问我答</h4>
+					<p>主理人在线解答</p>
+				</div>
+				<span class="comm_icon">💬</span>
+			</div>
+			<div class="comm_item" onclick="alert('正在载入标准工艺库流程...')">
+				<div class="comm_info">
+					<h4>避坑攻略</h4>
+					<p>标准工艺防腐SOP</p>
+				</div>
+				<span class="comm_icon">💡</span>
+			</div>
+			<div class="comm_item" onclick="alert('正在载入经典完工实景案例...')">
+				<div class="comm_info">
+					<h4>装修日记</h4>
+					<p>经典完工案例拆解</p>
+				</div>
+				<span class="comm_icon">📝</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- 今日推荐方案 -->
+	<section class="recommend">
+		<h3 class="section_title">今日推荐方案</h3>
+		<div class="recom_grid">
+			<div class="recom_card" onclick="location.href='effect.html'">
+				<div class="recom_img" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80');"></div>
+				<div class="recom_desc">
+					<h4>139㎡ 现代极简微水泥</h4>
+					<div class="author_box">
+						<div class="author_avatar"></div>
+						<span class="author_name">主理人</span>
+					</div>
+				</div>
+			</div>
+			<div class="recom_card" onclick="location.href='effect.html'">
+				<div class="recom_img" style="background-image: url('https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=400&q=80');"></div>
+				<div class="recom_desc">
+					<h4>200㎡ 独立音乐人听音室</h4>
+					<div class="author_box">
+						<div class="author_avatar"></div>
+						<span class="author_name">AXS设计</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 避坑与工序流程 -->
+	<section class="sop_section">
+		<h3 class="section_title">AXS 系统工序看板</h3>
+		<div class="sop_scroll">
+			<div class="sop_card">
+				<div class="sop_num">01</div>
+				<div class="sop_title">原始量房</div>
+				<div class="sop_desc">雷射测距雷达成像</div>
+			</div>
+			<div class="sop_card">
+				<div class="sop_num">02</div>
+				<div class="sop_title">布局确认</div>
+				<div class="sop_desc">洄游动线空间锁定</div>
+			</div>
+			<div class="sop_card">
+				<div class="sop_num">03</div>
+				<div class="sop_title">材料决选</div>
+				<div class="sop_desc">0加价供应链直达</div>
+			</div>
+			<div class="sop_card">
+				<div class="sop_num">04</div>
+				<div class="sop_title">双轨施工</div>
+				<div class="sop_desc">4G AI像素监督</div>
+			</div>
+			<div class="sop_card">
+				<div class="sop_num">05</div>
+				<div class="sop_title">终极闭环</div>
+				<div class="sop_desc">三方在线电子签批</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 精彩专题 -->
+	<section class="topic_section">
+		<h3 class="section_title">美学与工艺专题</h3>
+		<div class="topic_grid">
+			<div class="topic_item">
+				<div class="topic_dot"></div>
+				<span>榻榻米</span>
+			</div>
+			<div class="topic_item">
+				<div class="topic_dot"></div>
+				<span>建材决选</span>
+			</div>
+			<div class="topic_item">
+				<div class="topic_dot"></div>
+				<span>飘窗设计</span>
+			</div>
+			<div class="topic_item">
+				<div class="topic_dot"></div>
+				<span>吸音防噪</span>
+			</div>
+			<div class="topic_item">
+				<div class="topic_dot"></div>
+				<span>微水泥</span>
+			</div>
+			<div class="topic_item">
+				<div class="topic_dot"></div>
+				<span>无主灯</span>
+			</div>
+			<div class="topic_item">
+				<div class="topic_dot"></div>
+				<span>隐形踢脚</span>
+			</div>
+			<div class="topic_item">
+				<div class="topic_dot"></div>
+				<span>收纳细则</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- 底部导航 (5 Tab) -->
+	<footer id="nav_footer">
+		<ul>
+			<li>
+				<a href="index.html" class="active">
+					<svg viewBox="0 0 24 24">
+						<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+					</svg>
+					<span>首页</span>
+				</a>
+			</li>
+			<li>
+				<a href="effect.html">
+					<svg viewBox="0 0 24 24">
+						<path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c0 1.1.9-2-2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+					</svg>
+					<span>效果图</span>
+				</a>
+			</li>
+			<li>
+				<a href="requirement_interactive.html">
+					<svg viewBox="0 0 24 24">
+						<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c0 1.1.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+					</svg>
+					<span>找设计</span>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:alert('已激活 4G AI 摄像头实时视觉监理中枢，主理人已在云端看护您的工地。')">
+					<svg viewBox="0 0 24 24">
+						<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+					</svg>
+					<span>装修助手</span>
+				</a>
+			</li>
+			<li>
+				<a href="user.html">
+					<svg viewBox="0 0 24 24">
+						<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+					</svg>
+					<span>我的</span>
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+</body>
+</html>
