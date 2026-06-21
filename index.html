@@ -394,6 +394,83 @@
             font-size: 2em;
         }
     }
+
+    /* --- Mascots & Music Additions --- */
+    .mascot {
+        position: fixed;
+        bottom: 8vh;
+        width: 324px;
+        z-index: 8000;
+        pointer-events: none;
+        border-radius: 20px;
+        filter: drop-shadow(0 10px 20px rgba(212, 175, 55, 0.3));
+        mix-blend-mode: screen; 
+    }
+
+    .mascot-left {
+        left: 4vw;
+        animation: floatMascot 3.5s ease-in-out infinite, sway 5s ease-in-out infinite alternate;
+    }
+
+    .mascot-right {
+        right: 4vw;
+        animation: floatMascot 4.2s ease-in-out infinite reverse, sway 6s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes floatMascot {
+        0%, 100% { margin-bottom: 0; }
+        50% { margin-bottom: 25px; }
+    }
+
+    @keyframes sway {
+        0% { transform: rotate(-4deg); }
+        100% { transform: rotate(4deg); }
+    }
+
+    /* Music Toggle Button */
+    .music-toggle {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: rgba(10, 10, 10, 0.6);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        color: #d4af37;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 9000;
+        backdrop-filter: blur(8px);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    .music-toggle:hover {
+        background: rgba(212, 175, 55, 0.15);
+        border-color: #d4af37;
+        transform: scale(1.08);
+    }
+    .music-playing {
+        animation: spinMusic 4s linear infinite;
+    }
+    @keyframes spinMusic {
+        100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 1400px) {
+        .mascot { width: 252px; opacity: 0.8; }
+    }
+    @media (max-width: 1100px) {
+        .mascot { width: 180px; opacity: 0.4; }
+    }
+    @media (max-width: 800px) {
+        .mascot { display: none; }
+        .music-toggle { top: 15px; right: 15px; width: 38px; height: 38px; font-size: 16px; }
+    }
+
 </style>
 
 </head>
@@ -1111,5 +1188,54 @@
         }
     });
 </script>
+
+<!-- Mascots & BGM -->
+<img src="./builder_boy.png" class="mascot mascot-left" alt="Builder Boy">
+<img src="./designer_girl.png" class="mascot mascot-right" alt="Designer Girl">
+
+<audio id="bgm" loop>
+    <source src="bgm.mp3" type="audio/mpeg">
+</audio>
+<button id="musicToggle" class="music-toggle" title="播放/暂停音乐">
+    <span class="music-icon" id="musicIcon">🎵</span>
+</button>
+
+<script>
+    // Music Toggle Logic
+    const bgm = document.getElementById('bgm');
+    const musicToggle = document.getElementById('musicToggle');
+    const musicIcon = document.getElementById('musicIcon');
+    let isPlaying = false;
+    
+    // Set volume to an ambient, comfortable level
+    bgm.volume = 0.4;
+    
+    musicToggle.addEventListener('click', () => {
+        if (isPlaying) {
+            bgm.pause();
+            musicIcon.classList.remove('music-playing');
+            musicToggle.style.opacity = '0.6';
+        } else {
+            bgm.play();
+            musicIcon.classList.add('music-playing');
+            musicToggle.style.opacity = '1';
+        }
+        isPlaying = !isPlaying;
+    });
+
+    // Auto-play on first user interaction
+    document.body.addEventListener('click', () => {
+        if (!isPlaying) {
+            bgm.play().then(() => {
+                isPlaying = true;
+                musicIcon.classList.add('music-playing');
+                musicToggle.style.opacity = '1';
+            }).catch(() => {
+                // Auto-play prevented by browser, wait for manual click
+            });
+        }
+    }, { once: true });
+</script>
+
 </body>
 </html>

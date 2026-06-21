@@ -1,6 +1,18 @@
-*.pptx
-*.exe
-*.dwg
-*.mp4
-*.psd
-*.ai
+# ==========================================
+# AXS 系统云端隔离屏障 (Anti-Gravity Protocol)
+# ==========================================
+
+# 1. 第一法则：无差别拉黑一切（屏蔽管理系统腹地、知识库、SOP、废弃项目等）
+*
+
+# 2. 豁免清单：仅允许最前端的“触角”代码和门面文件上传到 GitHub
+!index.html
+!bgm.mp3
+!builder_boy.png
+!designer_girl.png
+!README说明书-AXS设计工作室.md
+!AGENTS.md
+!.gitignore
+
+# 3. 如果在根目录下不小心建了新文件夹，也要被封杀
+*/
