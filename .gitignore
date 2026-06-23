@@ -13,6 +13,7 @@
 !README说明书-AXS设计工作室.md
 !AGENTS.md
 !.gitignore
+!axs_share.html
 
 # 3. 如果在根目录下不小心建了新文件夹，也要被封杀
 */
